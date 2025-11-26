@@ -44,6 +44,8 @@ Este proyecto busca resolver la conversión manual y propensa a errores de archi
 -   [ ] Inicializar el proyecto (Vue.js o React).
 -   [ ] Diseñar y maquetar la interfaz principal (área de subida, botones, área de resultados).
 -   [ ] Implementar el formulario para la subida del fichero.
+-   [ ] Implementar validación de archivo en el cliente (extensión `.txt`, tamaño) para feedback inmediato.
+-   [ ] Implementar **validación en el servidor del Frontend** (tipo, extensión `.txt`, tamaño) tras la subida del usuario y antes de reenviar al Backend.
 -   [ ] Desarrollar el servicio para comunicarse con la API del backend.
 -   [ ] Implementar el estado de carga (animación/spinner) durante la conversión.
 -   [ ] Implementar la visualización del resumen de la conversión (`cueCount`, `channelCount`).
