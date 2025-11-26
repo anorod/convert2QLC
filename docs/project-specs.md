@@ -69,6 +69,7 @@ El proceso de conversión se realizará en un único pase en el backend, siguien
 
 ### 4.1. Funcionalidad Principal
 *   **Parseo de Fichero Picolo:** Analizar el formato de texto plano para extraer la Cue List y los niveles de canal de cada cue.
+*   **Validación de Entrada de Archivo:** Asegurar que el archivo subido sea de tipo `text/plain` y que su extensión sea `.txt`. Además, el tamaño del archivo debe ser inferior a un límite configurable (ej: 5MB) para evitar problemas de rendimiento o abusos.
 *   **Generación de Fichero QLC+:** Construir un fichero XML válido (`.qxc`) siguiendo la estructura y lógica detalladas.
 
 ### 4.2. Lógica de Transformación (Reglas de Negocio)
@@ -145,16 +146,12 @@ Las unidades en Picolo son **segundos**, y en QLC+ son **milisegundos**.
 
 ### 5.2. Tecnologías
 
-Se definen dos posibles enfoques para el frontend, dependiendo de la riqueza de la interfaz de usuario deseada.
+El frontend se desarrollará con un stack interactivo para una experiencia de usuario mejorada.
 
-#### 5.2.1. Opción 1: Stack Básico (Implementación Rápida)
-*   **Lenguaje:** **PHP**.
-*   **Descripción:** Una solución robusta y probada, ideal para cumplir con los requisitos mínimos de subir un archivo y descargar el resultado. La comunicación con el backend se puede realizar con cURL o una librería como Guzzle.
-
-#### 5.2.2. Opción 2: Stack Interactivo Recomendado (Experiencia de Usuario Mejorada)
+#### 5.2.1. Stack Interactivo Recomendado
 *   **Framework:** **Vue.js** o **React**.
-*   **Descripción:** Para implementar funcionalidades más dinámicas como la previsualización de resultados sin recargar la página, se recomienda un framework de JavaScript moderno. Esto permite crear una Single Page Application (SPA) que ofrece una experiencia de usuario mucho más fluida y rápida.
-*   **Servidor:** El frontend sería un conjunto de archivos estáticos (HTML, CSS, JS) que pueden ser servidos por un servidor web ligero como **Nginx**.
+*   **Descripción:** Para implementar funcionalidades dinámicas como la previsualización de resultados sin recargar la página, se utilizará un framework de JavaScript moderno. Esto permite crear una Single Page Application (SPA) que ofrece una experiencia de usuario mucho más fluida y rápida.
+*   **Servidor:** El frontend será un conjunto de archivos estáticos (HTML, CSS, JS) que pueden ser servidos por un servidor web ligero como **Nginx**.
 
 ## 6. Requisitos de Despliegue (Docker)
 
