@@ -105,9 +105,30 @@ Las unidades en Picolo son **segundos**, y en QLC+ son **milisegundos**.
 *   **Request Body:** `multipart/form-data` con un campo `file` conteniendo el `.txt` de Picolo.
 *   **Response (Éxito):**
     *   **Código:** `200 OK`
-    *   **Headers:** `Content-Type: application/xml`, `Content-Disposition: attachment; filename="show.qxc"`
-    *   **Body:** El contenido del XML generado.
+    *   **Headers:** `Content-Type: application/json`
+    *   **Body:** Un objeto JSON con los datos de la conversión.
+        ```json
+        {
+          "summary": {
+            "cueCount": 0,
+            "channelCount": 0,
+            "scenes": [
+              { "id": 0, "name": "" }
+            ]
+          },
+          "fileName": "show.qxc",
+          "fileContent": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>..."
+        }
+        ```
 *   **Response (Error):** `400 Bad Request` o `500 Internal Server Error` con un body JSON (`{"error": "mensaje descriptivo"}`).
+
+### 4.4. Stack Tecnológico Recomendado
+*   **Lenguaje:** **Python**. Es un lenguaje ideal para el parseo de texto y la manipulación de datos, que es el núcleo de la lógica de conversión.
+*   **Framework API:** **FastAPI**.
+    *   **Rendimiento:** Es extremadamente rápido, comparable a Node.js.
+    *   **Facilidad de uso:** Reduce la cantidad de código necesario para crear una API robusta.
+    *   **Documentación Automática:** Genera automáticamente una documentación interactiva de la API (con Swagger UI), lo cual es fantástico para probar el endpoint durante el desarrollo.
+    *   **Validación de Datos:** Utiliza el tipado de Python para validar automáticamente las peticiones, haciendo la API más segura.
 
 ## 5. Requisitos del Frontend
 
@@ -115,12 +136,25 @@ Las unidades en Picolo son **segundos**, y en QLC+ son **milisegundos**.
 1.  El usuario ve una página con un formulario para subir un archivo y un botón "Convertir".
 2.  Al seleccionar el archivo y hacer clic, se muestra una animación de carga.
 3.  La aplicación envía el archivo a la API del backend.
-4.  **En caso de éxito:** La animación de carga desaparece, se muestra un mensaje de éxito con el número de cues y canales detectados, y se inicia automáticamente la descarga del archivo `.qxc`.
+4.  **En caso de éxito:**
+    *   La animación de carga desaparece.
+    *   Se muestra en pantalla un resumen de la conversión: "Conversión exitosa: Se detectaron **X** cues y **Y** canales."
+    *   Opcionalmente, se puede mostrar una tabla con la lista de escenas generadas.
+    *   Aparece un botón "Descargar Archivo .qxc". Al hacer clic, el frontend genera y descarga el archivo utilizando los datos recibidos de la API.
 5.  **En caso de error:** Se muestra un mensaje de error claro y comprensible.
 
 ### 5.2. Tecnologías
-*   **Lenguaje:** PHP.
-*   **Comunicación:** Utilizará una librería HTTP (como Guzzle o cURL) para realizar la petición `POST` al servicio backend.
+
+Se definen dos posibles enfoques para el frontend, dependiendo de la riqueza de la interfaz de usuario deseada.
+
+#### 5.2.1. Opción 1: Stack Básico (Implementación Rápida)
+*   **Lenguaje:** **PHP**.
+*   **Descripción:** Una solución robusta y probada, ideal para cumplir con los requisitos mínimos de subir un archivo y descargar el resultado. La comunicación con el backend se puede realizar con cURL o una librería como Guzzle.
+
+#### 5.2.2. Opción 2: Stack Interactivo Recomendado (Experiencia de Usuario Mejorada)
+*   **Framework:** **Vue.js** o **React**.
+*   **Descripción:** Para implementar funcionalidades más dinámicas como la previsualización de resultados sin recargar la página, se recomienda un framework de JavaScript moderno. Esto permite crear una Single Page Application (SPA) que ofrece una experiencia de usuario mucho más fluida y rápida.
+*   **Servidor:** El frontend sería un conjunto de archivos estáticos (HTML, CSS, JS) que pueden ser servidos por un servidor web ligero como **Nginx**.
 
 ## 6. Requisitos de Despliegue (Docker)
 
