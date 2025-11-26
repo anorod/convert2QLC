@@ -1,69 +1,69 @@
-# Documento de Arquitectura: Conversor Picolo a QLC+
+# Architecture Document: Picolo to QLC+ Converter
 
-## 1. Diagrama de Arquitectura del Sistema
+## 1. System Architecture Diagram
 
-El sistema sigue una arquitectura de servicios desacoplados donde el contenedor del Frontend actúa como intermediario para el usuario, comunicándose con el Backend a través de una red interna.
+The system follows a decoupled services architecture where the Frontend container acts as an intermediary for the user, communicating with the Backend via an internal network.
 
 ```mermaid
 graph TD
-    A["Navegador del Usuario"] -- "Petición HTTP" --> B["Contenedor Frontend <br> (Servidor PHP/Node.js)"];
+    A["User Browser"] -- "HTTP Request" --> B["Frontend Container <br> (PHP/Node.js Server)"];
     
-    subgraph "Red Interna de Docker"
-        B -- "Llamada API <br> (http://backend:port/api/v1/convert)" --> C["Contenedor Backend <br> (Python/FastAPI)"];
+    subgraph "Internal Docker Network"
+        B -- "API Call <br> (http://backend:port/api/v1/convert)" --> C["Backend Container <br> (Python/FastAPI)"];
     end
 
     style B fill:#f9f,stroke:#333,stroke-width:2px
     style C fill:#ccf,stroke:#333,stroke-width:2px
 ```
 
-## 2. Flujo de Datos Principal (Conversión Exitosa)
+## 2. Main Data Flow (Successful Conversion)
 
-1.  **Petición Inicial:** El **Contenedor Frontend** sirve la página HTML con el formulario de subida.
-2.  **Selección y Validación en Frontend:** El usuario selecciona un archivo. El código JavaScript del frontend realiza una **validación instantánea** para verificar que la extensión es `.txt` y que el tamaño no excede el límite preconfigurado. Si el archivo es inválido, se muestra un error inmediato y se detiene el proceso.
-3.  **Envío del Formulario:** Si la validación en cliente es exitosa, el usuario envía el formulario. El navegador envía el archivo al servidor del Contenedor Frontend.
-4.  **Validación en Servidor Frontend y Llamada API:** El servidor del Frontend recibe el archivo del navegador. Realiza una **segunda validación** (adicional a la del cliente) para confirmar el tipo y tamaño del archivo. Si es válido, crea una nueva petición `POST` y envía el archivo al servicio Backend a través de la red interna de Docker. Si la validación falla aquí, el Frontend devuelve un error al usuario.
-5.  **Re-validación y Procesamiento en Backend:** El Contenedor Backend recibe la petición y realiza su propia **validación de seguridad**, repitiendo las comprobaciones de tipo y tamaño. Si la validación es correcta, procesa el archivo y genera el XML.
-6.  **Respuesta al Contenedor Frontend:** El Backend devuelve la respuesta JSON (`200 OK` o un error) al servidor del Frontend.
-7.  **Renderizado de la Respuesta:** El servidor del Frontend renderiza una nueva página HTML con el resumen de la conversión.
-8.  **Respuesta al Usuario:** El Frontend envía esta nueva página al navegador del usuario.
-9.  **Descarga del Archivo:** El usuario hace clic en un enlace de descarga, que solicita el archivo al servidor Frontend para iniciar la descarga.
+1.  **Initial Request:** The **Frontend Container** serves the initial HTML page with the upload form.
+2.  **Selection and Frontend Validation:** The user selects a file. The frontend JavaScript performs **instant validation** to check for a `.txt` extension and that the size does not exceed a pre-configured limit. If invalid, an error is shown immediately, and the process stops.
+3.  **Form Submission:** If client-side validation passes, the user submits the form. The browser sends the file to the Frontend Container's server.
+4.  **Frontend Server Validation and API Call:** The Frontend server receives the file from the browser. It performs a **second validation** (in addition to the client's) to confirm the file type and size. If valid, it creates a new `POST` request and sends the file to the Backend service through the internal Docker network. If this validation fails, the Frontend returns an error to the user.
+5.  **Re-validation and Processing in Backend:** The Backend Container receives the request and performs its own **security validation**, repeating the type and size checks. If the validation is correct, it processes the file and generates the XML.
+6.  **Response to Frontend Container:** The Backend returns the JSON response (`200 OK` or an error) to the Frontend server.
+7.  **Response Rendering:** The Frontend server renders a new HTML page displaying the conversion summary.
+8.  **Response to User:** The Frontend sends this new HTML page to the user's browser.
+9.  **File Download:** The user clicks a download link, which requests the file from the Frontend server, initiating the download.
 
-## 3. Mapeo de Endpoints y APIs
+## 3. Endpoint and API Mapping
 
-Solo existe un endpoint principal para la funcionalidad de la aplicación.
+There is only one main endpoint for the application's functionality.
 
 *   **Endpoint:** `POST /api/v1/convert`
-*   **Descripción:** Recibe un archivo de show de Picolo, lo procesa y devuelve el resultado de la conversión.
+*   **Description:** Receives a Picolo show file, processes it, and returns the conversion result.
 *   **Request:**
-    *   **Tipo:** `multipart/form-data`
-    *   **Campo:** `file`: El archivo `.txt` a convertir.
-*   **Response (Éxito `200 OK`):**
+    *   **Type:** `multipart/form-data`
+    *   **Field:** `file`: The `.txt` file to be converted.
+*   **Response (Success `200 OK`):**
     *   **Content-Type:** `application/json`
-    *   **Cuerpo:**
+    *   **Body:**
         ```json
         {
           "summary": {
             "cueCount": 52,
             "channelCount": 48,
             "scenes": [
-              { "id": 0, "name": "1.0 Escena de Inicio" },
-              { "id": 1, "name": "2.0 Apagón" }
+              { "id": 0, "name": "1.0 Opening Scene" },
+              { "id": 1, "name": "2.0 Blackout" }
             ]
           },
-          "fileName": "show_convertido.qxc",
+          "fileName": "converted_show.qxc",
           "fileContent": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>..."
         }
         ```
-*   **Response (Error `400 Bad Request` o `500 Internal Server Error`):**
+*   **Response (Error `400 Bad Request` or `500 Internal Server Error`):**
     *   **Content-Type:** `application/json`
-    *   **Cuerpo:**
+    *   **Body:**
         ```json
         {
-          "error": "Mensaje descriptivo del error (ej: 'El archivo excede el tamaño máximo permitido.')"
+          "error": "Descriptive error message (e.g., 'File exceeds the maximum allowed size.')"
         }
         ```
 
-## 4. Estructura de Carpetas Propuesta
+## 4. Proposed Folder Structure
 
 ```
 /convert2QLC/
@@ -72,46 +72,46 @@ Solo existe un endpoint principal para la funcionalidad de la aplicación.
 ├── backend/
 │   ├── Dockerfile
 │   └── src/
-│       ├── main.py         # Punto de entrada de la API (FastAPI)
-│       ├── converter/      # Módulo para la lógica de conversión
+│       ├── main.py         # API entry point (FastAPI)
+│       ├── converter/      # Module for conversion logic
 │       │   ├── __init__.py
 │       │   ├── parser.py
 │       │   ├── transformer.py
 │       │   └── generator.py
-│       └── tests/          # Pruebas unitarias
+│       └── tests/          # Unit tests
 │           ├── test_parser.py
 │           └── test_transformer.py
 └── frontend/
 │   ├── Dockerfile
 │   ├── package.json
-│   └── src/                # Código fuente de la SPA (Vue.js/React)
+│   └── src/                # Source code for the SPA (Vue.js/React) 
 └── docs/
     ├── project-architecture.md
     ├── project-plan.md
     └── project-specs.md
 ```
 
-## 5. Patrones Arquitectónicos Aplicados
+## 5. Applied Architectural Patterns
 
-*   **Arquitectura de Microservicios:** La separación del `Frontend` y el `Backend` en servicios independientes y contenerizados permite un desarrollo, despliegue y escalado autónomo.
-*   **Backend for Frontend (BFF):** El Contenedor Frontend actúa como un BFF. No contiene la lógica de negocio principal (que reside en el backend), sino que maneja las interacciones del usuario, se comunica con el servicio de backend y prepara los datos para su visualización.
-*   **API RESTful:** El Backend expone su funcionalidad a través de una API sin estado (stateless) basada en HTTP, diseñada para ser consumida por otros servicios, no directamente por el navegador.
+*   **Microservices Architecture:** The separation of the `Frontend` and `Backend` into independent, containerized services allows for autonomous development, deployment, and scaling.
+*   **Backend for Frontend (BFF):** The Frontend Container acts as a BFF. It does not contain the main business logic (which resides in the backend) but handles user interactions, communicates with the backend service, and prepares data for display.
+*   **RESTful API:** The Backend exposes its functionality through a stateless, HTTP-based API, designed to be consumed by other services, not directly by the browser.
 
-## 6. Diagramas de Flujo de Usuario
+## 6. User Flow Diagrams
 
-### Flujo de Conversión Exitosa
+### Successful Conversion Flow
 
 ```mermaid
 graph TD
-    A(["Inicio"]) --> B("Usuario selecciona archivo .txt");
-    B --> C("Usuario pulsa 'Convertir'");
-    C --> D("Muestra animación de carga");
-    D --> E("Servidor Frontend envía archivo a la API del Backend");
-    E --> F("Backend procesa y convierte");
-    F --> G("API devuelve JSON con éxito al Frontend");
-    G --> H("Frontend renderiza página con resumen");
-    H --> I("Usuario pulsa 'Descargar'");
-    I --> J("Navegador descarga el archivo .qxc");
-    J --> K(["Fin"]);
+    A(["Start"]) --> B("User selects .txt file");
+    B --> C("User clicks 'Convert'");
+    C --> D("Display loading animation");
+    D --> E("Frontend Server sends file to Backend API");
+    E --> F("Backend processes and converts");
+    F --> G("API returns successful JSON to Frontend");
+    G --> H("Frontend renders page with summary");
+    H --> I("User clicks 'Download'");
+    I --> J("Browser downloads .qxc file");
+    J --> K(["End"]);
 ```
 
