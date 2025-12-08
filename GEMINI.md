@@ -10,6 +10,7 @@ The application is composed of two main decoupled components:
 *   **Frontend:** A web interface that allows users to interact with the service. It's a single-page application built with a modern JavaScript framework (Vue.js or React).
 
 The entire application is containerized using Docker and orchestrated with Docker Compose.
+The project uses gitflow as a version control workflow
 
 ## Building and Running
 
