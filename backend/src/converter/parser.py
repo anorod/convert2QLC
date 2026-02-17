@@ -8,6 +8,8 @@ structured data including cue lists, channel levels, and maximum channel numbers
 from typing import Dict, List, Optional
 import re
 
+from .transformer import convert_level
+
 
 class InvalidFileFormatError(Exception):
     """Custom exception for invalid file formats."""
@@ -38,7 +40,8 @@ class PicoloParser:
         Raises:
             InvalidFileFormatError: If the Cue List section cannot be parsed.
         """
-        # Find all cue lines in the format "Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs"
+        # Find all cue lines in the format:
+        # "Cue TI TO TW Ti To Tm Jump Lp Text Command TC cfs"
         # followed by lines with cue data
         cues: List[Dict[str, str]] = []
         lines = self.content.split("\n")
@@ -68,7 +71,8 @@ class PicoloParser:
                         i += 1
                         continue
 
-                    # Parse cue line: "0.1    3    3    Manua          T1           CUE                                         -"
+                    # Parse cue line: "0.1 3 3 Manua T1 CUE -"
+                    # (CueNum TI TO TW Ti To Tm Jump Lp Text Command TC cfs)
                     parts = cue_line.split()
                     if len(parts) >= 1:
                         cue_number = parts[0]
@@ -128,12 +132,23 @@ class PicoloParser:
                 if current_cue_number is not None and all_channels:
                     # Convert cue number to int for consistency
                     cue_int = int(round(current_cue_number))
-                    channel_data[cue_int] = all_channels
+
+                    # Convert Picolo levels to QLC+ format
+                    converted_channels = []
+                    for channel_str in all_channels:
+                        try:
+                            qlc_value = convert_level(channel_str)
+                            converted_channels.append(str(qlc_value))
+                        except ValueError:
+                            # Keep original value if conversion fails
+                            converted_channels.append(channel_str)
+
+                    channel_data[cue_int] = converted_channels
             elif line.startswith("Cue") and "TI" in line and "TO" in line:
                 # Skip cue header - i will be incremented at the end of loop
                 pass
             elif re.match(r"^\s*\d+(\.\d+)?\s+\d", line):
-                # This is a cue data line (starts with number, followed by space, then another digit)
+                # Cue data line: starts with number, followed by space, then another digit
                 match = re.search(r"(\d+(\.\d+)?)", line)
                 if match:
                     current_cue_number = float(match.group(1))
