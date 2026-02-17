@@ -80,24 +80,34 @@ def test_parse_cue_list():
     """Test parsing of the Cue List section."""
     parser = PicoloParser(SAMPLE_PICOLO_FILE)
     result = parser.parse_cue_list()
-    # Add assertions based on expected output
+    # Should return a list with cue information
     assert isinstance(result, list)
+    assert len(result) > 0
+    # Check that we have the expected cues from the sample file
+    assert any(cue["cue_number"] == "0.1" for cue in result)
+    assert any(cue["cue_number"] == "0.2" for cue in result)
 
 
 def test_parse_channel_data():
     """Test parsing of channel data."""
     parser = PicoloParser(SAMPLE_PICOLO_FILE)
     result = parser.parse_channel_data()
-    # Add assertions based on expected output
+    # Should return a dict mapping cue numbers to channel lists
     assert isinstance(result, dict)
+    assert len(result) > 0
+    # Check that we have channels for some cues
+    assert 1 in result or 2 in result
 
 
 def test_find_max_channel_number():
     """Test finding the maximum channel number."""
     parser = PicoloParser(SAMPLE_PICOLO_FILE)
+    # First parse the channel data
+    parser.parse_channel_data()
     result = parser.find_max_channel_number()
-    # Add assertions based on expected output
-    assert result is None  # Placeholder - will be updated with actual logic
+    # Should return a positive integer (max channel from sample file)
+    assert isinstance(result, int)
+    assert result > 0
 
 
 def test_parse_invalid_file():
