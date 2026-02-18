@@ -3,7 +3,7 @@ Tests for the XML Generator module.
 """
 
 import pytest
-from backend.src.converter.xml_generator import XMLGenerator
+from converter.xml_generator import XMLGenerator
 
 
 def test_generate_base_xml():
