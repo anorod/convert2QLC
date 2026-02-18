@@ -71,12 +71,19 @@ class PicoloParser:
                         i += 1
                         continue
 
-                    # Parse cue line: "0.1 3 3 Manua T1 CUE -"
+# Parse cue line: "0.1 3 3 Manua T1 CUE -"
                     # (CueNum TI TO TW Ti To Tm Jump Lp Text Command TC cfs)
                     parts = cue_line.split()
                     if len(parts) >= 1:
                         cue_number = parts[0]
-                        cues.append({"cue_number": cue_number})
+                        # Extract time values TI, TO, TW from the cue line
+                        cue_data = {
+                            "cue_number": cue_number,
+                            "TI": parts[1] if len(parts) > 1 else "0",
+                            "TO": parts[2] if len(parts) > 2 else "0", 
+                            "TW": parts[3] if len(parts) > 3 else "0"
+                        }
+                        cues.append(cue_data)
                     i += 1
             else:
                 i += 1
