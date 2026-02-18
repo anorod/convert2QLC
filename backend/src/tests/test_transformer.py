@@ -5,7 +5,8 @@ Tests cover level conversion from Picolo format to QLC+ format.
 """
 
 import sys
-sys.path.insert(0, "../../..")
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 from converter.transformer import convert_level
 import pytest
