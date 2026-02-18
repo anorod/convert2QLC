@@ -90,8 +90,8 @@ class XMLGenerator:
         
         # Add channel data to the scene
         for i, level in enumerate(channel_levels):
-            # Skip if level is empty or invalid
-            if not level or level == "0":
+            # Skip if level is empty or None
+            if not level:
                 continue
                 
             channel = ET.SubElement(scene, "Channel")
