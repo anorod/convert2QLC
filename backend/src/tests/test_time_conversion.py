@@ -45,7 +45,7 @@ def test_convert_cue_times():
     # Check the first cue - FadeIn should be 3000ms, FadeOut should be 5000ms (from next cue)
     assert result[0]["FadeIn"] == 3000
     assert result[0]["FadeOut"] == 5000  # From next cue's TI value
-    assert result[0]["Hold"] == 0  # TW is "Manua"
+    assert result[0]["Hold"] == 4294967294  # TW is "Manua" -> special QLC+ value
     
     # Check the second cue - FadeIn should be 5000ms, FadeOut should be 10000ms (from last cue)
     assert result[1]["FadeIn"] == 5000
@@ -55,7 +55,7 @@ def test_convert_cue_times():
     # Check the third cue - FadeIn should be 10000ms, FadeOut should be 10000ms (TO value since it's last)
     assert result[2]["FadeIn"] == 10000
     assert result[2]["FadeOut"] == 10000  # From TO since it's the last cue
-    assert result[2]["Hold"] == 0  # TW is "Manua"
+    assert result[2]["Hold"] == 4294967294  # TW is "Manua" -> special QLC+ value
 
 
 def test_convert_cue_times_with_manua_values():
@@ -77,4 +77,5 @@ def test_convert_cue_times_with_manua_values():
     # Second cue - TI is 2, TO is "Manua", so FadeOut should be TO value (which is "Manua" -> 0)
     # Since it's the last cue, we use TO directly for FadeOut calculation
     assert result[1]["FadeIn"] == 2000  # TI = 2 seconds -> 2000ms
-    assert result[1]["FadeOut"] == 0  # TO is "Manua" -> 0
+    assert result[1]["FadeOut"] == 0  # TO is "Manua" -> 0 (but it's the last cue, so TO value is used)
+    assert result[1]["Hold"] == 4294967294  # TW is "Manua" -> special QLC+ value

@@ -76,7 +76,13 @@ def convert_time_value(picolo_time: str) -> int:
         return 0
     try:
         # Convert seconds to milliseconds
-        return int(picolo_time) * 1000
+        seconds = int(picolo_time)
+        if seconds < 0:
+            raise ValueError(
+                f"Invalid Picolo time format: '{picolo_time}'. "
+                "Expected 'Manua' or positive numeric string representing seconds"
+            )
+        return seconds * 1000
     except ValueError:
         raise ValueError(
             f"Invalid Picolo time format: '{picolo_time}'. "
@@ -122,14 +128,16 @@ def convert_cue_times(cue_list: list, channel_data: dict) -> list:
             # For the last step, use TO directly for FadeOut calculation
             fade_out = convert_time_value(to_value)
         
-        # Hold time is TW value (if not "Manua") - converted to milliseconds
-        hold = 0  # Default value
-        if tw_value != "Manua":
+        # Hold time is TW value - converted to milliseconds
+        # Special case: when TW is "Manua", QLC+ uses a specific large value (4294967294)
+        if tw_value == "Manua":
+            hold = 4294967294
+        else:
             try:
                 hold = int(tw_value) * 1000  # Convert seconds to milliseconds
             except ValueError:
                 # If invalid, default to 0
-                pass
+                hold = 0
 
         # Add the converted time attributes to the cue
         new_cue["FadeIn"] = fade_in
