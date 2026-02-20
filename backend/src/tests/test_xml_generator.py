@@ -2,8 +2,12 @@
 Tests for the XML Generator module.
 """
 
-import pytest
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+
 from converter.xml_generator import XMLGenerator
+import pytest
 
 
 def test_generate_base_xml():

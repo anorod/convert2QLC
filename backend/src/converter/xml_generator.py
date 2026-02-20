@@ -153,7 +153,10 @@ class XMLGenerator:
         scenes = []
         for i, cue in enumerate(cue_list):
             # Get the channel levels for this cue
-            cue_number = int(float(cue.get("cue_number", 0)))
+            try:
+                cue_number = int(float(cue.get("cue_number", 0)))
+            except ValueError:
+                continue
             levels = channel_data.get(cue_number, [])
             
             # Get time values from cue (these are already converted by transformer)
