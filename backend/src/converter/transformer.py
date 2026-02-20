@@ -115,7 +115,10 @@ def convert_cue_times(cue_list: list, channel_data: dict) -> list:
         tw_value = cue.get("TW", "0")  # Default to 0 if not found
         
         # Convert TI (FadeIn) from seconds to milliseconds
-        fade_in = convert_time_value(ti_value)
+        try:
+            fade_in = convert_time_value(ti_value)
+        except ValueError:
+            fade_in = 0
         
         # Calculate FadeOut based on next step's FadeIn value, or use TO directly for last step
         fade_out = 0  # Default value
@@ -123,10 +126,16 @@ def convert_cue_times(cue_list: list, channel_data: dict) -> list:
             # Get the next cue and its TI value (FadeIn of next step)
             next_cue = cue_list[i + 1]
             next_ti_value = next_cue.get("TI", "0")
-            fade_out = convert_time_value(next_ti_value)
+            try:
+                fade_out = convert_time_value(next_ti_value)
+            except ValueError:
+                fade_out = 0
         else:
             # For the last step, use TO directly for FadeOut calculation
-            fade_out = convert_time_value(to_value)
+            try:
+                fade_out = convert_time_value(to_value)
+            except ValueError:
+                fade_out = 0
         
         # Hold time is TW value - converted to milliseconds
         # Special case: when TW is "Manua", QLC+ uses a specific large value (4294967294)

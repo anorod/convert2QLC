@@ -12,7 +12,7 @@ from .transformer import convert_level
 
 
 class InvalidFileFormatError(Exception):
-    """Custom exception for invalid file formats."""
+    """Custom exception for invalid Picolo file formats."""
 
     pass
 
@@ -59,19 +59,18 @@ class PicoloParser:
                 i += 1
 
                 # Now look for actual cue data lines - these are lines that start with a number
-                while i < len(lines) and lines[i].strip():
+                while i < len(lines):
                     cue_line = lines[i].strip()
 
-                    # Skip any line that is a cue header, empty line, or Channels line
+                    # Stop processing when we hit a new Cue header, Channels line, or empty line
                     if (
                         not cue_line
                         or cue_line.startswith("Cue")
                         or cue_line == "Channels"
                     ):
-                        i += 1
-                        continue
+                        break
 
-# Parse cue line: "0.1 3 3 Manua T1 CUE -"
+                    # Parse cue line: "0.1 3 3 Manua T1 CUE -"
                     # (CueNum TI TO TW Ti To Tm Jump Lp Text Command TC cfs)
                     parts = cue_line.split()
                     if len(parts) >= 1:
@@ -125,10 +124,18 @@ class PicoloParser:
                 channels_line2 = []
 
                 # Read the next two lines for channel values
+                # Skip any separator lines that might appear before actual channel data
+                while i < len(lines) and not lines[i].strip():
+                    i += 1
+                    
                 if i < len(lines) and lines[i].strip():
                     channels_line1 = lines[i].strip().split()
                     i += 1
 
+                # Skip any separator lines that might appear before second channel data line
+                while i < len(lines) and not lines[i].strip():
+                    i += 1
+                    
                 if i < len(lines) and lines[i].strip():
                     channels_line2 = lines[i].strip().split()
                     i += 1
@@ -136,13 +143,16 @@ class PicoloParser:
                 # Combine both lines of channel data
                 all_channels = channels_line1 + channels_line2
 
-                if current_cue_number is not None and all_channels:
+                # Filter out any non-numeric values (like separator lines)
+                filtered_channels = [ch for ch in all_channels if ch and not re.match(r'^-+$', ch)]
+
+                if current_cue_number is not None and filtered_channels:
                     # Convert cue number to int for consistency
                     cue_int = int(round(current_cue_number))
 
                     # Convert Picolo levels to QLC+ format
                     converted_channels = []
-                    for channel_str in all_channels:
+                    for channel_str in filtered_channels:
                         try:
                             qlc_value = convert_level(channel_str)
                             converted_channels.append(str(qlc_value))
@@ -158,7 +168,12 @@ class PicoloParser:
                 # Cue data line: starts with number, followed by space, then another digit
                 match = re.search(r"(\d+(\.\d+)?)", line)
                 if match:
-                    current_cue_number = float(match.group(1))
+                    try:
+                        val = float(match.group(1))
+                        current_cue_number = val
+                    except ValueError:
+                        # Skip lines that can't be converted to float (e.g., separator lines)
+                        current_cue_number = None
             # Always increment i to move to next line
             i += 1
             iterations += 1

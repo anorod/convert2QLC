@@ -6,7 +6,7 @@ Tests cover conversion of Picolo time values (TI, TO, TW) to QLC+ FadeIn, FadeOu
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from converter.transformer import convert_time_value, convert_cue_times
 import pytest
