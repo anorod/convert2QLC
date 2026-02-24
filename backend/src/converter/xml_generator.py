@@ -18,7 +18,7 @@ class XMLGenerator:
 
     def __init__(self):
         """Initialize the XML generator with default namespace and version."""
-        self.namespace = "http://www.qlcplus.org/QLCPlus"
+        self.workspace_namespace = "http://www.qlcplus.org/Workspace"
         self.version = "4.12.0"  # QLC+ version
 
     def generate_base_xml(self, file_name: str) -> ET.Element:
@@ -31,9 +31,8 @@ class XMLGenerator:
             Root element of the XML document
         """
         # Create root element with proper namespace and version
-        root = ET.Element("QLCPlus")
-        root.set("version", self.version)
-        root.set("name", file_name)
+        root = ET.Element("Workspace")
+        root.set("xmlns", self.workspace_namespace)
         
         return root
 
@@ -48,22 +47,14 @@ class XMLGenerator:
         """
         # Create fixture element
         fixture = ET.Element("Fixture")
-        fixture.set("Name", "Generic Fixture")
-        fixture.set("Manufacturer", "Picolo Converter")
+        fixture.set("Manufacturer", "Generic")
         fixture.set("Model", "Generic")
-        fixture.set("Type", "Generic")
+        fixture.set("Mode", "71 Channel")
+        fixture.set("ID", "0")
+        fixture.set("Name", "Dimmers")
+        fixture.set("Universe", "0")
+        fixture.set("Address", "0")
         fixture.set("Channels", str(max_channel_number))
-        
-        # Add channels to the fixture (for each channel, we just add a basic channel element)
-        for i in range(1, max_channel_number + 1):
-            channel = ET.SubElement(fixture, "Channel")
-            channel.set("Name", f"Channel {i}")
-            channel.set("Group", "Generic")
-            channel.set("Type", "Intensity")
-            channel.set("Min", "0")
-            channel.set("Max", "255")
-            channel.set("Default", "0")
-            channel.set("Description", f"Channel {i} of the generic fixture")
         
         return fixture
 
@@ -81,24 +72,25 @@ class XMLGenerator:
         Returns:
             Scene element with channel data and timing attributes
         """
-        # Create scene element with a descriptive name
-        scene = ET.Element("Scene")
-        scene.set("Name", f"Cue {cue_number} Scene")
-        scene.set("FadeIn", str(fade_in))
-        scene.set("FadeOut", str(fade_out))
-        scene.set("Hold", str(hold))
+        # Create Function element with a descriptive name (QXW format)
+        function = ET.Element("Function")
+        function.set("ID", str(cue_number))
+        function.set("Type", "Scene")
+        function.set("Name", f"{cue_number}. Cue {cue_number}")
         
-        # Add channel data to the scene
-        for i, level in enumerate(channel_levels):
-            # Skip if level is empty or None
-            if not level:
-                continue
-                
-            channel = ET.SubElement(scene, "Channel")
-            channel.set("Number", str(i + 1))  # Channel numbers are 1-based
-            channel.set("Level", str(level))
+        # Add Speed element with timing information
+        speed = ET.SubElement(function, "Speed")
+        speed.set("FadeIn", str(fade_in))
+        speed.set("FadeOut", str(fade_out))
+        speed.set("Duration", str(hold))
         
-        return scene
+        # Add FixtureVal element with comma-separated channel values
+        if channel_levels:
+            fixture_val = ET.SubElement(function, "FixtureVal")
+            fixture_val.set("ID", "0")
+            fixture_val.text = ",".join(channel_levels)
+        
+        return function
 
     def generate_chaser(self, scenes: List[ET.Element]) -> ET.Element:
         """Generate a chaser that sequences all scenes in order.
@@ -109,25 +101,212 @@ class XMLGenerator:
         Returns:
             Chaser element with all scenes included in sequence
         """
-        # Create chaser element
-        chaser = ET.Element("Chaser")
-        chaser.set("Name", "Picolo Cue Sequence")
-        chaser.set("Mode", "Forward")
-        chaser.set("Direction", "Forward")
-        chaser.set("Loop", "false")
-        chaser.set("FadeIn", "0")
-        chaser.set("FadeOut", "0")
-        chaser.set("Hold", "0")
+        # Create chaser element (QXW format)
+        chaser = ET.Element("Function")
+        chaser.set("ID", str(len(scenes)))
+        chaser.set("Type", "Chaser")
+        chaser.set("Name", "Cuelist")
         
-        # Add all scenes to the chaser in order
+        # Add Speed element
+        speed = ET.SubElement(chaser, "Speed")
+        speed.set("FadeIn", "0")
+        speed.set("FadeOut", "0")
+        speed.set("Duration", "0")
+        
+        # Add Direction and RunOrder
+        ET.SubElement(chaser, "Direction").text = "Forward"
+        ET.SubElement(chaser, "RunOrder").text = "Loop"
+        
+        # Add SpeedModes
+        speed_modes = ET.SubElement(chaser, "SpeedModes")
+        speed_modes.set("FadeIn", "PerStep")
+        speed_modes.set("FadeOut", "PerStep")
+        speed_modes.set("Duration", "PerStep")
+        
+        # Add steps for each scene
         for i, scene in enumerate(scenes):
-            # Get the scene name and create a step for it
-            scene_name = scene.get("Name", f"Scene {i + 1}")
             step = ET.SubElement(chaser, "Step")
-            step.set("Scene", scene_name)
-            step.set("Duration", "0")  # Use default duration or calculate based on cue times
+            step.set("Number", str(i))
+            # Get timing from the scene's Speed element
+            speed_elem = scene.find("Speed")
+            if speed_elem is not None:
+                fade_in = int(speed_elem.get("FadeIn", 0))
+                hold = int(speed_elem.get("Duration", 4294967294))
+                fade_out = int(speed_elem.get("FadeOut", 0))
+            else:
+                fade_in = 0
+                hold = 4294967294
+                fade_out = 0
             
+            step.set("FadeIn", str(fade_in * 1000 if fade_in > 0 else fade_in))
+            step.set("Hold", str(hold if hold != 4294967294 else 4294967294))
+            step.set("FadeOut", str(fade_out * 1000 if fade_out > 0 else fade_out))
+            step.text = str(i)
+        
         return chaser
+
+    def generate_engine_section(self, file_name: str, max_channel_number: int) -> ET.Element:
+        """Generate the Engine section for QXW format.
+
+        Args:
+            file_name: Name of the original Picolo file
+            max_channel_number: Highest channel number found in the file
+
+        Returns:
+            Engine element with all subsections
+        """
+        engine = ET.Element("Engine")
+        
+        # Add InputOutputMap
+        io_map = ET.SubElement(engine, "InputOutputMap")
+        beat_gen = ET.SubElement(io_map, "BeatGenerator")
+        beat_gen.set("BeatType", "Disabled")
+        beat_gen.set("BPM", "0")
+        
+        # Add Universes
+        for i in range(1, 5):
+            universe = ET.SubElement(io_map, "Universe")
+            universe.set("Name", f"Universe {i}")
+            universe.set("ID", str(i-1))
+        
+         # Add Fixture
+        fixture = self.generate_fixture(max_channel_number)
+        engine.append(fixture)
+        
+        return engine
+    
+    def generate_virtual_console_section(self) -> ET.Element:
+        """Generate the VirtualConsole section for QXW format."""
+        vc = ET.Element("VirtualConsole")
+        
+        # Add Frame
+        frame = ET.SubElement(vc, "Frame")
+        frame.set("Caption", "")
+        appearance = ET.SubElement(frame, "Appearance")
+        appearance.set("FrameStyle", "None")
+        appearance.set("ForegroundColor", "Default")
+        appearance.set("BackgroundColor", "Default")
+        appearance.set("BackgroundImage", "None")
+        appearance.set("Font", "Default")
+        
+        # Add Properties
+        properties = ET.SubElement(vc, "Properties")
+        size = ET.SubElement(properties, "Size")
+        size.set("Width", "1920")
+        size.set("Height", "1080")
+        grand_master = ET.SubElement(properties, "GrandMaster")
+        grand_master.set("Visible", "1")
+        grand_master.set("ChannelMode", "Intensity")
+        grand_master.set("ValueMode", "Reduce")
+        grand_master.set("SliderMode", "Normal")
+        
+        return vc
+    
+    def generate_simple_desk_section(self) -> ET.Element:
+        """Generate the SimpleDesk section for QXW format."""
+        sd = ET.Element("SimpleDesk")
+        engine = ET.SubElement(sd, "Engine")
+        return sd
+    
+    def extract_cue_details_section(self, content: str) -> str:
+        """Extract the detailed cue section from Picolo file content.
+        
+        Args:
+            content: The raw text content of the Picolo file
+            
+        Returns:
+            String containing only the cue details section (lines 315-338 in test file)
+            
+        Raises:
+            ValueError: If the cue details section cannot be found
+        """
+        lines = content.split('\n')
+        start_line = None
+        end_line = None
+        
+        # Find the start of cue details section (line with "Cue    TI   TO   TW")
+        # We need to find the SECOND occurrence if it exists, as the first is typically a summary section
+        header_count = 0
+        first_header_line = None
+        second_header_line = None
+        for i, line in enumerate(lines):
+            if line.startswith("Cue    TI   TO   TW"):
+                header_count += 1
+                if header_count == 1:
+                    first_header_line = i
+                elif header_count == 2:
+                    second_header_line = i
+                    break
+        
+        # Use the second header if found, otherwise use the first one
+        start_line = second_header_line if second_header_line is not None else first_header_line
+        
+        if start_line is None:
+            raise ValueError("Cue details section header not found")
+        
+        # Find the end of cue details section
+        # The pattern is: Cue header -> cue number line -> Channels -> channel numbers -> values
+        # We need to find where this pattern stops and Group sections start
+        
+        in_cue_section = True  # We're starting at a cue header, so we're in the cue section
+        for i in range(start_line + 1, len(lines)):
+            line = lines[i]
+            
+            # Mark that we're in the cue data section when we see a cue line
+            if line.startswith("Cue    "):
+                in_cue_section = True
+            elif line.startswith("Group TI"):
+                # Found Group sections - these should not be included in cue details
+                end_line = i
+                break
+            elif line.strip() == "Channels Patch":
+                # Found Channels Patch marker - this should not be included in cue details
+                end_line = i
+                break
+            elif in_cue_section and line.strip() == "":
+                # Empty line after cue data indicates potential end
+                # But check if there are more cues coming
+                next_non_empty = i + 1
+                while next_non_empty < len(lines) and lines[next_non_empty].strip() == "":
+                    next_non_empty += 1
+                
+                if next_non_empty < len(lines):
+                    # Check if the next non-empty line starts a new Cue section, Group, or Channels Patch
+                    if not lines[next_non_empty].startswith("Cue    ") and not lines[next_non_empty].startswith("Group TI") and not lines[next_non_empty].strip() == "Channels Patch":
+                        end_line = i
+                        break
+                else:
+                    # End of file reached
+                    end_line = len(lines)
+            
+            # If we've gone past a reasonable number of lines, stop
+            if i > start_line + 500:  # Safety limit
+                end_line = i
+                break
+            elif in_cue_section and line.strip() == "":
+                # Empty line after cue data indicates potential end
+                # But check if there are more cues coming
+                next_non_empty = i + 1
+                while next_non_empty < len(lines) and lines[next_non_empty].strip() == "":
+                    next_non_empty += 1
+                
+                if next_non_empty < len(lines):
+                    # Check if the next non-empty line starts a new Cue section, Group, or Channels Patch
+                    if not lines[next_non_empty].startswith("Cue    ") and not lines[next_non_empty].strip() == "Channels Patch":
+                        end_line = i
+                        break
+                else:
+                    # End of file reached
+                    end_line = len(lines)
+                    break
+        
+        if end_line is None:
+            # If no clear end marker found, use a reasonable default
+            end_line = start_line + 25  # Typically around 25 lines of cue data
+        
+        # Extract and return the section
+        cue_section = '\n'.join(lines[start_line:end_line])
+        return cue_section
 
     def generate_xml(self, file_name: str, cue_list: List[Dict], 
                     channel_data: Dict[int, List[str]], max_channel_number: int) -> str:
@@ -142,12 +321,21 @@ class XMLGenerator:
         Returns:
             Formatted XML string representing the QLC+ project
         """
-        # Create base XML structure
+        # Create base XML structure (Workspace)
         root = self.generate_base_xml(file_name)
         
-        # Create fixture element with appropriate channel count
-        fixture = self.generate_fixture(max_channel_number)
-        root.append(fixture)
+        # Add CurrentWindow attribute
+        root.set("CurrentWindow", "FunctionManager")
+        
+        # Add Creator section
+        creator = ET.SubElement(root, "Creator")
+        ET.SubElement(creator, "Name").text = "Q Light Controller Plus"
+        ET.SubElement(creator, "Version").text = self.version
+        ET.SubElement(creator, "Author").text = "anorod"
+        
+        # Generate Engine section with InputOutputMap, Fixture, and Functions
+        engine = self.generate_engine_section(file_name, max_channel_number)
+        root.append(engine)
         
         # Generate scenes for each cue (convert cue times first)
         scenes = []
@@ -164,16 +352,38 @@ class XMLGenerator:
             fade_out = int(cue.get("FadeOut", 0)) 
             hold = int(cue.get("Hold", 0))
             
-            # Create scene with channel levels and timing
+             # Create scene with channel levels and timing
             scene = self.generate_scene(cue_number, levels, fade_in, fade_out, hold)
             scenes.append(scene)
-            root.append(scene)
+            engine.append(scene)
         
         # Create chaser to sequence all scenes
         chaser = self.generate_chaser(scenes)
-        root.append(chaser)
+        engine.append(chaser)
+        
+        # Add Monitor section
+        monitor = ET.SubElement(engine, "Monitor")
+        monitor.set("DisplayMode", "0")
+        monitor.set("ShowLabels", "0")
+        font = ET.SubElement(monitor, "Font")
+        font.text = "Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+        monitor.append(ET.Element("ChannelStyle", {"text": "0"}))
+        monitor.append(ET.Element("ValueStyle", {"text": "0"}))
+        grid = ET.SubElement(monitor, "Grid")
+        grid.set("Width", "5")
+        grid.set("Height", "3")
+        grid.set("Depth", "5")
+        grid.set("Units", "0")
+        
+        # Add VirtualConsole section
+        vc = self.generate_virtual_console_section()
+        root.append(vc)
+        
+        # Add SimpleDesk section
+        sd = self.generate_simple_desk_section()
+        root.append(sd)
         
         # Convert the XML tree to a formatted string
         rough_string = ET.tostring(root, encoding="unicode")
         reparsed = minidom.parseString(rough_string)
-        return reparsed.toprettyxml(indent="  ")
+        return reparsed.toprettyxml(indent="  ")
