@@ -1,0 +1,1192 @@
+******************************
+* SHOW: LEY Y PANORAMA *
+******************************
+Shape Text
+1     Sine
+2     Step
+3     Flash
+4     Up
+5     Down
+6     Up&Down
+7     CanCan+/-
+8     Circle
+9     Shape8
+10    Triangle
+11    Arch
+12    CmySin1/3
+13    CmyFlash1/3
+14    CmyUp1/3
+15    Cosine
+16    Trapeze
+17    Tri
+18    Saw
+19    Square
+20    CmySin>Black
+21    CmyFlash>Blk
+22    CmyUp>Black
+23    CanCanCross
+24    CanCanWave
+25    CanCan UpDim
+26    Flash Rate>
+27    ChaseDimmer
+28    Circles Mix
+29    CircleByTurn
+30    CircleFlash
+31    Circle Size>
+32    Cross Double
+33    OnlyOneCross
+34    CmySin>Cyan
+35    CmySin>Sat-V
+36    CmySin>SatCy
+37    -Sine
+38    -Cosine
+39    -Step
+40    -Flash
+41    -Up&Down
+42    FromToSin
+43    FromTo-Sin
+44    FromToCosine
+45    FromTo-Cosin
+46    FromToStep
+47    FromTo-Step
+48    FromToFlash
+49    FromTo-Flash
+50    FromToUp
+51    FromToDown
+52    FromToUpDown
+53    FromTo-UpDow
+54    SoftDimmer
+55    HardDimmer
+56    RampUp
+57    RampDown
+58    Ballyhoo
+59    FlyOut
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+1   Sine
+                  Sine         Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+2   Step
+                  Step         Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+3   Flash
+                  Flash        Dimmer Free0  0  [+]No  center pt   50          +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+4   Up
+                  Up           Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+5   Down
+                  Down         Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+6   Up&Down
+                  Up&Down      Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+7   CanCan+/-
+                  Up&Down      Y      Free8  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+8   Circle
+                  Circle       PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+9   Shape8
+                  Shape8       PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+10  Triangle
+                  Triangle     PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+11  Arch
+                  Arch         PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+12  CmySin1/3
+                  CmySin1/3    ColMix Free3  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+13  CmyFlash1/3
+                  CmyFlash1/3  ColMix Free7  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+14  CmyUp1/3
+                  CmyUp1/3     ColMix Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+15  Cosine
+                  Cosine       Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+16  Trapeze
+                  Trapeze      Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+17  Tri
+                  Tri          Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+18  Saw
+                  Saw          Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+19  Square
+                  Square       PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+20  CmySin>Black
+                  CmySin       ColMix Free1  0  [+]No  down point  100         +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+21  CmyFlash>Blk
+                  CmyFlash     ColMix Free0  0  [+]No  down point  100         +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+22  CmyUp>Black
+                  CmyUp        ColMix Free0  0  [+]No  down point  100         +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+23  CanCanCross
+                  Up&Down      Y      Free8  0  [+]No  center pt   40          +21(6)    SizeIt  0  Fn1-40
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+24  CanCanWave
+                  Up&Down      Y      Free3  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+25  CanCan UpDim
+                  Up&Down      Y      Free0  0  [+]No  center pt   10          +21(6)
+                  Up&Down      Dimmer Free0  0  [+]No  up point    100         +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+26  Flash Rate>
+                  Flash        Dimmer Free0  0  [+]No  center pt   50          +59(20)   RateCy  10 Lin+5
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+27  ChaseDimmer
+                  Step         Dimmer Chase0 0  [+]No  up point    100         +100(600)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+28  Circles Mix
+                  Circle       PanTiltFree8  0  [+]No  center pt   10          +21(6)    RateIt  0  Fn2+0
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+29  CircleByTurn
+                  Circle       PanTiltChase1 2  [+]No  center pt   10          +30(8)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+30  CircleFlash
+                  Circle       PanTiltFree4  0  [+]No  center pt   10          +21(6)
+                  Flash        Dimmer Free4  0  [+]No  up point    100         +64(23)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+31  Circle Size>
+                  Circle       PanTiltFree3  0  [+]No  center pt   10          +21(6)    SizeCy  32 Fn1+10
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+32  Cross Double
+                  Up&Down      X      Free8  0  [+]No  center pt   23          +21(6)
+                  Step         Y      Free1  0  [+]No  center pt   20          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+33  OnlyOneCross
+                  Up           Y      Free0  0  [+]No  down point  30          +21(6)    RateCy  2  Lin-80
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+34  CmySin>Cyan
+                  CmySin       ColMix Free0  0  [+]No  down point  50          +21(6)    Form       CBR+50
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+35  CmySin>Sat-V
+                  CmySin1/3    ColMix Free0  0  [+]No  down point  100         +21(6)    SizeIt  0  Fn1-50
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+36  CmySin>SatCy
+                  CmySin1/3    ColMix Free0  0  [+]No  down point  50          +21(6)    SizeCy  10 Lin+50
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+37  -Sine
+                  -Sine        Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+38  -Cosine
+                  -Cosine      Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+39  -Step
+                  -Step        Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+40  -Flash
+                  -Flash       Dimmer Free0  0  [+]No  center pt   50          +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+41  -Up&Down
+                  -Up&Down     Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+42  FromToSin
+                  FromToSin    ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+43  FromTo-Sin
+                  FromTo-Sin   ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+44  FromToCosine
+                  FromToCosine ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+45  FromTo-Cosin
+                  FromTo-Cosin ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+46  FromToStep
+                  FromToStep   ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+47  FromTo-Step
+                  FromTo-Step  ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+48  FromToFlash
+                  FromToFlash  ColMix Free0  0  [+]No  0,0,0       255,255,255 +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+49  FromTo-Flash
+                  FromTo-Flash ColMix Free0  0  [+]No  0,0,0       255,255,255 +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+50  FromToUp
+                  FromToUp     ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+51  FromToDown
+                  FromToDown   ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+52  FromToUpDown
+                  FromToUpDown ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+53  FromTo-UpDow
+                  FromTo-UpDow ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+54  SoftDimmer
+                  Cosine       Dimmer Free4  0  [+]No  center pt   50          +78(41)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+55  HardDimmer
+                  Trapeze      Dimmer Free4  0  [+]No  center pt   50          +83(53)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+56  RampUp
+                  Up           Dimmer Free2  0  [+]No  center pt   50          +73(33)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+57  RampDown
+                  Down         Dimmer Free2  0  [+]No  center pt   50          +73(33)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+58  Ballyhoo
+                  Trapeze      Dimmer Free2  0  [+]No  up point    100         +61(21)
+                  Up&Down      X      Free8  0  [+]No  center pt   20          +60(21)
+                  -Up&Down     Y      Free2  0  [+]No  center pt   20          +60(21)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+59  FlyOut
+                  Step         Dimmer Free4  0  [+]No  up point    100         +46(13)
+                  Up           Y      Free4  0  [+]No  center pt   97          +46(13)
+--------------------------------------------------------------------------------
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+0.1    3    3    Manua          T1           INICIO SECUENCIA                            -
+0.2    5    5    Manua          T1           PASADA                                   c  -
+0.3    10   10   Manua          T1           AVISOS                                      -
+1      15   15   Manua4         T1           INICIO TAMBORES                          c  -
+2      8    8    Manua          T1           ENTRA PABLO BUTACAS                      c  -
+2.5    6    12   0.1            T1           SUBE A ESCENARIO CON                     c  -
+3      8    8    Manua          T1           ARRIBA SIN ESCALERA                      c  -
+4      8    12   Manua          T1           SALEN TAMBORES                           c  -
+5      20   20   Manua          T1           FINAL CANCION CAMPAN                     c  -
+6      10   12   Manua          T1           ENTRAN SOLDADOS                          c  -
+7      6    10   Manua          T1           CAMBIO INTERIOR                          c  -
+8      8    10   Manua          T1           ENTRA PINEDO                             c  -
+9      6    6    Manua          T1           ENTRA LUIS                               c  -
+10     6    6    Manua          T1           SE VA LUIS                               c  -
+11     6    6    Manua          T1           ENTRA CAPITAN                            c  -
+12     6    6    Manua          T1           GIRAN                                    c  -
+13     6    6    Manua          T1           SE VA JUAN                               c  -
+13.5   12   12   Manua          T1           ENTRADA REBOLLEDO                        c  -
+13.6   4    4    Manua          T1           ENTRAN JUAN Y PINEDO                     c  -
+14     6    6    Manua          T1           METE CAMA                                c  -
+14.5   6    6    5              T1           CAMA EN SU SITIO                         c  -
+15     10   10   Manua          T1           SE SIENTAN EN CAMA                       c  -
+16     18   25   Manua          T1           SEDUCCION                                c  -
+17     6    12   Manua          T1           ENTRAN TODOS                             c  -
+17.5   15   15   Manua7         T1           ENTRA LOPE                               c  -
+18     6    6    Manua          T1           SE VAN TODOS                             c  -
+19     6    15   Manua     2    T1           CRESPO COGE LA SILLA                     c  -
+20     12   20   Manua          T1           SUENA MUSICA                             c  -
+21     6    6    Manua          T1           SE LEVANTA PINEDO                        c  -
+22     6    6    Manua          T1           TRANSICION FUERACAMA                        -
+22.5   12   12   Manua          T1           ENTRAN SOLDADOS                          c  -
+23     6    6    Manua          T1           SOLDADOS POSICION                        c  -
+24     6    6    Manua          T1           SE LEVANTA EL SARGEN                     c  -
+25     15   15   Manua          T1           CANTAN                                   c  -
+26     8    8    2              T1           OSCURO A LA MUSICA                       c  -
+27     12   12   Manua          T1           JARDIN                                   c  -
+28     15   15   Manua          T1           ENTRA BLANCA                             c  -
+29     6    6    Manua          T1           SUENA MUSICA                             c  -
+30     6    6    Manua          T1           TIRA SILLA                               c  -
+31     6    6    4              T1           que les pesa. OSCURO                        -
+31.5   6    6    Manua          T1           ENTRAN BORRACHOS                         c  -
+32     9    10   Manua          T1           LLEGAN A PROSCENIO                       c  -
+33     12   12   Manua          T1           PELEA                                    c  -
+34     26   26   1              T1           FINAL MUSICA                             c  -
+34.5   10   10   Manua          T1           CAPITAN AL CENTRO                        c  -
+34.6   10   10   Manua          T1           CAPITAN A LA VENTANA                     c  -
+35     6    6    1              T1           A LA MUSICA OSCURO                          -
+36     10   10   1              T1           ENTRAN RULO Y TERE                       c  -
+36.5   25   25   Manua          T1           ENTRA REBOLLEDO                          c  -
+36.7   9    10   Manua          T1           CAPITAN DELANTE                          c  -
+37     8    8    4              T1           TRANSICION DESPEDIDA                     c  -
+39     15   15   Manua          T1           PADRE HIJO                               c  -
+39.5   22   22   Manua          T1           CONSEJOS                                 c  -
+40     6    10   Manua          T1           GRILLOS                                  c  -
+41     4    4    0.1            T1           ved que vienen de ca                     c  -
+42     6    12   Manua          T1           AVANZAN PINEDO Y BLA                     c  -
+43     12   12   Manua          T1           MONOLOGO JUAN                            c  -
+43.5   12   12   Manua          T1           FINAL JUAN                               c  -
+44     10   16   Manua          T1           BLANCA                                   c  -
+45     12   12   Manua          T1           BLANCA DELANTE                           c  -
+46     6    10   Manua          T1           ENTRA CRESPO                             c  -
+46.5   25   25   Manua          T1           RODILLAS L SUELO                         c  -
+47     6    10   Manua          T1           voy a hacer justicia                     c  -
+48     6    6    Manua          T1           CAPITAN Y SARGENTO A                     c  -
+49     6    6    Manua          T1           ENTRA REBOLLEDO                          c  -
+50     6    6    Manua          T1           ENTRA CRESPO                             c  -
+51     6    6    Manua          T1           VARA SUELO                               c  -
+51.5   4    4    0.1            T1           RECOGE VARA                              c  -
+52     12   6    0.1            T1           EVOLUCION                                c  -
+52.1   15   15   Manua          T1           APARECE REJAS                            c  -
+52.5   6    6    Manua          T1           A LA MUSICA transici                     c  -
+53     15   12   Manua          T1           DESPARECEN                               c  -
+54     6    6    Manua          T1           HABLA                                    c  -
+55     6    6    Manua          T1           COGE A BLANCA                            c  -
+56     25   25   Manua          T1           LOPE DELANTE                             c  -
+58     4    7    9              T1           TAMBORES                                 c  -
+59     6    6    Manua          T1           VOZ DEL REY                              c  -
+60     5    5    0.1            T1           GARROTE                                  c  -
+60.5   6    6    Manua          T1           EVOLUCION GARROTE                        c  -
+61     8    8    0.1       13   T1           VOZ REY                                  c  -
+62     5    5    37             T1           RESOLUCION                               c  -
+63     6    6    7              T1           RESOLUCION 2FRONTAL                      c  -
+64     6    6    3              T1           SEMI OSCURO                              c  -
+65     11   11   Manua          T1           OSCURO                                      -
+66     3    3    Manua          T1           saludo 1                                 c  -
+67     3    3    Manua          T1           saludo CALLES ATRAS                      c  -
+68     2    6    Manua          T1           SALUDO FRONTAL                           c  -
+69     3    3    Manua          T1           saludo contra                            c  -
+70     3    3    Manua          T1           saludo calles                            c  -
+71     2    6    Manua          T1 66        saludo frontal                           c  -
+--------------------------------------------------------------------------------
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+0.1    3    3    Manua          T1           INICIO SECUENCIA                            -
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+0.2    5    5    Manua          T1           PASADA                                   c  -
+Channels
+ 13   14   61   66   70   71   197
+ 75   75   40   75   40   47   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+0.3    10   10   Manua          T1           AVISOS                                      -
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+1      15   15   Manua4         T1           INICIO TAMBORES                          c  -
+Channels
+ 70
+ 41
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+2      8    8    Manua          T1           ENTRA PABLO BUTACAS                      c  -
+Channels
+ 61   70
+ FF   44
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+2.5    6    12   0.1            T1           SUBE A ESCENARIO CON                     c  -
+Channels
+ 2    5    11   21   41   42   61
+ 52   79   50   65   70   70   78
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+3      8    8    Manua          T1           ARRIBA SIN ESCALERA                      c  -
+Channels
+ 2    5    11   21   28   41   42
+ 19   64   50   65   07   70   70
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+4      8    12   Manua          T1           SALEN TAMBORES                           c  -
+Channels
+ 2    5    11   21   37   41   42   53   54   90
+ 18   58   50   65   30   70   70   37   37   51
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+5      20   20   Manua          T1           FINAL CANCION CAMPAN                     c  -
+Channels
+ 11   13   14   15   16   17   41   42   53   54   66
+ 87   50   50   FF   FF   FF   44   44   FF   FF   50
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+6      10   12   Manua          T1           ENTRAN SOLDADOS                          c  -
+Channels
+ 11   13   14   15   16   17   20   42   43   47   50   53   54   66
+ 75   50   50   FF   FF   FF   FF   45   50   70   80   FF   83   50
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+7      6    10   Manua          T1           CAMBIO INTERIOR                          c  -
+Channels
+ 5    13   14   57   66
+ 80   80   50   70   50
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+8      8    10   Manua          T1           ENTRA PINEDO                             c  -
+Channels
+ 13   14   23   26   41   43   44   57   66   72
+ 65   35   FF   FF   90   90   91   70   35   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+9      6    6    Manua          T1           ENTRA LUIS                               c  -
+Channels
+ 13   14   23   26   41   43   48   50   52   57   66   72
+ 65   37   FF   FF   90   90   93   FF   FF   70   37   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+10     6    6    Manua          T1           SE VA LUIS                               c  -
+Channels
+ 13   14   23   26   41   42   43   44   46   57   66   72
+ 65   35   FF   FF   90   65   90   70   35   70   35   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+11     6    6    Manua          T1           ENTRA CAPITAN                            c  -
+Channels
+ 7    13   14   23   26   41   43   50   52   57   66   72
+ FF   65   35   FF   FF   90   90   FF   FF   70   35   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+12     6    6    Manua          T1           GIRAN                                    c  -
+Channels
+ 13   14   23   26   42   44   45   46   47   48   49   51   57   66   72
+ 65   35   FF   FF   57   57   00   39   FF   00   FF   FF   70   35   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+13     6    6    Manua          T1           SE VA JUAN                               c  -
+Channels
+ 13   14   23   26   47   48   49   50   52   57   66   72
+ 65   35   FF   FF   FF   FF   FF   FF   FF   70   35   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+13.5   12   12   Manua          T1           ENTRADA REBOLLEDO                        c  -
+Channels
+ 1    13   14   18   23   26   47   48   49   50   52   57   66   72
+ 35   65   35   45   FF   FF   FF   FF   FF   FF   FF   70   37   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+13.6   4    4    Manua          T1           ENTRAN JUAN Y PINEDO                     c  -
+Channels
+ 1    13   14   23   26   42   44   47   49   57   66   72
+ 17   65   37   FF   FF   FF   FF   FF   FF   70   37   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+14     6    6    Manua          T1           METE CAMA                                c  -
+Channels
+ 57
+ 70
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+14.5   6    6    5              T1           CAMA EN SU SITIO                         c  -
+Channels
+ 27
+ 68
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+15     10   10   Manua          T1           SE SIENTAN EN CAMA                       c  -
+Channels
+ 26   27   28   35   41   42   43   44   45   46   65   100
+ 25   82   52   45   60   60   75   55   64   45   20   80
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+16     18   25   Manua          T1           SEDUCCION                                c  -
+Channels
+ 26   27   35   41   45   46   49   50   65   100
+ 40   82   78   17   19   56   90   98   45   80
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+17     6    12   Manua          T1           ENTRAN TODOS                             c  -
+Channels
+ 26   27   28   31   32   33   34   35   41   42   43   44   45   46   58   60   64   65   100  232
+ 25   80   50   39   67   55   30   45   FF   70   50   50   55   55   54   60   40   40   80   28
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+17.5   15   15   Manua7         T1           ENTRA LOPE                               c  -
+Channels
+ 26   27   28   31   32   33   34   35   41   42   43   44   45   46   58   60   64   65   100  232
+ 25   80   50   75   67   55   30   45   FF   70   50   50   55   55   54   60   40   40   80   28
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+18     6    6    Manua          T1           SE VAN TODOS                             c  -
+Channels
+ 26   27   28   31   32   33   35   41   42   43   44   45   46   100
+ 25   82   52   75   75   67   45   70   77   50   50   50   50   80
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+19     6    15   Manua     2    T1           CRESPO COGE LA SILLA                     c  -
+Channels
+ 27   28   31   32   35   42   47   100
+ 82   52   58   72   45   50   FF   70
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+20     12   20   Manua          T1           SUENA MUSICA                             c  -
+Channels
+ 10   15   16   17   18   27   29   31   32   35   39   41   42   43   47   49   56   100
+ 03   FF   98   97   04   82   07   51   55   45   05   50   50   35   97   05   04   60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+21     6    6    Manua          T1           SE LEVANTA PINEDO                        c  -
+Channels
+ 15   16   17   27   32   35   43   47   48   100
+ FF   FF   FF   82   40   45   35   80   80   60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+22     6    6    Manua          T1           TRANSICION FUERACAMA                        -
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+22.5   12   12   Manua          T1           ENTRAN SOLDADOS                          c  -
+Channels
+ 15   16   17   20   53   54   102
+ 69   69   69   FF   FF   FF   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+23     6    6    Manua          T1           SOLDADOS POSICION                        c  -
+Channels
+ 15   16   17   20   31   32   39   40   53   54   102
+ 69   69   69   FF   43   00   FF   FF   75   75   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+24     6    6    Manua          T1           SE LEVANTA EL SARGEN                     c  -
+Channels
+ 15   16   17   20   39   40   47   48   49   53   54   102
+ 70   70   70   FF   FF   FF   50   50   45   FF   FF   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+25     15   15   Manua          T1           CANTAN                                   c  -
+Channels
+ 15   16   17   20   49   50   51   52   102
+ FF   FF   FF   FF   50   50   50   50   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+26     8    8    2              T1           OSCURO A LA MUSICA                       c  -
+Channels
+ 102
+ 40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+27     12   12   Manua          T1           JARDIN                                   c  -
+Channels
+ 7    21   22   23   24   25   43   45
+ 45   76   FF   45   76   87   85   60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+28     15   15   Manua          T1           ENTRA BLANCA                             c  -
+Channels
+ 15   16   21   22   23   24   25   41   42   43   44   46
+ 58   58   85   FF   45   85   87   18   60   60   60   60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+29     6    6    Manua          T1           SUENA MUSICA                             c  -
+Channels
+ 15   16   21   22   23   24   25   41   42   43   44   56
+ 58   58   85   FF   45   85   76   18   60   60   60   75
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+30     6    6    Manua          T1           TIRA SILLA                               c  -
+Channels
+ 15   16   17   21   22   23   24   25   47   48   49   50   56
+ FF   FF   FF   85   FF   56   85   87   80   80   80   80   76
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+31     6    6    4              T1           que les pesa. OSCURO                        -
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+31.5   6    6    Manua          T1           ENTRAN BORRACHOS                         c  -
+Channels
+ 15   16   17   56
+ 75   75   75   65
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+32     9    10   Manua          T1           LLEGAN A PROSCENIO                       c  -
+Channels
+ 1    10   15   16   17   18   29   39   47   49   56
+ 52   45   FF   75   60   60   FF   80   57   82   54
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+33     12   12   Manua          T1           PELEA                                    c  -
+Channels
+ 10   13   14   15   16   17   20   29   39   40   47   53   54   56   58   66
+ 46   25   25   FF   FF   FF   17   47   29   29   24   69   45   26   28   25
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+34     26   26   1              T1           FINAL MUSICA                             c  -
+Channels
+ 2    10   13   14   15   16   17   20   29   39   40   42   43   53   56   58   66
+ 31   46   25   25   FF   FF   FF   17   56   29   29   54   47   67   54   35   25
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+34.5   10   10   Manua          T1           CAPITAN AL CENTRO                        c  -
+Channels
+ 2    10   13   14   15   16   17   20   29   31   39   40   42   43   53   58   66
+ 31   45   25   25   FF   FF   FF   17   56   63   30   30   55   50   65   35   25
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+34.6   10   10   Manua          T1           CAPITAN A LA VENTANA                     c  -
+Channels
+ 2    10   13   14   15   16   17   20   29   39   40   42   43   53   58   66
+ 31   45   25   25   FF   FF   FF   17   56   30   30   55   50   65   35   25
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+35     6    6    1              T1           A LA MUSICA OSCURO                          -
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+36     10   10   1              T1           ENTRAN RULO Y TERE                       c  -
+Channels
+ 10   11   12   13   14   37   53   54   66   90
+ 05   05   05   07   07   06   59   50   07   09
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+36.5   25   25   Manua          T1           ENTRA REBOLLEDO                          c  -
+Channels
+ 10   11   12   13   14   18   20   34   37   41   43   53   54   58   66   90
+ 60   60   60   60   60   70   45   43   35   62   56   95   95   52   60   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+36.7   9    10   Manua          T1           CAPITAN DELANTE                          c  -
+Channels
+ 1    10   11   12   13   14   18   19   20   39   42   44   46   47   48   49   51   53   54   60
+ 21   60   60   60   60   60   56   50   45   FF   55   55   55   60   01   60   60   95   95   55
+ 66
+ 60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+37     8    8    4              T1           TRANSICION DESPEDIDA                     c  -
+Channels
+ 10   11   12   13   14   66
+ 50   50   50   60   60   60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+39     15   15   Manua          T1           PADRE HIJO                               c  -
+Channels
+ 5    11   13   16   24   28   35   41   42   43   53   54   65   102
+ 70   FF   83   70   65   45   65   55   50   70   65   64   25   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+39.5   22   22   Manua          T1           CONSEJOS                                 c  -
+Channels
+ 5    10   11   13   16   24   28   35   41   42   43   53   65   102
+ 70   02   50   83   FF   64   47   65   50   50   70   45   25   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+40     6    10   Manua          T1           GRILLOS                                  c  -
+Channels
+ 12   14   33   40   53   54   58   60
+ 69   59   44   80   64   64   39   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+41     4    4    0.1            T1           ved que vienen de ca                     c  -
+Channels
+ 7    12   15   33   53   54
+ 40   69   25   40   64   64
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+42     6    12   Manua          T1           AVANZAN PINEDO Y BLA                     c  -
+Channels
+ 12   15   16   17   20   53   66   72
+ 25   70   FF   FF   FF   40   48   35
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+43     12   12   Manua          T1           MONOLOGO JUAN                            c  -
+Channels
+ 15   16   17   20   44   65
+ FF   FF   FF   80   70   60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+43.5   12   12   Manua          T1           FINAL JUAN                               c  -
+Channels
+ 15   16   17   20   53
+ FF   FF   FF   65   76
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+44     10   16   Manua          T1           BLANCA                                   c  -
+Channels
+ 16   20   38
+ FF   49   56
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+45     12   12   Manua          T1           BLANCA DELANTE                           c  -
+Channels
+ 16   20   31   38
+ FF   50   90   50
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+46     6    10   Manua          T1           ENTRA CRESPO                             c  -
+Channels
+ 15   16   17   20   31   42   43   44   46   47   52   58   63
+ FF   FF   FF   85   41   50   55   45   25   75   30   62   34
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+46.5   25   25   Manua          T1           RODILLAS L SUELO                         c  -
+Channels
+ 15   16   17   20   31   32   42   43   44   46   47   52   58   63
+ FF   FF   FF   85   51   06   50   55   45   25   75   30   34   60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+47     6    10   Manua          T1           voy a hacer justicia                     c  -
+Channels
+ 15   16   17
+ FF   FF   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+48     6    6    Manua          T1           CAPITAN Y SARGENTO A                     c  -
+Channels
+ 10   15   16   17   18   47   48
+ 35   FF   FF   FF   59   66   78
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+49     6    6    Manua          T1           ENTRA REBOLLEDO                          c  -
+Channels
+ 10   11   12   13   14   15   16   17   47   48   49   50   51   52   66
+ 35   35   35   35   35   FF   FF   FF   85   85   85   85   78   78   35
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+50     6    6    Manua          T1           ENTRA CRESPO                             c  -
+Channels
+ 10   11   12   13   14   15   16   17   43   45   47   48   49   50   52   66
+ 35   35   35   35   35   FF   FF   FF   88   88   78   78   78   78   78   35
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+51     6    6    Manua          T1           VARA SUELO                               c  -
+Channels
+ 10   11   12   13   14   15   16   17   36   41   42   43   44   45   46   58   60   66
+ 35   35   35   35   35   FF   90   FF   80   80   46   80   46   50   50   65   55   35
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+51.5   4    4    0.1            T1           RECOGE VARA                              c  -
+Channels
+ 10   11   12   13   14   15   16   17   41   42   43   44   45   46   58   60   66
+ 35   35   35   35   35   FF   FF   FF   80   46   80   46   50   50   65   55   35
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+52     12   6    0.1            T1           EVOLUCION                                c  -
+Channels
+ 10   11   12   13   14   15   16   17   30   41   42   43   44   45   46   58   60   66
+ 35   35   35   35   35   FF   FF   FF   17   80   50   80   50   80   80   49   FF   35
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+52.1   15   15   Manua          T1           APARECE REJAS                            c  -
+Channels
+ 10   11   12   13   14   15   16   17   30   35   41   42   43   44   45   46   58   60   66
+ 35   35   35   35   35   FF   FF   FF   FF   35   80   80   80   80   80   80   90   FF   35
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+52.5   6    6    Manua          T1           A LA MUSICA transici                     c  -
+Channels
+ 30   35
+ 79   47
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+53     15   12   Manua          T1           DESPARECEN                               c  -
+Channels
+ 10   11   12   13   14   15   16   17   23   26   66   72   100
+ 60   60   60   60   60   70   70   70   FF   FF   44   FF   70
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+54     6    6    Manua          T1           HABLA                                    c  -
+Channels
+ 10   11   12   13   14   15   16   17   19   23   26   42   60   66   72   100
+ 60   60   60   60   60   80   80   80   62   FF   FF   45   69   44   FF   70
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+55     6    6    Manua          T1           COGE A BLANCA                            c  -
+Channels
+ 10   11   12   13   14   15   16   17   23   26   41   42   43   44   45   46   66   72   100
+ 60   60   60   60   60   FF   FF   FF   FF   FF   75   70   75   70   75   75   44   FF   70
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+56     25   25   Manua          T1           LOPE DELANTE                             c  -
+Channels
+ 10   11   12   13   14   15   16   17   23   26   31   32   41   42   43   44   45   46   58   60
+ 60   60   60   60   60   FF   FF   FF   FF   FF   FF   76   75   70   75   70   75   75   43   35
+ 66   72   100
+ 44   FF   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+58     4    7    9              T1           TAMBORES                                 c  -
+Channels
+ 15   16   17   47   48   49   50   51   52
+ FF   FF   FF   79   79   79   79   79   79
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+59     6    6    Manua          T1           VOZ DEL REY                              c  -
+Channels
+ 15   39   40   47   48   50   61
+ 49   37   45   84   56   79   50
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+60     5    5    0.1            T1           GARROTE                                  c  -
+Channels
+ 15   37   40   47   48   49   50   53   61
+ 49   FF   45   84   56   15   79   40   50
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+60.5   6    6    Manua          T1           EVOLUCION GARROTE                        c  -
+Channels
+ 15   16   17   32   37   39   40   47   48   49   50   53   61
+ 85   85   85   69   FF   52   45   84   56   15   79   66   50
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+61     8    8    0.1       13   T1           VOZ REY                                  c  -
+Channels
+ 15   16   17   37   47   48   49   50   53
+ FF   FF   FF   FF   79   79   79   79   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+62     5    5    37             T1           RESOLUCION                               c  -
+Channels
+ 15   16   17   32   33   34   37   47   48   49   50   64   65
+ FF   FF   FF   45   45   45   70   79   79   79   79   45   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+63     6    6    7              T1           RESOLUCION 2FRONTAL                      c  -
+Channels
+ 15   16   17   32   34   37   47   48   49   50   64   65
+ FF   FF   FF   45   45   70   79   79   79   79   84   40
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+64     6    6    3              T1           SEMI OSCURO                              c  -
+Channels
+ 15   16   17   32   37   64   65
+ FF   FF   FF   45   70   45   45
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+65     11   11   Manua          T1           OSCURO                                      -
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+66     3    3    Manua          T1           saludo 1                                 c  -
+Channels
+ 13   14   66
+ FF   FF   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+67     3    3    Manua          T1           saludo CALLES ATRAS                      c  -
+Channels
+ 13   14   43   44   49   50   66
+ FF   FF   FF   FF   FF   FF   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+68     2    6    Manua          T1           SALUDO FRONTAL                           c  -
+Channels
+ 2    3    13   14   41   42   47   48   58   60   66
+ FF   FF   FF   FF   FF   FF   FF   FF   FF   FF   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+69     3    3    Manua          T1           saludo contra                            c  -
+Channels
+ 13   14   66
+ FF   FF   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+70     3    3    Manua          T1           saludo calles                            c  -
+Channels
+ 13   14   43   44   49   50   66
+ FF   FF   FF   FF   FF   FF   FF
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+71     2    6    Manua          T1 66        saludo frontal                           c  -
+Channels
+ 2    3    13   14   41   42   47   48   58   60   66
+ FF   FF   FF   FF   FF   FF   FF   FF   FF   FF   FF
+Group TI   TO   TW   Tm Text         cfs
+500   3    3    ManuaT1              c  -
+501   3    3    ManuaT1              c  -
+502   3    3    ManuaT1              c  -
+503   3    3    ManuaT1              c  -
+504   3    3    ManuaT1              c  -
+505   3    3    ManuaT1              c  -
+506   3    3    ManuaT1 FOCO CARLOS  c  -
+507   3    3    ManuaT1              c  -
+508   3    3    ManuaT1              c  -
+509   3    3    ManuaT1 HUMO         c  -
+510   3    3    ManuaT1              c  -
+511   3    3    ManuaT1              c  -
+512   3    3    ManuaT1              c  -
+513   3    3    ManuaT1              c  -
+514   3    3    ManuaT1              c  -
+515   3    3    ManuaT1              c  -
+516   3    3    ManuaT1              c  -
+517   3    3    ManuaT1              c  -
+518   3    3    ManuaT1              c  -
+519   3    3    ManuaT1              c  -
+520   3    3    ManuaT1              c  -
+521   3    3    ManuaT1              c  -
+522   3    3    ManuaT1              c  -
+523   3    3    ManuaT1              c  -
+524   3    3    ManuaT1              c  -
+525   3    3    ManuaT1              c  -
+526   3    3    ManuaT1              c  -
+527   3    3    ManuaT1              c  -
+528   3    3    ManuaT1              c  -
+529   3    3    ManuaT1              c  -
+530   3    3    ManuaT1              c  -
+531   3    3    ManuaT1              c  -
+532   3    3    ManuaT1              c  -
+533   3    3    ManuaT1              c  -
+534   3    3    ManuaT1              c  -
+535   3    3    ManuaT1              c  -
+536   3    3    ManuaT1              c  -
+537   3    3    ManuaT1              c  -
+538   3    3    ManuaT1              c  -
+539   3    3    ManuaT1              c  -
+540   3    3    ManuaT1              c  -
+541   3    3    ManuaT1              c  -
+542   3    3    ManuaT1              c  -
+543   3    3    ManuaT1              c  -
+544   3    3    ManuaT1              c  -
+545   3    3    ManuaT1              c  -
+546   3    3    ManuaT1              c  -
+547   3    3    ManuaT1              c  -
+548   3    3    ManuaT1              c  -
+549   3    3    ManuaT1              c  -
+550   3    3    ManuaT1              c  -
+551   3    3    ManuaT1              c  -
+552   3    3    ManuaT1              c  -
+553   3    3    ManuaT1              c  -
+554   3    3    ManuaT1              c  -
+555   3    3    ManuaT1              c  -
+556   3    3    ManuaT1              c  -
+557   3    3    ManuaT1              c  -
+558   3    3    ManuaT1              c  -
+--------------------------------------------------------------------------------
+Group TI   TO   TW   Tm Text         cfs
+500   3    3    ManuaT1              c  -
+Channels
+ 100
+ FF
+Group TI   TO   TW   Tm Text         cfs
+501   3    3    ManuaT1              c  -
+Channels
+ 101
+ FF
+Group TI   TO   TW   Tm Text         cfs
+502   3    3    ManuaT1              c  -
+Channels
+ 102
+ FF
+Group TI   TO   TW   Tm Text         cfs
+503   3    3    ManuaT1              c  -
+Channels
+ 103
+ FF
+Group TI   TO   TW   Tm Text         cfs
+504   3    3    ManuaT1              c  -
+Channels
+ 70
+ FF
+Group TI   TO   TW   Tm Text         cfs
+505   3    3    ManuaT1              c  -
+Channels
+ 13   14   66
+ FF   FF   FF
+Group TI   TO   TW   Tm Text         cfs
+506   3    3    ManuaT1 FOCO CARLOS  c  -
+Channels
+ 62
+ 45
+Group TI   TO   TW   Tm Text         cfs
+507   3    3    ManuaT1              c  -
+Channels
+ 62
+ 81
+Group TI   TO   TW   Tm Text         cfs
+508   3    3    ManuaT1              c  -
+Channels
+ 510
+ FF
+Group TI   TO   TW   Tm Text         cfs
+509   3    3    ManuaT1 HUMO         c  -
+Channels
+ 511
+ FF
+Group TI   TO   TW   Tm Text         cfs
+510   3    3    ManuaT1              c  -
+Channels
+ 447
+ FF
+Group TI   TO   TW   Tm Text         cfs
+511   3    3    ManuaT1              c  -
+Channels
+ 13   14   66
+ FF   FF   FF
+Group TI   TO   TW   Tm Text         cfs
+512   3    3    ManuaT1              c  -
+Channels
+ 13   14   66
+ FF   FF   FF
+Group TI   TO   TW   Tm Text         cfs
+513   3    3    ManuaT1              c  -
+Channels
+ 13   14   66
+ FF   FF   FF
+Group TI   TO   TW   Tm Text         cfs
+514   3    3    ManuaT1              c  -
+Channels
+ 13   14   66
+ FF   FF   FF
+Group TI   TO   TW   Tm Text         cfs
+515   3    3    ManuaT1              c  -
+Channels
+ 104
+ FF
+Group TI   TO   TW   Tm Text         cfs
+516   3    3    ManuaT1              c  -
+Channels
+ 71   197
+ FF   FF
+Group TI   TO   TW   Tm Text         cfs
+517   3    3    ManuaT1              c  -
+Channels
+ 508
+ FF
+Group TI   TO   TW   Tm Text         cfs
+518   3    3    ManuaT1              c  -
+Channels
+ 511
+ FF
+Group TI   TO   TW   Tm Text         cfs
+519   3    3    ManuaT1              c  -
+Channels
+ 213
+ FF
+Group TI   TO   TW   Tm Text         cfs
+520   3    3    ManuaT1              c  -
+Channels
+ 213
+ FF
+Group TI   TO   TW   Tm Text         cfs
+521   3    3    ManuaT1              c  -
+Channels
+ 274
+ FF
+Group TI   TO   TW   Tm Text         cfs
+522   3    3    ManuaT1              c  -
+Channels
+ 100
+ FF
+Group TI   TO   TW   Tm Text         cfs
+523   3    3    ManuaT1              c  -
+Channels
+ 300
+ FF
+Group TI   TO   TW   Tm Text         cfs
+524   3    3    ManuaT1              c  -
+Channels
+ 300  301
+ FF   FF
+Group TI   TO   TW   Tm Text         cfs
+525   3    3    ManuaT1              c  -
+Channels
+ 303
+ FF
+Group TI   TO   TW   Tm Text         cfs
+526   3    3    ManuaT1              c  -
+Channels
+ 302
+ FF
+Group TI   TO   TW   Tm Text         cfs
+527   3    3    ManuaT1              c  -
+Channels
+ 508
+ FF
+Group TI   TO   TW   Tm Text         cfs
+528   3    3    ManuaT1              c  -
+Channels
+ 509
+ FF
+Group TI   TO   TW   Tm Text         cfs
+529   3    3    ManuaT1              c  -
+Channels
+ 510
+ FF
+Group TI   TO   TW   Tm Text         cfs
+530   3    3    ManuaT1              c  -
+Channels
+ 511
+ FF
+Group TI   TO   TW   Tm Text         cfs
+531   3    3    ManuaT1              c  -
+Channels
+ 500
+ FF
+Group TI   TO   TW   Tm Text         cfs
+532   3    3    ManuaT1              c  -
+Channels
+ 452
+ FF
+Group TI   TO   TW   Tm Text         cfs
+533   3    3    ManuaT1              c  -
+Channels
+ 128
+ FF
+Group TI   TO   TW   Tm Text         cfs
+534   3    3    ManuaT1              c  -
+Channels
+ 1
+ FF
+Group TI   TO   TW   Tm Text         cfs
+535   3    3    ManuaT1              c  -
+Channels
+ 2    3
+ FF   FF
+Group TI   TO   TW   Tm Text         cfs
+536   3    3    ManuaT1              c  -
+Channels
+ 128
+ FF
+Group TI   TO   TW   Tm Text         cfs
+537   3    3    ManuaT1              c  -
+Channels
+ 510
+ FF
+Group TI   TO   TW   Tm Text         cfs
+538   3    3    ManuaT1              c  -
+Channels
+ 201
+ FF
+Group TI   TO   TW   Tm Text         cfs
+539   3    3    ManuaT1              c  -
+Channels
+ 202
+ FF
+Group TI   TO   TW   Tm Text         cfs
+540   3    3    ManuaT1              c  -
+Channels
+ 200
+ FF
+Group TI   TO   TW   Tm Text         cfs
+541   3    3    ManuaT1              c  -
+Channels
+ 256
+ FF
+Group TI   TO   TW   Tm Text         cfs
+542   3    3    ManuaT1              c  -
+Channels
+ 350
+ FF
+Group TI   TO   TW   Tm Text         cfs
+543   3    3    ManuaT1              c  -
+Channels
+ 351
+ FF
+Group TI   TO   TW   Tm Text         cfs
+544   3    3    ManuaT1              c  -
+Channels
+ 100
+ FF
+Group TI   TO   TW   Tm Text         cfs
+545   3    3    ManuaT1              c  -
+Channels
+ 30
+ FF
+Group TI   TO   TW   Tm Text         cfs
+546   3    3    ManuaT1              c  -
+Channels
+ 240
+ FF
+Group TI   TO   TW   Tm Text         cfs
+547   3    3    ManuaT1              c  -
+Channels
+ 13
+ FF
+Group TI   TO   TW   Tm Text         cfs
+548   3    3    ManuaT1              c  -
+Channels
+ 57
+ FF
+Group TI   TO   TW   Tm Text         cfs
+549   3    3    ManuaT1              c  -
+Channels
+ 70
+ FF
+Group TI   TO   TW   Tm Text         cfs
+550   3    3    ManuaT1              c  -
+Channels
+ 114
+ FF
+Group TI   TO   TW   Tm Text         cfs
+551   3    3    ManuaT1              c  -
+Channels
+ 88   114
+ FF   FF
+Group TI   TO   TW   Tm Text         cfs
+552   3    3    ManuaT1              c  -
+Channels
+ 88
+ FF
+Group TI   TO   TW   Tm Text         cfs
+553   3    3    ManuaT1              c  -
+Channels
+ 62
+ FF
+Group TI   TO   TW   Tm Text         cfs
+554   3    3    ManuaT1              c  -
+Channels
+ 119  120
+ FF   FF
+Group TI   TO   TW   Tm Text         cfs
+555   3    3    ManuaT1              c  -
+Channels
+ 116  240  241
+ FF   FF   FF
+Group TI   TO   TW   Tm Text         cfs
+556   3    3    ManuaT1              c  -
+Channels
+ 118  119
+ FF   FF
+Group TI   TO   TW   Tm Text         cfs
+557   3    3    ManuaT1              c  -
+Channels
+ 350
+ FF
+Group TI   TO   TW   Tm Text         cfs
+558   3    3    ManuaT1              c  -
+Channels
+ 256
+ FF
+Channels Patch
+

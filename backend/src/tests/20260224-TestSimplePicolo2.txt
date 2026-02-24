@@ -1,0 +1,5252 @@
+******************************
+* SHOW:                      *
+******************************
+Shape Text
+1     Sine
+2     Step
+3     Flash
+4     Up
+5     Down
+6     Up&Down
+7     CanCan+/-
+8     Circle
+9     Shape8
+10    Triangle
+11    Arch
+12    CmySin1/3
+13    CmyFlash1/3
+14    CmyUp1/3
+15    Cosine
+16    Trapeze
+17    Tri
+18    Saw
+19    Square
+20    CmySin>Black
+21    CmyFlash>Blk
+22    CmyUp>Black
+23    CanCanCross
+24    CanCanWave
+25    CanCan UpDim
+26    Flash Rate>
+27    ChaseDimmer
+28    Circles Mix
+29    CircleByTurn
+30    CircleFlash
+31    Circle Size>
+32    Cross Double
+33    OnlyOneCross
+34    CmySin>Cyan
+35    CmySin>Sat-V
+36    CmySin>SatCy
+37    -Sine
+38    -Cosine
+39    -Step
+40    -Flash
+41    -Up&Down
+42    FromToSin
+43    FromTo-Sin
+44    FromToCosine
+45    FromTo-Cosin
+46    FromToStep
+47    FromTo-Step
+48    FromToFlash
+49    FromTo-Flash
+50    FromToUp
+51    FromToDown
+52    FromToUpDown
+53    FromTo-UpDow
+54    SoftDimmer
+55    HardDimmer
+56    RampUp
+57    RampDown
+58    Ballyhoo
+59    FlyOut
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+1   Sine
+                  Sine         Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+2   Step
+                  Step         Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+3   Flash
+                  Flash        Dimmer Free0  0  [+]No  center pt   50          +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+4   Up
+                  Up           Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+5   Down
+                  Down         Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+6   Up&Down
+                  Up&Down      Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+7   CanCan+/-
+                  Up&Down      Y      Free8  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+8   Circle
+                  Circle       PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+9   Shape8
+                  Shape8       PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+10  Triangle
+                  Triangle     PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+11  Arch
+                  Arch         PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+12  CmySin1/3
+                  CmySin1/3    ColMix Free3  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+13  CmyFlash1/3
+                  CmyFlash1/3  ColMix Free7  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+14  CmyUp1/3
+                  CmyUp1/3     ColMix Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+15  Cosine
+                  Cosine       Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+16  Trapeze
+                  Trapeze      Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+17  Tri
+                  Tri          Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+18  Saw
+                  Saw          Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+19  Square
+                  Square       PanTiltFree4  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+20  CmySin>Black
+                  CmySin       ColMix Free1  0  [+]No  down point  100         +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+21  CmyFlash>Blk
+                  CmyFlash     ColMix Free0  0  [+]No  down point  100         +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+22  CmyUp>Black
+                  CmyUp        ColMix Free0  0  [+]No  down point  100         +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+23  CanCanCross
+                  Up&Down      Y      Free8  0  [+]No  center pt   40          +21(6)    SizeIt  0  Fn1-40
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+24  CanCanWave
+                  Up&Down      Y      Free3  0  [+]No  center pt   10          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+25  CanCan UpDim
+                  Up&Down      Y      Free0  0  [+]No  center pt   10          +21(6)
+                  Up&Down      Dimmer Free0  0  [+]No  up point    100         +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+26  Flash Rate>
+                  Flash        Dimmer Free0  0  [+]No  center pt   50          +59(20)   RateCy  10 Lin+5
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+27  ChaseDimmer
+                  Step         Dimmer Chase0 0  [+]No  up point    100         +100(600)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+28  Circles Mix
+                  Circle       PanTiltFree8  0  [+]No  center pt   10          +21(6)    RateIt  0  Fn2+0
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+29  CircleByTurn
+                  Circle       PanTiltChase1 2  [+]No  center pt   10          +30(8)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+30  CircleFlash
+                  Circle       PanTiltFree4  0  [+]No  center pt   10          +21(6)
+                  Flash        Dimmer Free4  0  [+]No  up point    100         +64(23)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+31  Circle Size>
+                  Circle       PanTiltFree3  0  [+]No  center pt   10          +21(6)    SizeCy  32 Fn1+10
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+32  Cross Double
+                  Up&Down      X      Free8  0  [+]No  center pt   23          +21(6)
+                  Step         Y      Free1  0  [+]No  center pt   20          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+33  OnlyOneCross
+                  Up           Y      Free0  0  [+]No  down point  30          +21(6)    RateCy  2  Lin-80
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+34  CmySin>Cyan
+                  CmySin       ColMix Free0  0  [+]No  down point  50          +21(6)    Form       CBR+50
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+35  CmySin>Sat-V
+                  CmySin1/3    ColMix Free0  0  [+]No  down point  100         +21(6)    SizeIt  0  Fn1-50
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)  Game1  Nm Mod/Par
+36  CmySin>SatCy
+                  CmySin1/3    ColMix Free0  0  [+]No  down point  50          +21(6)    SizeCy  10 Lin+50
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+37  -Sine
+                  -Sine        Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+38  -Cosine
+                  -Cosine      Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+39  -Step
+                  -Step        Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+40  -Flash
+                  -Flash       Dimmer Free0  0  [+]No  center pt   50          +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+41  -Up&Down
+                  -Up&Down     Dimmer Free0  0  [+]No  center pt   50          +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+42  FromToSin
+                  FromToSin    ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+43  FromTo-Sin
+                  FromTo-Sin   ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+44  FromToCosine
+                  FromToCosine ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+45  FromTo-Cosin
+                  FromTo-Cosin ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+46  FromToStep
+                  FromToStep   ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+47  FromTo-Step
+                  FromTo-Step  ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+48  FromToFlash
+                  FromToFlash  ColMix Free0  0  [+]No  0,0,0       255,255,255 +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+49  FromTo-Flash
+                  FromTo-Flash ColMix Free0  0  [+]No  0,0,0       255,255,255 +43(12)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+50  FromToUp
+                  FromToUp     ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+51  FromToDown
+                  FromToDown   ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+52  FromToUpDown
+                  FromToUpDown ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+53  FromTo-UpDow
+                  FromTo-UpDow ColMix Free0  0  [+]No  0,0,0       255,255,255 +21(6)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+54  SoftDimmer
+                  Cosine       Dimmer Free4  0  [+]No  center pt   50          +78(41)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+55  HardDimmer
+                  Trapeze      Dimmer Free4  0  [+]No  center pt   50          +83(53)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+56  RampUp
+                  Up           Dimmer Free2  0  [+]No  center pt   50          +73(33)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+57  RampDown
+                  Down         Dimmer Free2  0  [+]No  center pt   50          +73(33)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+58  Ballyhoo
+                  Trapeze      Dimmer Free2  0  [+]No  up point    100         +61(21)
+                  Up&Down      X      Free8  0  [+]No  center pt   20          +60(21)
+                  -Up&Down     Y      Free2  0  [+]No  center pt   20          +60(21)
+--------------------------------------------------------------------------------
+Shp Text          Palette      Type   Effect Nm Orders Base/From   Size/To     Rate(BPM)
+59  FlyOut
+                  Step         Dimmer Free4  0  [+]No  up point    100         +46(13)
+                  Up           Y      Free4  0  [+]No  center pt   97          +46(13)
+--------------------------------------------------------------------------------
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+1      3    3    Manua          T1           Cue inicial                              c  -
+2      3    3    5              T1           Cue 2 segunda auto                       c  -
+3      3    3    Manua          T1           Cue BK                                      -
+4      1    5    Manua          T1           Cue 1 canal                              c  -
+4.5    3    3    Manua          T1           Un decimal en la Cue                     c  -
+5      3    3    Manua          T1           Otra Cue BK                                 -
+--------------------------------------------------------------------------------
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+1      3    3    Manua          T1           Cue inicial                              c  -
+Channels
+ 3    5    11   71
+ 30   FF   FF   60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+2      3    3    5              T1           Cue 2 segunda auto                       c  -
+Channels
+ 1    3    5    71
+ FF   30   FF   60
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+3      3    3    Manua          T1           Cue BK                                      -
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+4      1    5    Manua          T1           Cue 1 canal                              c  -
+Channels
+ 5
+ 50
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+4.5    3    3    Manua          T1           Un decimal en la Cue                     c  -
+Channels
+ 2    5
+ FF   50
+Cue    TI   TO   TW   Ti   To   Tm Jump   Lp Text                 Command         TC  cfs
+5      3    3    Manua          T1           Otra Cue BK                                 -
+Group TI   TO   TW   Tm Text         cfs
+500   3    3    ManuaT1              c  -
+501   3    3    ManuaT1              c  -
+--------------------------------------------------------------------------------
+Group TI   TO   TW   Tm Text         cfs
+500   3    3    ManuaT1              c  -
+Channels
+ 6    10   39
+ FF   FF   FF
+Group TI   TO   TW   Tm Text         cfs
+501   3    3    ManuaT1              c  -
+Channels
+ 5
+ FF
+Channels Patch
+
+Channel Dmx   Li Cu
+1       1     FF 1
+2       2     FF 1
+3       3     FF 1
+4       4     FF 1
+5       5     FF 1
+6       6     FF 1
+7       7     FF 1
+8       8     FF 1
+9       9     FF 1
+10      10    FF 1
+11      11    FF 1
+12      12    FF 1
+13      13    FF 1
+14      14    FF 1
+15      15    FF 1
+16      16    FF 1
+17      17    FF 1
+18      18    FF 1
+19      19    FF 1
+20      20    FF 1
+21      21    FF 1
+22      22    FF 1
+23      23    FF 1
+24      24    FF 1
+25      25    FF 1
+26      26    FF 1
+27      27    FF 1
+28      28    FF 1
+29      29    FF 1
+30      30    FF 1
+31      31    FF 1
+32      32    FF 1
+33      33    FF 1
+34      34    FF 1
+35      35    FF 1
+36      36    FF 1
+37      37    FF 1
+38      38    FF 1
+39      39    FF 1
+40      40    FF 1
+41      41    FF 1
+42      42    FF 1
+43      43    FF 1
+44      44    FF 1
+45      45    FF 1
+46      46    FF 1
+47      47    FF 1
+48      48    FF 1
+49      49    FF 1
+50      50    FF 1
+51      51    FF 1
+52      52    FF 1
+53      53    FF 1
+54      54    FF 1
+55      55    FF 1
+56      56    FF 1
+57      57    FF 1
+58      58    FF 1
+59      59    FF 1
+60      60    FF 1
+61      61    FF 1
+62      62    FF 1
+63      63    FF 1
+64      64    FF 1
+65      65    FF 1
+66      66    FF 1
+67      67    FF 1
+68      68    FF 1
+69      69    FF 1
+70      70    FF 1
+71      71    FF 1
+72      72    FF 1
+73      73    FF 1
+74      74    FF 1
+75      75    FF 1
+76      76    FF 1
+77      77    FF 1
+78      78    FF 1
+79      79    FF 1
+80      80    FF 1
+81      81    FF 1
+82      82    FF 1
+83      83    FF 1
+84      84    FF 1
+85      85    FF 1
+86      86    FF 1
+87      87    FF 1
+88      88    FF 1
+89      89    FF 1
+90      90    FF 1
+91      91    FF 1
+92      92    FF 1
+93      93    FF 1
+94      94    FF 1
+95      95    FF 1
+96      96    FF 1
+97      97    FF 1
+98      98    FF 1
+99      99    FF 1
+100     100   FF 1
+101     101   FF 1
+102     102   FF 1
+103     103   FF 1
+104     104   FF 1
+105     105   FF 1
+106     106   FF 1
+107     107   FF 1
+108     108   FF 1
+109     109   FF 1
+110     110   FF 1
+111     111   FF 1
+112     112   FF 1
+113     113   FF 1
+114     114   FF 1
+115     115   FF 1
+116     116   FF 1
+117     117   FF 1
+118     118   FF 1
+119     119   FF 1
+120     120   FF 1
+121     121   FF 1
+122     122   FF 1
+123     123   FF 1
+124     124   FF 1
+125     125   FF 1
+126     126   FF 1
+127     127   FF 1
+128     128   FF 1
+129     129   FF 1
+130     130   FF 1
+131     131   FF 1
+132     132   FF 1
+133     133   FF 1
+134     134   FF 1
+135     135   FF 1
+136     136   FF 1
+137     137   FF 1
+138     138   FF 1
+139     139   FF 1
+140     140   FF 1
+141     141   FF 1
+142     142   FF 1
+143     143   FF 1
+144     144   FF 1
+145     145   FF 1
+146     146   FF 1
+147     147   FF 1
+148     148   FF 1
+149     149   FF 1
+150     150   FF 1
+151     151   FF 1
+152     152   FF 1
+153     153   FF 1
+154     154   FF 1
+155     155   FF 1
+156     156   FF 1
+157     157   FF 1
+158     158   FF 1
+159     159   FF 1
+160     160   FF 1
+161     161   FF 1
+162     162   FF 1
+163     163   FF 1
+164     164   FF 1
+165     165   FF 1
+166     166   FF 1
+167     167   FF 1
+168     168   FF 1
+169     169   FF 1
+170     170   FF 1
+171     171   FF 1
+172     172   FF 1
+173     173   FF 1
+174     174   FF 1
+175     175   FF 1
+176     176   FF 1
+177     177   FF 1
+178     178   FF 1
+179     179   FF 1
+180     180   FF 1
+181     181   FF 1
+182     182   FF 1
+183     183   FF 1
+184     184   FF 1
+185     185   FF 1
+186     186   FF 1
+187     187   FF 1
+188     188   FF 1
+189     189   FF 1
+190     190   FF 1
+191     191   FF 1
+192     192   FF 1
+193     193   FF 1
+194     194   FF 1
+195     195   FF 1
+196     196   FF 1
+197     197   FF 1
+198     198   FF 1
+199     199   FF 1
+200     200   FF 1
+201     201   FF 1
+202     202   FF 1
+203     203   FF 1
+204     204   FF 1
+205     205   FF 1
+206     206   FF 1
+207     207   FF 1
+208     208   FF 1
+209     209   FF 1
+210     210   FF 1
+211     211   FF 1
+212     212   FF 1
+213     213   FF 1
+214     214   FF 1
+215     215   FF 1
+216     216   FF 1
+217     217   FF 1
+218     218   FF 1
+219     219   FF 1
+220     220   FF 1
+221     221   FF 1
+222     222   FF 1
+223     223   FF 1
+224     224   FF 1
+225     225   FF 1
+226     226   FF 1
+227     227   FF 1
+228     228   FF 1
+229     229   FF 1
+230     230   FF 1
+231     231   FF 1
+232     232   FF 1
+233     233   FF 1
+234     234   FF 1
+235     235   FF 1
+236     236   FF 1
+237     237   FF 1
+238     238   FF 1
+239     239   FF 1
+240     240   FF 1
+241     241   FF 1
+242     242   FF 1
+243     243   FF 1
+244     244   FF 1
+245     245   FF 1
+246     246   FF 1
+247     247   FF 1
+248     248   FF 1
+249     249   FF 1
+250     250   FF 1
+251     251   FF 1
+252     252   FF 1
+253     253   FF 1
+254     254   FF 1
+255     255   FF 1
+256     256   FF 1
+257     257   FF 1
+258     258   FF 1
+259     259   FF 1
+260     260   FF 1
+261     261   FF 1
+262     262   FF 1
+263     263   FF 1
+264     264   FF 1
+265     265   FF 1
+266     266   FF 1
+267     267   FF 1
+268     268   FF 1
+269     269   FF 1
+270     270   FF 1
+271     271   FF 1
+272     272   FF 1
+273     273   FF 1
+274     274   FF 1
+275     275   FF 1
+276     276   FF 1
+277     277   FF 1
+278     278   FF 1
+279     279   FF 1
+280     280   FF 1
+281     281   FF 1
+282     282   FF 1
+283     283   FF 1
+284     284   FF 1
+285     285   FF 1
+286     286   FF 1
+287     287   FF 1
+288     288   FF 1
+289     289   FF 1
+290     290   FF 1
+291     291   FF 1
+292     292   FF 1
+293     293   FF 1
+294     294   FF 1
+295     295   FF 1
+296     296   FF 1
+297     297   FF 1
+298     298   FF 1
+299     299   FF 1
+300     300   FF 1
+301     301   FF 1
+302     302   FF 1
+303     303   FF 1
+304     304   FF 1
+305     305   FF 1
+306     306   FF 1
+307     307   FF 1
+308     308   FF 1
+309     309   FF 1
+310     310   FF 1
+311     311   FF 1
+312     312   FF 1
+313     313   FF 1
+314     314   FF 1
+315     315   FF 1
+316     316   FF 1
+317     317   FF 1
+318     318   FF 1
+319     319   FF 1
+320     320   FF 1
+321     321   FF 1
+322     322   FF 1
+323     323   FF 1
+324     324   FF 1
+325     325   FF 1
+326     326   FF 1
+327     327   FF 1
+328     328   FF 1
+329     329   FF 1
+330     330   FF 1
+331     331   FF 1
+332     332   FF 1
+333     333   FF 1
+334     334   FF 1
+335     335   FF 1
+336     336   FF 1
+337     337   FF 1
+338     338   FF 1
+339     339   FF 1
+340     340   FF 1
+341     341   FF 1
+342     342   FF 1
+343     343   FF 1
+344     344   FF 1
+345     345   FF 1
+346     346   FF 1
+347     347   FF 1
+348     348   FF 1
+349     349   FF 1
+350     350   FF 1
+351     351   FF 1
+352     352   FF 1
+353     353   FF 1
+354     354   FF 1
+355     355   FF 1
+356     356   FF 1
+357     357   FF 1
+358     358   FF 1
+359     359   FF 1
+360     360   FF 1
+361     361   FF 1
+362     362   FF 1
+363     363   FF 1
+364     364   FF 1
+365     365   FF 1
+366     366   FF 1
+367     367   FF 1
+368     368   FF 1
+369     369   FF 1
+370     370   FF 1
+371     371   FF 1
+372     372   FF 1
+373     373   FF 1
+374     374   FF 1
+375     375   FF 1
+376     376   FF 1
+377     377   FF 1
+378     378   FF 1
+379     379   FF 1
+380     380   FF 1
+381     381   FF 1
+382     382   FF 1
+383     383   FF 1
+384     384   FF 1
+385     385   FF 1
+386     386   FF 1
+387     387   FF 1
+388     388   FF 1
+389     389   FF 1
+390     390   FF 1
+391     391   FF 1
+392     392   FF 1
+393     393   FF 1
+394     394   FF 1
+395     395   FF 1
+396     396   FF 1
+397     397   FF 1
+398     398   FF 1
+399     399   FF 1
+400     400   FF 1
+401     401   FF 1
+402     402   FF 1
+403     403   FF 1
+404     404   FF 1
+405     405   FF 1
+406     406   FF 1
+407     407   FF 1
+408     408   FF 1
+409     409   FF 1
+410     410   FF 1
+411     411   FF 1
+412     412   FF 1
+413     413   FF 1
+414     414   FF 1
+415     415   FF 1
+416     416   FF 1
+417     417   FF 1
+418     418   FF 1
+419     419   FF 1
+420     420   FF 1
+421     421   FF 1
+422     422   FF 1
+423     423   FF 1
+424     424   FF 1
+425     425   FF 1
+426     426   FF 1
+427     427   FF 1
+428     428   FF 1
+429     429   FF 1
+430     430   FF 1
+431     431   FF 1
+432     432   FF 1
+433     433   FF 1
+434     434   FF 1
+435     435   FF 1
+436     436   FF 1
+437     437   FF 1
+438     438   FF 1
+439     439   FF 1
+440     440   FF 1
+441     441   FF 1
+442     442   FF 1
+443     443   FF 1
+444     444   FF 1
+445     445   FF 1
+446     446   FF 1
+447     447   FF 1
+448     448   FF 1
+449     449   FF 1
+450     450   FF 1
+451     451   FF 1
+452     452   FF 1
+453     453   FF 1
+454     454   FF 1
+455     455   FF 1
+456     456   FF 1
+457     457   FF 1
+458     458   FF 1
+459     459   FF 1
+460     460   FF 1
+461     461   FF 1
+462     462   FF 1
+463     463   FF 1
+464     464   FF 1
+465     465   FF 1
+466     466   FF 1
+467     467   FF 1
+468     468   FF 1
+469     469   FF 1
+470     470   FF 1
+471     471   FF 1
+472     472   FF 1
+473     473   FF 1
+474     474   FF 1
+475     475   FF 1
+476     476   FF 1
+477     477   FF 1
+478     478   FF 1
+479     479   FF 1
+480     480   FF 1
+481     481   FF 1
+482     482   FF 1
+483     483   FF 1
+484     484   FF 1
+485     485   FF 1
+486     486   FF 1
+487     487   FF 1
+488     488   FF 1
+489     489   FF 1
+490     490   FF 1
+491     491   FF 1
+492     492   FF 1
+493     493   FF 1
+494     494   FF 1
+495     495   FF 1
+496     496   FF 1
+497     497   FF 1
+498     498   FF 1
+499     499   FF 1
+500     500   FF 1
+501     501   FF 1
+502     502   FF 1
+503     503   FF 1
+504     504   FF 1
+505     505   FF 1
+506     506   FF 1
+507     507   FF 1
+508     508   FF 1
+509     509   FF 1
+510     510   FF 1
+511     511   FF 1
+512     512   FF 1
+513     513   FF 1
+514     514   FF 1
+515     515   FF 1
+516     516   FF 1
+517     517   FF 1
+518     518   FF 1
+519     519   FF 1
+520     520   FF 1
+521     521   FF 1
+522     522   FF 1
+523     523   FF 1
+524     524   FF 1
+525     525   FF 1
+526     526   FF 1
+527     527   FF 1
+528     528   FF 1
+529     529   FF 1
+530     530   FF 1
+531     531   FF 1
+532     532   FF 1
+533     533   FF 1
+534     534   FF 1
+535     535   FF 1
+536     536   FF 1
+537     537   FF 1
+538     538   FF 1
+539     539   FF 1
+540     540   FF 1
+541     541   FF 1
+542     542   FF 1
+543     543   FF 1
+544     544   FF 1
+545     545   FF 1
+546     546   FF 1
+547     547   FF 1
+548     548   FF 1
+549     549   FF 1
+550     550   FF 1
+551     551   FF 1
+552     552   FF 1
+553     553   FF 1
+554     554   FF 1
+555     555   FF 1
+556     556   FF 1
+557     557   FF 1
+558     558   FF 1
+559     559   FF 1
+560     560   FF 1
+561     561   FF 1
+562     562   FF 1
+563     563   FF 1
+564     564   FF 1
+565     565   FF 1
+566     566   FF 1
+567     567   FF 1
+568     568   FF 1
+569     569   FF 1
+570     570   FF 1
+571     571   FF 1
+572     572   FF 1
+573     573   FF 1
+574     574   FF 1
+575     575   FF 1
+576     576   FF 1
+577     577   FF 1
+578     578   FF 1
+579     579   FF 1
+580     580   FF 1
+581     581   FF 1
+582     582   FF 1
+583     583   FF 1
+584     584   FF 1
+585     585   FF 1
+586     586   FF 1
+587     587   FF 1
+588     588   FF 1
+589     589   FF 1
+590     590   FF 1
+591     591   FF 1
+592     592   FF 1
+593     593   FF 1
+594     594   FF 1
+595     595   FF 1
+596     596   FF 1
+597     597   FF 1
+598     598   FF 1
+599     599   FF 1
+600     600   FF 1
+601     601   FF 1
+602     602   FF 1
+603     603   FF 1
+604     604   FF 1
+605     605   FF 1
+606     606   FF 1
+607     607   FF 1
+608     608   FF 1
+609     609   FF 1
+610     610   FF 1
+611     611   FF 1
+612     612   FF 1
+613     613   FF 1
+614     614   FF 1
+615     615   FF 1
+616     616   FF 1
+617     617   FF 1
+618     618   FF 1
+619     619   FF 1
+620     620   FF 1
+621     621   FF 1
+622     622   FF 1
+623     623   FF 1
+624     624   FF 1
+625     625   FF 1
+626     626   FF 1
+627     627   FF 1
+628     628   FF 1
+629     629   FF 1
+630     630   FF 1
+631     631   FF 1
+632     632   FF 1
+633     633   FF 1
+634     634   FF 1
+635     635   FF 1
+636     636   FF 1
+637     637   FF 1
+638     638   FF 1
+639     639   FF 1
+640     640   FF 1
+641     641   FF 1
+642     642   FF 1
+643     643   FF 1
+644     644   FF 1
+645     645   FF 1
+646     646   FF 1
+647     647   FF 1
+648     648   FF 1
+649     649   FF 1
+650     650   FF 1
+651     651   FF 1
+652     652   FF 1
+653     653   FF 1
+654     654   FF 1
+655     655   FF 1
+656     656   FF 1
+657     657   FF 1
+658     658   FF 1
+659     659   FF 1
+660     660   FF 1
+661     661   FF 1
+662     662   FF 1
+663     663   FF 1
+664     664   FF 1
+665     665   FF 1
+666     666   FF 1
+667     667   FF 1
+668     668   FF 1
+669     669   FF 1
+670     670   FF 1
+671     671   FF 1
+672     672   FF 1
+673     673   FF 1
+674     674   FF 1
+675     675   FF 1
+676     676   FF 1
+677     677   FF 1
+678     678   FF 1
+679     679   FF 1
+680     680   FF 1
+681     681   FF 1
+682     682   FF 1
+683     683   FF 1
+684     684   FF 1
+685     685   FF 1
+686     686   FF 1
+687     687   FF 1
+688     688   FF 1
+689     689   FF 1
+690     690   FF 1
+691     691   FF 1
+692     692   FF 1
+693     693   FF 1
+694     694   FF 1
+695     695   FF 1
+696     696   FF 1
+697     697   FF 1
+698     698   FF 1
+699     699   FF 1
+700     700   FF 1
+701     701   FF 1
+702     702   FF 1
+703     703   FF 1
+704     704   FF 1
+705     705   FF 1
+706     706   FF 1
+707     707   FF 1
+708     708   FF 1
+709     709   FF 1
+710     710   FF 1
+711     711   FF 1
+712     712   FF 1
+713     713   FF 1
+714     714   FF 1
+715     715   FF 1
+716     716   FF 1
+717     717   FF 1
+718     718   FF 1
+719     719   FF 1
+720     720   FF 1
+721     721   FF 1
+722     722   FF 1
+723     723   FF 1
+724     724   FF 1
+725     725   FF 1
+726     726   FF 1
+727     727   FF 1
+728     728   FF 1
+729     729   FF 1
+730     730   FF 1
+731     731   FF 1
+732     732   FF 1
+733     733   FF 1
+734     734   FF 1
+735     735   FF 1
+736     736   FF 1
+737     737   FF 1
+738     738   FF 1
+739     739   FF 1
+740     740   FF 1
+741     741   FF 1
+742     742   FF 1
+743     743   FF 1
+744     744   FF 1
+745     745   FF 1
+746     746   FF 1
+747     747   FF 1
+748     748   FF 1
+749     749   FF 1
+750     750   FF 1
+751     751   FF 1
+752     752   FF 1
+753     753   FF 1
+754     754   FF 1
+755     755   FF 1
+756     756   FF 1
+757     757   FF 1
+758     758   FF 1
+759     759   FF 1
+760     760   FF 1
+761     761   FF 1
+762     762   FF 1
+763     763   FF 1
+764     764   FF 1
+765     765   FF 1
+766     766   FF 1
+767     767   FF 1
+768     768   FF 1
+769     769   FF 1
+770     770   FF 1
+771     771   FF 1
+772     772   FF 1
+773     773   FF 1
+774     774   FF 1
+775     775   FF 1
+776     776   FF 1
+777     777   FF 1
+778     778   FF 1
+779     779   FF 1
+780     780   FF 1
+781     781   FF 1
+782     782   FF 1
+783     783   FF 1
+784     784   FF 1
+785     785   FF 1
+786     786   FF 1
+787     787   FF 1
+788     788   FF 1
+789     789   FF 1
+790     790   FF 1
+791     791   FF 1
+792     792   FF 1
+793     793   FF 1
+794     794   FF 1
+795     795   FF 1
+796     796   FF 1
+797     797   FF 1
+798     798   FF 1
+799     799   FF 1
+800     800   FF 1
+801     801   FF 1
+802     802   FF 1
+803     803   FF 1
+804     804   FF 1
+805     805   FF 1
+806     806   FF 1
+807     807   FF 1
+808     808   FF 1
+809     809   FF 1
+810     810   FF 1
+811     811   FF 1
+812     812   FF 1
+813     813   FF 1
+814     814   FF 1
+815     815   FF 1
+816     816   FF 1
+817     817   FF 1
+818     818   FF 1
+819     819   FF 1
+820     820   FF 1
+821     821   FF 1
+822     822   FF 1
+823     823   FF 1
+824     824   FF 1
+825     825   FF 1
+826     826   FF 1
+827     827   FF 1
+828     828   FF 1
+829     829   FF 1
+830     830   FF 1
+831     831   FF 1
+832     832   FF 1
+833     833   FF 1
+834     834   FF 1
+835     835   FF 1
+836     836   FF 1
+837     837   FF 1
+838     838   FF 1
+839     839   FF 1
+840     840   FF 1
+841     841   FF 1
+842     842   FF 1
+843     843   FF 1
+844     844   FF 1
+845     845   FF 1
+846     846   FF 1
+847     847   FF 1
+848     848   FF 1
+849     849   FF 1
+850     850   FF 1
+851     851   FF 1
+852     852   FF 1
+853     853   FF 1
+854     854   FF 1
+855     855   FF 1
+856     856   FF 1
+857     857   FF 1
+858     858   FF 1
+859     859   FF 1
+860     860   FF 1
+861     861   FF 1
+862     862   FF 1
+863     863   FF 1
+864     864   FF 1
+865     865   FF 1
+866     866   FF 1
+867     867   FF 1
+868     868   FF 1
+869     869   FF 1
+870     870   FF 1
+871     871   FF 1
+872     872   FF 1
+873     873   FF 1
+874     874   FF 1
+875     875   FF 1
+876     876   FF 1
+877     877   FF 1
+878     878   FF 1
+879     879   FF 1
+880     880   FF 1
+881     881   FF 1
+882     882   FF 1
+883     883   FF 1
+884     884   FF 1
+885     885   FF 1
+886     886   FF 1
+887     887   FF 1
+888     888   FF 1
+889     889   FF 1
+890     890   FF 1
+891     891   FF 1
+892     892   FF 1
+893     893   FF 1
+894     894   FF 1
+895     895   FF 1
+896     896   FF 1
+897     897   FF 1
+898     898   FF 1
+899     899   FF 1
+900     900   FF 1
+901     901   FF 1
+902     902   FF 1
+903     903   FF 1
+904     904   FF 1
+905     905   FF 1
+906     906   FF 1
+907     907   FF 1
+908     908   FF 1
+909     909   FF 1
+910     910   FF 1
+911     911   FF 1
+912     912   FF 1
+913     913   FF 1
+914     914   FF 1
+915     915   FF 1
+916     916   FF 1
+917     917   FF 1
+918     918   FF 1
+919     919   FF 1
+920     920   FF 1
+921     921   FF 1
+922     922   FF 1
+923     923   FF 1
+924     924   FF 1
+925     925   FF 1
+926     926   FF 1
+927     927   FF 1
+928     928   FF 1
+929     929   FF 1
+930     930   FF 1
+931     931   FF 1
+932     932   FF 1
+933     933   FF 1
+934     934   FF 1
+935     935   FF 1
+936     936   FF 1
+937     937   FF 1
+938     938   FF 1
+939     939   FF 1
+940     940   FF 1
+941     941   FF 1
+942     942   FF 1
+943     943   FF 1
+944     944   FF 1
+945     945   FF 1
+946     946   FF 1
+947     947   FF 1
+948     948   FF 1
+949     949   FF 1
+950     950   FF 1
+951     951   FF 1
+952     952   FF 1
+953     953   FF 1
+954     954   FF 1
+955     955   FF 1
+956     956   FF 1
+957     957   FF 1
+958     958   FF 1
+959     959   FF 1
+960     960   FF 1
+961     961   FF 1
+962     962   FF 1
+963     963   FF 1
+964     964   FF 1
+965     965   FF 1
+966     966   FF 1
+967     967   FF 1
+968     968   FF 1
+969     969   FF 1
+970     970   FF 1
+971     971   FF 1
+972     972   FF 1
+973     973   FF 1
+974     974   FF 1
+975     975   FF 1
+976     976   FF 1
+977     977   FF 1
+978     978   FF 1
+979     979   FF 1
+980     980   FF 1
+981     981   FF 1
+982     982   FF 1
+983     983   FF 1
+984     984   FF 1
+985     985   FF 1
+986     986   FF 1
+987     987   FF 1
+988     988   FF 1
+989     989   FF 1
+990     990   FF 1
+991     991   FF 1
+992     992   FF 1
+993     993   FF 1
+994     994   FF 1
+995     995   FF 1
+996     996   FF 1
+997     997   FF 1
+998     998   FF 1
+999     999   FF 1
+1000    1000  FF 1
+--------------------------------------------------------------------------------
+Dimmers Patch
+
+Dmx   Li Cu Cha  Fxt
+1     FF 1  1
+2     FF 1  2
+3     FF 1  3
+4     FF 1  4
+5     FF 1  5
+6     FF 1  6
+7     FF 1  7
+8     FF 1  8
+9     FF 1  9
+10    FF 1  10
+11    FF 1  11
+12    FF 1  12
+13    FF 1  13
+14    FF 1  14
+15    FF 1  15
+16    FF 1  16
+17    FF 1  17
+18    FF 1  18
+19    FF 1  19
+20    FF 1  20
+21    FF 1  21
+22    FF 1  22
+23    FF 1  23
+24    FF 1  24
+25    FF 1  25
+26    FF 1  26
+27    FF 1  27
+28    FF 1  28
+29    FF 1  29
+30    FF 1  30
+31    FF 1  31
+32    FF 1  32
+33    FF 1  33
+34    FF 1  34
+35    FF 1  35
+36    FF 1  36
+37    FF 1  37
+38    FF 1  38
+39    FF 1  39
+40    FF 1  40
+41    FF 1  41
+42    FF 1  42
+43    FF 1  43
+44    FF 1  44
+45    FF 1  45
+46    FF 1  46
+47    FF 1  47
+48    FF 1  48
+49    FF 1  49
+50    FF 1  50
+51    FF 1  51
+52    FF 1  52
+53    FF 1  53
+54    FF 1  54
+55    FF 1  55
+56    FF 1  56
+57    FF 1  57
+58    FF 1  58
+59    FF 1  59
+60    FF 1  60
+61    FF 1  61
+62    FF 1  62
+63    FF 1  63
+64    FF 1  64
+65    FF 1  65
+66    FF 1  66
+67    FF 1  67
+68    FF 1  68
+69    FF 1  69
+70    FF 1  70
+71    FF 1  71
+72    FF 1  72
+73    FF 1  73
+74    FF 1  74
+75    FF 1  75
+76    FF 1  76
+77    FF 1  77
+78    FF 1  78
+79    FF 1  79
+80    FF 1  80
+81    FF 1  81
+82    FF 1  82
+83    FF 1  83
+84    FF 1  84
+85    FF 1  85
+86    FF 1  86
+87    FF 1  87
+88    FF 1  88
+89    FF 1  89
+90    FF 1  90
+91    FF 1  91
+92    FF 1  92
+93    FF 1  93
+94    FF 1  94
+95    FF 1  95
+96    FF 1  96
+97    FF 1  97
+98    FF 1  98
+99    FF 1  99
+100   FF 1  100
+101   FF 1  101
+102   FF 1  102
+103   FF 1  103
+104   FF 1  104
+105   FF 1  105
+106   FF 1  106
+107   FF 1  107
+108   FF 1  108
+109   FF 1  109
+110   FF 1  110
+111   FF 1  111
+112   FF 1  112
+113   FF 1  113
+114   FF 1  114
+115   FF 1  115
+116   FF 1  116
+117   FF 1  117
+118   FF 1  118
+119   FF 1  119
+120   FF 1  120
+121   FF 1  121
+122   FF 1  122
+123   FF 1  123
+124   FF 1  124
+125   FF 1  125
+126   FF 1  126
+127   FF 1  127
+128   FF 1  128
+129   FF 1  129
+130   FF 1  130
+131   FF 1  131
+132   FF 1  132
+133   FF 1  133
+134   FF 1  134
+135   FF 1  135
+136   FF 1  136
+137   FF 1  137
+138   FF 1  138
+139   FF 1  139
+140   FF 1  140
+141   FF 1  141
+142   FF 1  142
+143   FF 1  143
+144   FF 1  144
+145   FF 1  145
+146   FF 1  146
+147   FF 1  147
+148   FF 1  148
+149   FF 1  149
+150   FF 1  150
+151   FF 1  151
+152   FF 1  152
+153   FF 1  153
+154   FF 1  154
+155   FF 1  155
+156   FF 1  156
+157   FF 1  157
+158   FF 1  158
+159   FF 1  159
+160   FF 1  160
+161   FF 1  161
+162   FF 1  162
+163   FF 1  163
+164   FF 1  164
+165   FF 1  165
+166   FF 1  166
+167   FF 1  167
+168   FF 1  168
+169   FF 1  169
+170   FF 1  170
+171   FF 1  171
+172   FF 1  172
+173   FF 1  173
+174   FF 1  174
+175   FF 1  175
+176   FF 1  176
+177   FF 1  177
+178   FF 1  178
+179   FF 1  179
+180   FF 1  180
+181   FF 1  181
+182   FF 1  182
+183   FF 1  183
+184   FF 1  184
+185   FF 1  185
+186   FF 1  186
+187   FF 1  187
+188   FF 1  188
+189   FF 1  189
+190   FF 1  190
+191   FF 1  191
+192   FF 1  192
+193   FF 1  193
+194   FF 1  194
+195   FF 1  195
+196   FF 1  196
+197   FF 1  197
+198   FF 1  198
+199   FF 1  199
+200   FF 1  200
+201   FF 1  201
+202   FF 1  202
+203   FF 1  203
+204   FF 1  204
+205   FF 1  205
+206   FF 1  206
+207   FF 1  207
+208   FF 1  208
+209   FF 1  209
+210   FF 1  210
+211   FF 1  211
+212   FF 1  212
+213   FF 1  213
+214   FF 1  214
+215   FF 1  215
+216   FF 1  216
+217   FF 1  217
+218   FF 1  218
+219   FF 1  219
+220   FF 1  220
+221   FF 1  221
+222   FF 1  222
+223   FF 1  223
+224   FF 1  224
+225   FF 1  225
+226   FF 1  226
+227   FF 1  227
+228   FF 1  228
+229   FF 1  229
+230   FF 1  230
+231   FF 1  231
+232   FF 1  232
+233   FF 1  233
+234   FF 1  234
+235   FF 1  235
+236   FF 1  236
+237   FF 1  237
+238   FF 1  238
+239   FF 1  239
+240   FF 1  240
+241   FF 1  241
+242   FF 1  242
+243   FF 1  243
+244   FF 1  244
+245   FF 1  245
+246   FF 1  246
+247   FF 1  247
+248   FF 1  248
+249   FF 1  249
+250   FF 1  250
+251   FF 1  251
+252   FF 1  252
+253   FF 1  253
+254   FF 1  254
+255   FF 1  255
+256   FF 1  256
+257   FF 1  257
+258   FF 1  258
+259   FF 1  259
+260   FF 1  260
+261   FF 1  261
+262   FF 1  262
+263   FF 1  263
+264   FF 1  264
+265   FF 1  265
+266   FF 1  266
+267   FF 1  267
+268   FF 1  268
+269   FF 1  269
+270   FF 1  270
+271   FF 1  271
+272   FF 1  272
+273   FF 1  273
+274   FF 1  274
+275   FF 1  275
+276   FF 1  276
+277   FF 1  277
+278   FF 1  278
+279   FF 1  279
+280   FF 1  280
+281   FF 1  281
+282   FF 1  282
+283   FF 1  283
+284   FF 1  284
+285   FF 1  285
+286   FF 1  286
+287   FF 1  287
+288   FF 1  288
+289   FF 1  289
+290   FF 1  290
+291   FF 1  291
+292   FF 1  292
+293   FF 1  293
+294   FF 1  294
+295   FF 1  295
+296   FF 1  296
+297   FF 1  297
+298   FF 1  298
+299   FF 1  299
+300   FF 1  300
+301   FF 1  301
+302   FF 1  302
+303   FF 1  303
+304   FF 1  304
+305   FF 1  305
+306   FF 1  306
+307   FF 1  307
+308   FF 1  308
+309   FF 1  309
+310   FF 1  310
+311   FF 1  311
+312   FF 1  312
+313   FF 1  313
+314   FF 1  314
+315   FF 1  315
+316   FF 1  316
+317   FF 1  317
+318   FF 1  318
+319   FF 1  319
+320   FF 1  320
+321   FF 1  321
+322   FF 1  322
+323   FF 1  323
+324   FF 1  324
+325   FF 1  325
+326   FF 1  326
+327   FF 1  327
+328   FF 1  328
+329   FF 1  329
+330   FF 1  330
+331   FF 1  331
+332   FF 1  332
+333   FF 1  333
+334   FF 1  334
+335   FF 1  335
+336   FF 1  336
+337   FF 1  337
+338   FF 1  338
+339   FF 1  339
+340   FF 1  340
+341   FF 1  341
+342   FF 1  342
+343   FF 1  343
+344   FF 1  344
+345   FF 1  345
+346   FF 1  346
+347   FF 1  347
+348   FF 1  348
+349   FF 1  349
+350   FF 1  350
+351   FF 1  351
+352   FF 1  352
+353   FF 1  353
+354   FF 1  354
+355   FF 1  355
+356   FF 1  356
+357   FF 1  357
+358   FF 1  358
+359   FF 1  359
+360   FF 1  360
+361   FF 1  361
+362   FF 1  362
+363   FF 1  363
+364   FF 1  364
+365   FF 1  365
+366   FF 1  366
+367   FF 1  367
+368   FF 1  368
+369   FF 1  369
+370   FF 1  370
+371   FF 1  371
+372   FF 1  372
+373   FF 1  373
+374   FF 1  374
+375   FF 1  375
+376   FF 1  376
+377   FF 1  377
+378   FF 1  378
+379   FF 1  379
+380   FF 1  380
+381   FF 1  381
+382   FF 1  382
+383   FF 1  383
+384   FF 1  384
+385   FF 1  385
+386   FF 1  386
+387   FF 1  387
+388   FF 1  388
+389   FF 1  389
+390   FF 1  390
+391   FF 1  391
+392   FF 1  392
+393   FF 1  393
+394   FF 1  394
+395   FF 1  395
+396   FF 1  396
+397   FF 1  397
+398   FF 1  398
+399   FF 1  399
+400   FF 1  400
+401   FF 1  401
+402   FF 1  402
+403   FF 1  403
+404   FF 1  404
+405   FF 1  405
+406   FF 1  406
+407   FF 1  407
+408   FF 1  408
+409   FF 1  409
+410   FF 1  410
+411   FF 1  411
+412   FF 1  412
+413   FF 1  413
+414   FF 1  414
+415   FF 1  415
+416   FF 1  416
+417   FF 1  417
+418   FF 1  418
+419   FF 1  419
+420   FF 1  420
+421   FF 1  421
+422   FF 1  422
+423   FF 1  423
+424   FF 1  424
+425   FF 1  425
+426   FF 1  426
+427   FF 1  427
+428   FF 1  428
+429   FF 1  429
+430   FF 1  430
+431   FF 1  431
+432   FF 1  432
+433   FF 1  433
+434   FF 1  434
+435   FF 1  435
+436   FF 1  436
+437   FF 1  437
+438   FF 1  438
+439   FF 1  439
+440   FF 1  440
+441   FF 1  441
+442   FF 1  442
+443   FF 1  443
+444   FF 1  444
+445   FF 1  445
+446   FF 1  446
+447   FF 1  447
+448   FF 1  448
+449   FF 1  449
+450   FF 1  450
+451   FF 1  451
+452   FF 1  452
+453   FF 1  453
+454   FF 1  454
+455   FF 1  455
+456   FF 1  456
+457   FF 1  457
+458   FF 1  458
+459   FF 1  459
+460   FF 1  460
+461   FF 1  461
+462   FF 1  462
+463   FF 1  463
+464   FF 1  464
+465   FF 1  465
+466   FF 1  466
+467   FF 1  467
+468   FF 1  468
+469   FF 1  469
+470   FF 1  470
+471   FF 1  471
+472   FF 1  472
+473   FF 1  473
+474   FF 1  474
+475   FF 1  475
+476   FF 1  476
+477   FF 1  477
+478   FF 1  478
+479   FF 1  479
+480   FF 1  480
+481   FF 1  481
+482   FF 1  482
+483   FF 1  483
+484   FF 1  484
+485   FF 1  485
+486   FF 1  486
+487   FF 1  487
+488   FF 1  488
+489   FF 1  489
+490   FF 1  490
+491   FF 1  491
+492   FF 1  492
+493   FF 1  493
+494   FF 1  494
+495   FF 1  495
+496   FF 1  496
+497   FF 1  497
+498   FF 1  498
+499   FF 1  499
+500   FF 1  500
+501   FF 1  501
+502   FF 1  502
+503   FF 1  503
+504   FF 1  504
+505   FF 1  505
+506   FF 1  506
+507   FF 1  507
+508   FF 1  508
+509   FF 1  509
+510   FF 1  510
+511   FF 1  511
+512   FF 1  512
+513   FF 1  513
+514   FF 1  514
+515   FF 1  515
+516   FF 1  516
+517   FF 1  517
+518   FF 1  518
+519   FF 1  519
+520   FF 1  520
+521   FF 1  521
+522   FF 1  522
+523   FF 1  523
+524   FF 1  524
+525   FF 1  525
+526   FF 1  526
+527   FF 1  527
+528   FF 1  528
+529   FF 1  529
+530   FF 1  530
+531   FF 1  531
+532   FF 1  532
+533   FF 1  533
+534   FF 1  534
+535   FF 1  535
+536   FF 1  536
+537   FF 1  537
+538   FF 1  538
+539   FF 1  539
+540   FF 1  540
+541   FF 1  541
+542   FF 1  542
+543   FF 1  543
+544   FF 1  544
+545   FF 1  545
+546   FF 1  546
+547   FF 1  547
+548   FF 1  548
+549   FF 1  549
+550   FF 1  550
+551   FF 1  551
+552   FF 1  552
+553   FF 1  553
+554   FF 1  554
+555   FF 1  555
+556   FF 1  556
+557   FF 1  557
+558   FF 1  558
+559   FF 1  559
+560   FF 1  560
+561   FF 1  561
+562   FF 1  562
+563   FF 1  563
+564   FF 1  564
+565   FF 1  565
+566   FF 1  566
+567   FF 1  567
+568   FF 1  568
+569   FF 1  569
+570   FF 1  570
+571   FF 1  571
+572   FF 1  572
+573   FF 1  573
+574   FF 1  574
+575   FF 1  575
+576   FF 1  576
+577   FF 1  577
+578   FF 1  578
+579   FF 1  579
+580   FF 1  580
+581   FF 1  581
+582   FF 1  582
+583   FF 1  583
+584   FF 1  584
+585   FF 1  585
+586   FF 1  586
+587   FF 1  587
+588   FF 1  588
+589   FF 1  589
+590   FF 1  590
+591   FF 1  591
+592   FF 1  592
+593   FF 1  593
+594   FF 1  594
+595   FF 1  595
+596   FF 1  596
+597   FF 1  597
+598   FF 1  598
+599   FF 1  599
+600   FF 1  600
+601   FF 1  601
+602   FF 1  602
+603   FF 1  603
+604   FF 1  604
+605   FF 1  605
+606   FF 1  606
+607   FF 1  607
+608   FF 1  608
+609   FF 1  609
+610   FF 1  610
+611   FF 1  611
+612   FF 1  612
+613   FF 1  613
+614   FF 1  614
+615   FF 1  615
+616   FF 1  616
+617   FF 1  617
+618   FF 1  618
+619   FF 1  619
+620   FF 1  620
+621   FF 1  621
+622   FF 1  622
+623   FF 1  623
+624   FF 1  624
+625   FF 1  625
+626   FF 1  626
+627   FF 1  627
+628   FF 1  628
+629   FF 1  629
+630   FF 1  630
+631   FF 1  631
+632   FF 1  632
+633   FF 1  633
+634   FF 1  634
+635   FF 1  635
+636   FF 1  636
+637   FF 1  637
+638   FF 1  638
+639   FF 1  639
+640   FF 1  640
+641   FF 1  641
+642   FF 1  642
+643   FF 1  643
+644   FF 1  644
+645   FF 1  645
+646   FF 1  646
+647   FF 1  647
+648   FF 1  648
+649   FF 1  649
+650   FF 1  650
+651   FF 1  651
+652   FF 1  652
+653   FF 1  653
+654   FF 1  654
+655   FF 1  655
+656   FF 1  656
+657   FF 1  657
+658   FF 1  658
+659   FF 1  659
+660   FF 1  660
+661   FF 1  661
+662   FF 1  662
+663   FF 1  663
+664   FF 1  664
+665   FF 1  665
+666   FF 1  666
+667   FF 1  667
+668   FF 1  668
+669   FF 1  669
+670   FF 1  670
+671   FF 1  671
+672   FF 1  672
+673   FF 1  673
+674   FF 1  674
+675   FF 1  675
+676   FF 1  676
+677   FF 1  677
+678   FF 1  678
+679   FF 1  679
+680   FF 1  680
+681   FF 1  681
+682   FF 1  682
+683   FF 1  683
+684   FF 1  684
+685   FF 1  685
+686   FF 1  686
+687   FF 1  687
+688   FF 1  688
+689   FF 1  689
+690   FF 1  690
+691   FF 1  691
+692   FF 1  692
+693   FF 1  693
+694   FF 1  694
+695   FF 1  695
+696   FF 1  696
+697   FF 1  697
+698   FF 1  698
+699   FF 1  699
+700   FF 1  700
+701   FF 1  701
+702   FF 1  702
+703   FF 1  703
+704   FF 1  704
+705   FF 1  705
+706   FF 1  706
+707   FF 1  707
+708   FF 1  708
+709   FF 1  709
+710   FF 1  710
+711   FF 1  711
+712   FF 1  712
+713   FF 1  713
+714   FF 1  714
+715   FF 1  715
+716   FF 1  716
+717   FF 1  717
+718   FF 1  718
+719   FF 1  719
+720   FF 1  720
+721   FF 1  721
+722   FF 1  722
+723   FF 1  723
+724   FF 1  724
+725   FF 1  725
+726   FF 1  726
+727   FF 1  727
+728   FF 1  728
+729   FF 1  729
+730   FF 1  730
+731   FF 1  731
+732   FF 1  732
+733   FF 1  733
+734   FF 1  734
+735   FF 1  735
+736   FF 1  736
+737   FF 1  737
+738   FF 1  738
+739   FF 1  739
+740   FF 1  740
+741   FF 1  741
+742   FF 1  742
+743   FF 1  743
+744   FF 1  744
+745   FF 1  745
+746   FF 1  746
+747   FF 1  747
+748   FF 1  748
+749   FF 1  749
+750   FF 1  750
+751   FF 1  751
+752   FF 1  752
+753   FF 1  753
+754   FF 1  754
+755   FF 1  755
+756   FF 1  756
+757   FF 1  757
+758   FF 1  758
+759   FF 1  759
+760   FF 1  760
+761   FF 1  761
+762   FF 1  762
+763   FF 1  763
+764   FF 1  764
+765   FF 1  765
+766   FF 1  766
+767   FF 1  767
+768   FF 1  768
+769   FF 1  769
+770   FF 1  770
+771   FF 1  771
+772   FF 1  772
+773   FF 1  773
+774   FF 1  774
+775   FF 1  775
+776   FF 1  776
+777   FF 1  777
+778   FF 1  778
+779   FF 1  779
+780   FF 1  780
+781   FF 1  781
+782   FF 1  782
+783   FF 1  783
+784   FF 1  784
+785   FF 1  785
+786   FF 1  786
+787   FF 1  787
+788   FF 1  788
+789   FF 1  789
+790   FF 1  790
+791   FF 1  791
+792   FF 1  792
+793   FF 1  793
+794   FF 1  794
+795   FF 1  795
+796   FF 1  796
+797   FF 1  797
+798   FF 1  798
+799   FF 1  799
+800   FF 1  800
+801   FF 1  801
+802   FF 1  802
+803   FF 1  803
+804   FF 1  804
+805   FF 1  805
+806   FF 1  806
+807   FF 1  807
+808   FF 1  808
+809   FF 1  809
+810   FF 1  810
+811   FF 1  811
+812   FF 1  812
+813   FF 1  813
+814   FF 1  814
+815   FF 1  815
+816   FF 1  816
+817   FF 1  817
+818   FF 1  818
+819   FF 1  819
+820   FF 1  820
+821   FF 1  821
+822   FF 1  822
+823   FF 1  823
+824   FF 1  824
+825   FF 1  825
+826   FF 1  826
+827   FF 1  827
+828   FF 1  828
+829   FF 1  829
+830   FF 1  830
+831   FF 1  831
+832   FF 1  832
+833   FF 1  833
+834   FF 1  834
+835   FF 1  835
+836   FF 1  836
+837   FF 1  837
+838   FF 1  838
+839   FF 1  839
+840   FF 1  840
+841   FF 1  841
+842   FF 1  842
+843   FF 1  843
+844   FF 1  844
+845   FF 1  845
+846   FF 1  846
+847   FF 1  847
+848   FF 1  848
+849   FF 1  849
+850   FF 1  850
+851   FF 1  851
+852   FF 1  852
+853   FF 1  853
+854   FF 1  854
+855   FF 1  855
+856   FF 1  856
+857   FF 1  857
+858   FF 1  858
+859   FF 1  859
+860   FF 1  860
+861   FF 1  861
+862   FF 1  862
+863   FF 1  863
+864   FF 1  864
+865   FF 1  865
+866   FF 1  866
+867   FF 1  867
+868   FF 1  868
+869   FF 1  869
+870   FF 1  870
+871   FF 1  871
+872   FF 1  872
+873   FF 1  873
+874   FF 1  874
+875   FF 1  875
+876   FF 1  876
+877   FF 1  877
+878   FF 1  878
+879   FF 1  879
+880   FF 1  880
+881   FF 1  881
+882   FF 1  882
+883   FF 1  883
+884   FF 1  884
+885   FF 1  885
+886   FF 1  886
+887   FF 1  887
+888   FF 1  888
+889   FF 1  889
+890   FF 1  890
+891   FF 1  891
+892   FF 1  892
+893   FF 1  893
+894   FF 1  894
+895   FF 1  895
+896   FF 1  896
+897   FF 1  897
+898   FF 1  898
+899   FF 1  899
+900   FF 1  900
+901   FF 1  901
+902   FF 1  902
+903   FF 1  903
+904   FF 1  904
+905   FF 1  905
+906   FF 1  906
+907   FF 1  907
+908   FF 1  908
+909   FF 1  909
+910   FF 1  910
+911   FF 1  911
+912   FF 1  912
+913   FF 1  913
+914   FF 1  914
+915   FF 1  915
+916   FF 1  916
+917   FF 1  917
+918   FF 1  918
+919   FF 1  919
+920   FF 1  920
+921   FF 1  921
+922   FF 1  922
+923   FF 1  923
+924   FF 1  924
+925   FF 1  925
+926   FF 1  926
+927   FF 1  927
+928   FF 1  928
+929   FF 1  929
+930   FF 1  930
+931   FF 1  931
+932   FF 1  932
+933   FF 1  933
+934   FF 1  934
+935   FF 1  935
+936   FF 1  936
+937   FF 1  937
+938   FF 1  938
+939   FF 1  939
+940   FF 1  940
+941   FF 1  941
+942   FF 1  942
+943   FF 1  943
+944   FF 1  944
+945   FF 1  945
+946   FF 1  946
+947   FF 1  947
+948   FF 1  948
+949   FF 1  949
+950   FF 1  950
+951   FF 1  951
+952   FF 1  952
+953   FF 1  953
+954   FF 1  954
+955   FF 1  955
+956   FF 1  956
+957   FF 1  957
+958   FF 1  958
+959   FF 1  959
+960   FF 1  960
+961   FF 1  961
+962   FF 1  962
+963   FF 1  963
+964   FF 1  964
+965   FF 1  965
+966   FF 1  966
+967   FF 1  967
+968   FF 1  968
+969   FF 1  969
+970   FF 1  970
+971   FF 1  971
+972   FF 1  972
+973   FF 1  973
+974   FF 1  974
+975   FF 1  975
+976   FF 1  976
+977   FF 1  977
+978   FF 1  978
+979   FF 1  979
+980   FF 1  980
+981   FF 1  981
+982   FF 1  982
+983   FF 1  983
+984   FF 1  984
+985   FF 1  985
+986   FF 1  986
+987   FF 1  987
+988   FF 1  988
+989   FF 1  989
+990   FF 1  990
+991   FF 1  991
+992   FF 1  992
+993   FF 1  993
+994   FF 1  994
+995   FF 1  995
+996   FF 1  996
+997   FF 1  997
+998   FF 1  998
+999   FF 1  999
+1000  FF 1  1000
+--------------------------------------------------------------------------------
+Fixtures Patch
+
+Fix Type  Dmx---dmx   X/Y ColorSys dm
+--------------------------------------------------------------------------------
+Curves
+
+US6-Soft
+0 - 00% - 000
+1 - 10% - 025
+2 - 20% - 051
+3 - 30% - 076
+4 - 40% - 102
+5 - 50% - 127
+6 - 60% - 153
+7 - 70% - 178
+8 - 80% - 204
+9 - 90% - 229
+F - FF% - 255
+
+US7-Soft
+0 - 00% - 000
+1 - 10% - 025
+2 - 20% - 051
+3 - 30% - 076
+4 - 40% - 102
+5 - 50% - 127
+6 - 60% - 153
+7 - 70% - 178
+8 - 80% - 204
+9 - 90% - 229
+F - FF% - 255
+
+US8-Soft
+0 - 00% - 000
+1 - 10% - 025
+2 - 20% - 051
+3 - 30% - 076
+4 - 40% - 102
+5 - 50% - 127
+6 - 60% - 153
+7 - 70% - 178
+8 - 80% - 204
+9 - 90% - 229
+F - FF% - 255
+
+--------------------------------------------------------------------------------
+Fixtures Cache
+
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+1    MC500 16  Mac500 Mode4              MARTN 1001 MAC500M4.--- HEAD   440 306
+          Par=0  Control  Ch=1    Home=0
+                    Step Name   Level Time Pal
+                    1    Reset  208   6    Rst
+                    2    On     228   6    On 
+                    3    Off    248   6    Off
+          Par=1  Shutter  Num=21  Ch=1                 Home=49
+                    Step Name   Min Max Stop Palette
+                    1    CLOSED   0  19      Close
+                    2    OPEN    20  49      Open
+                    3    STROBE  50  72 s    Strobe
+                    4    OPEN P  80  99 s    PulseOp
+                    5    CLOS P 100 119 s    PulseCl
+                    6    RndOpn 191 196 s    Random
+                    7    RndCls 197 202 s    
+                    8    OPEN   203 207      
+          Par=2  Dimmer   Num=20  Ch=2               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=3  Color1   Num=47  Ch=3          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  15      White
+                    2    BLUE    16  31      Blue
+                    3    RED     32  47      Red
+                    4    MAGNTA  48  63      Magent
+                    5    GREEN   64  79      Green
+                    6    YELLOW  80  95      Yellow
+                    7    PURPLE  96 111      Purple
+                    8    BLUE   112 127      
+                    9    PINK   128 143      Pink
+                    10   CYAN   144 144 s    Cyan
+                    11   CYAN   145 148      
+                    12   PINK   149 152      
+                    13   BLUE   153 156      
+                    14   PURPLE 157 160      
+                    15   YELLOW 161 164      
+                    16   GREEN  165 168      
+                    17   MAGNTA 169 172      
+                    18   RED    173 176      
+                    19   BLUE   177 180      
+                    20   WHITE  181 184 s    
+                    21   SPN--> 185 215      Col>
+                    22   <--SPN 216 245 s    
+                    23   CW2_ON 246 255      
+          Par=4  Color2   Num=47  Ch=4          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    white    0   7      
+                    2    4100     8  25      
+                    3    5600    26  40      
+                    4    blue    41  55      
+                    5    congo   56  72      
+                    6    green   73  88      
+                    7    red     89 104      
+                    8    yellw+ 105 120      
+                    9    2900   121 136      
+                    10   4200   137 144      
+                    11   4100   145 148      
+                    12   5600   149 152      
+                    13   blue   153 156      
+                    14   congo  157 160      
+                    15   green  161 164      
+                    16   red    165 168      
+                    17   yellw+ 169 172      
+                    18   2900   173 176      
+                    19   4200   177 180      
+                    20   white  181 184      
+                    21   >>>>>  185 215      
+                    22   <<<<<< 216 245      
+                    23   random 246 255      
+          Par=5  RotGB    Num=60  Ch=5          gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  55      
+                    2    GOBO1   56  75      Gobo 1
+                    3    GOBO2   76  95      Gobo 2
+                    4    GOBO3   96 115      Gobo 3
+                    5    GOBO4  116 135      Gobo 4
+                    6    GOBO5  136 155 s    Gobo 5
+                    7    >>GOB5 156 175      
+                    8    >>GOB4 176 195      
+                    9    >>GOB3 196 215      
+                    10   >>GOB2 216 235      
+                    11   >>GOB1 236 255      
+          Par=6  RotGbRot Num=61  Ch=6          gob    Home=0
+                    Step Name   Min Max Stop
+                    1    ROT-->   0 127      
+                    2    <--ROT 128 252      
+                    3    STOP   253 255      
+          Par=7  GWhl     Num=60  Ch=7          gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0   9      
+                    2    GOBO1   10  19      
+                    3    GOBO2   20  29      
+                    4    GOBO3   30  39      
+                    5    GOBO4   40  49      
+                    6    GOBO5   50  59      
+                    7    GOBO6   60  69      
+                    8    GOBO7   70  79      
+                    9    GOBO8   80  89      
+                    10   GOBO9   90 102 s    
+                    11   <>GOB9 103 119      
+                    12   <>GOB8 120 136      
+                    13   <>GOB7 137 153      
+                    14   <>GOB6 154 170      
+                    15   <>GOB5 171 187      
+                    16   <>GOB4 188 204      
+                    17   <>GOB3 205 221      
+                    18   <>GOB2 222 238      
+                    19   <>GOB1 239 255      
+          Par=8  Focus    Num=80  Ch=8               f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=9  Iris     Num=81  Ch=9               f Home=0
+                    Step Name   Min Max Stop
+                    1    Op>Cls   0 199      
+                    2    CLOSE  200 215 s    
+                    3    OPEN P 216 229 s    
+                    4    CLOS P 230 243 s    
+                    5    RndOpn 244 249 s    
+                    6    RndCls 250 255      
+          Par=10 Prism    Num=101 Ch=10         xtra f Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0  19      
+                    2    <--ROT  20  79      
+                    3    STOP    80  89      
+                    4    ROT-->  90 149 s    
+                    5    MACRO1 216 220      
+                    6    MACRO2 221 225      
+                    7    MACRO3 226 230      
+                    8    MACRO4 231 235      
+                    9    MACRO5 236 240      
+                    10   MACRO6 241 245      
+                    11   MACRO7 246 250      
+                    12   MACRO8 251 255      
+          Par=11 X        Num=0   Ch=11  +12    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=12 Y        Num=1   Ch=13  +14    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=13 Mov-Spd  Num=103 Ch=15                Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   2      
+                    2    Fst>Sl   3 245 s    
+                    3    NORM   246 248 s    
+                    4    FAST   249 251 s    
+                    5    Mov BO 252 255      
+          Par=14 Speed    Num=105 Ch=16                Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   2      
+                    2    Fst>Sl   3 245 s    
+                    3    MISC   246 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+2    MC600 14  Mac600 Mode4              MARTN 1002 MAC600M4.--- HEAD   440 306
+          Par=0  Control  Ch=1    Home=0
+                    Step Name   Level Time Pal
+                    1    Shuttr 202   6       
+                    2    Reset  212   6    Rst
+                    3    On     232   6    On 
+                    4    Off    255   6    Off
+          Par=1  Strobe   Num=22  Ch=1                 Home=49
+                    Step Name   Min Max Stop Palette
+                    1    CLOSED   0  19      Close
+                    2    OPEN    20  49      Open
+                    3    STROBE  50 112      Strobe
+                    4    CLOSED 113 115 s    
+                    5    >open< 116 122      
+                    6    CLOSED 123 127 s    
+                    7    RANDOM 128 187      Random
+                    8    CLOSED 188 207      
+          Par=2  Dimmer   Num=20  Ch=2               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=3  Cyan     Num=40  Ch=3          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=4  Magenta  Num=41  Ch=4          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=5  Yellow   Num=42  Ch=5          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+          Par=6  CWhl     Num=47  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  39      
+                    2    COLOR1  40  79      
+                    3    COLOR2  80 119      
+                    4    COLOR3 120 159      
+                    5    COLOR4 160 160 s    
+                    6    COLOR4 161 165      
+                    7    COLOR3 166 170      
+                    8    COLOR2 171 175      
+                    9    COLOR1 176 180      
+                    10   WHITE  181 185 s    
+                    11   SPN--> 186 214      
+                    12   <--SPN 215 243 s    
+                    13   RANDOM 244 255      
+          Par=7  BeamShp  Num=84  Ch=7          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Lft>Rt   0 255      
+          Par=8  Frost    Num=82  Ch=8          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Lft>Rt   0 170 s    
+                    2    Frost  171 255      
+          Par=9  X        Num=0   Ch=9   +10    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=10 Y        Num=1   Ch=11  +12    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=11 Mov-Spd  Num=103 Ch=13                Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   2      
+                    2    Fst>Sl   3 245 s    
+                    3    NORM   246 248 s    
+                    4    FAST   249 251 s    
+                    5    Mov BO 252 255      
+          Par=12 Mov-Type Num=107 Ch=14              f Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   2      
+                    2    Speed    3 239 s    
+                    3    StuOff 240 242 s    
+                    4    StuOn  243 245 s    
+                    5    ScOff  246 248 s    
+                    6    ScOn   249 251 s    
+                    7    Mov BO 252 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+3    RGB   3   RGB Barras, washes...     DEVIC 0903 RGB-BAR-.3CH        0   0
+          Par=1  Red      Num=43  Ch=1          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Red      0 255      
+          Par=2  Green    Num=44  Ch=2          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Green    0 255      
+          Par=3  Blue     Num=45  Ch=3          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Blue     0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+4    STAGS 17  StageScan                 CPAKY 0104 STAGESCA.--- MIRROR 150 110
+          Par=0  Control  Ch=17   Home=0
+                    Step Name   Level Time Pal
+                    1    Off    0     0    Off
+                    2    On     255   0    On 
+          Par=1  Iris     Num=81  Ch=1          beam   Home=255
+                    Step Name   Min Max Stop
+                    1    Iris     0 255      
+          Par=2  CWhl     Num=47  Ch=2          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  15      
+                    2    WARM_F  16  31      
+                    3    COLD_F  32  48      
+                    4    RED     49  64      
+                    5    YELLOW  65  80      
+                    6    BLUE    81  97      
+                    7    UV      98 113      
+                    8    4COLOR 114 126      
+                    9    WHITE  127 127 s    
+                    10   SPN--> 128 255      
+          Par=3  Frost    Num=82  Ch=3          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0  47      
+                    2    FROST   48  99      
+                    3    L.FRST 100 151      
+                    4    H.FRST 152 203      
+                    5    PRISM  204 255      
+          Par=4  Dimmer   Num=20  Ch=4               f Home=139
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 139 s    Dimmer
+                    2    Strobe 140 255      Strobe
+          Par=5  X        Num=0   Ch=5          pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=6  Y        Num=1   Ch=6          pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=7  Zoom     Num=83  Ch=7          beam f Home=128
+                    Step Name   Min Max Stop
+                    1    24.9     0  42      
+                    2    21.2    43  85      
+                    3    18.2    86 128      
+                    4    16     129 171      
+                    5    14.5   172 214      
+                    6    13.1   215 255      
+          Par=8  Focus    Num=80  Ch=8          beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=9  Prism    Num=101 Ch=9          xtra f Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0  51      
+                    2    4PRISM  52 103      
+                    3    2PRISM 104 155      
+                    4    TRAIL  156 207      
+                    5    3D     208 255      
+          Par=10 PrismRot Num=102 Ch=10         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    0 -->    0  20      
+                    2    90 -->  21  41      
+                    3    180-->  42  62      
+                    4    270-->  63  83      
+                    5    360-->  84 104      
+                    6    450--> 105 126      
+                    7    540    127 127 s    
+                    8    <--ROT 128 190      
+                    9    STOP   191 192      
+                    10   ROT--> 193 255      
+          Par=11 GWhl     Num=60  Ch=11         gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  47      
+                    2    FLOWER  48  99      
+                    3    GLASS  100 151      
+                    4    TRIANG 152 203      
+                    5    CIRCLE 204 255      
+          Par=12 RotGB    Num=60  Ch=12         gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  51      
+                    2    COSMOS  52 103      
+                    3    STAR   104 155      
+                    4    SPIRAL 156 207      
+                    5    TRIANG 208 255      
+          Par=13 RotGbRot Num=61  Ch=13         gob    Home=0
+                    Step Name   Min Max Stop
+                    1    0 -->    0  20      
+                    2    90 -->  21  41      
+                    3    180-->  42  62      
+                    4    270-->  63  83      
+                    5    360-->  84 104      
+                    6    450--> 105 126      
+                    7    540    127 127 s    
+                    8    ROT--> 128 190      
+                    9    STOP   191 192      
+                    10   <--ROT 193 255      
+          Par=14 Cyan     Num=40  Ch=14       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=15 Magenta  Num=41  Ch=15       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=16 Yellow   Num=42  Ch=16       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+5    SPSCZ 16  SuperScan Zoom 16Ch       CPAKY 0106 SUPRSCNZ.ME- MIRROR 150 110
+          Par=1  Iris     Num=81  Ch=1          beam   Home=255
+                    Step Name   Min Max Stop
+                    1    Iris     0 255      
+          Par=2  Color    Num=47  Ch=2          col    Home=0
+                    Step Name   Min Max Stop Palette
+                    1    white    0  15      
+                    2    yellow  16  31      
+                    3    Red++   32  47      
+                    4    UV      48  63      
+                    5    BlueH   64  79      
+                    6    YellwH  80  95      
+                    7    cto     96 111      
+                    8    ctb    112 127      
+                    9    speen> 128 255      
+          Par=3  GWhl     Num=60  Ch=3          gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    none     0  50      
+                    2    gobo1   51 101      Gobo 1
+                    3    gobo2  102 153      Gobo 2
+                    4    gobo3  154 204      Gobo 3
+                    5    gobo4  205 255      Gobo 4
+          Par=4  Dimmer   Num=20  Ch=4               f Home=127
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 127 s    Dimmer
+                    2    Strobe 128 255      Strobe
+          Par=5  X        Num=0   Ch=5          pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=6  Y        Num=1   Ch=6          pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=7  Frost    Num=82  Ch=7          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Frost    0 255      
+          Par=8  Zoom     Num=83  Ch=8          beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Zoom     0 255      
+          Par=9  Focus    Num=80  Ch=9          beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=10 Cyan     Num=40  Ch=10       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=11 Magenta  Num=41  Ch=11       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=12 Yellow   Num=42  Ch=12       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+          Par=13 GoboRot  Num=60  Ch=13         gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    None     0  50      
+                    2    1 gob   51 101      Gobo 5
+                    3    2 gob  102 153      Gobo 6
+                    4    3 gob  154 204      Gobo 7
+                    5    4 gob  205 255      Gobo 8
+          Par=14 RotGbRot Num=61  Ch=14         gob    Home=0
+                    Step Name   Min Max Stop
+                    1    Index    0 127 s    
+                    2    Rotate 129 255      
+          Par=15 Prism    Num=101 Ch=15         xtra f Home=0
+                    Step Name   Min Max Stop
+                    1    Prism    0 255      
+          Par=16 PrismRot Num=102 Ch=16         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    Rotate   0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+6    STAGZ 19  StageZoom 1200            CPAKY 0111 STAGEZOO.--- HEAD   450 252
+          Par=0  Control  Ch=17   Home=0
+                    Step Name   Level Time Pal
+                    1    Off    0     0    Off
+                    2    On     255   0    On 
+          Par=1  Iris     Num=81  Ch=1          beam   Home=255
+                    Step Name   Min Max Stop
+                    1    Iris     0 255      
+          Par=2  CWhl     Num=47  Ch=2          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0   7      
+                    2    WARM_F   8  23      
+                    3    COLD_F  24  39      
+                    4    BLUE    40  55      
+                    5    YELLOW  56  71      
+                    6    RED     72  87      
+                    7    4COLOR  88 103      
+                    8    UV     104 119      
+                    9    WHITE  120 127 s    
+                    10   SPN--> 128 255      
+          Par=3  Frost    Num=82  Ch=3          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Frost    0 255      
+          Par=4  Dimmer   Num=20  Ch=4               f Home=139
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 139 s    Dimmer
+                    2    Strobe 140 255      Strobe
+          Par=5  X        Num=0   Ch=5   +18    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=6  Y        Num=1   Ch=6   +19    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=7  Zoom     Num=83  Ch=7          beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Zoom     0 255      
+          Par=8  Focus    Num=80  Ch=8          beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=9  Prism    Num=101 Ch=9          xtra f Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0  51      
+                    2    4PRISM  52 103      
+                    3    5PRISM 104 155      
+                    4    2PRISM 156 207      
+                    5    3D     208 255      
+          Par=10 PrismRot Num=102 Ch=10         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    0 -->    0  20      
+                    2    90 -->  21  41      
+                    3    180-->  42  62      
+                    4    270-->  63  83      
+                    5    360-->  84 104      
+                    6    450--> 105 126      
+                    7    540    127 127 s    
+                    8    <--ROT 128 190      
+                    9    STOP   191 192      
+                    10   ROT--> 193 255      
+          Par=11 GWhl     Num=60  Ch=11         gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  47      
+                    2    GOBO1   48  99      Gobo 1
+                    3    GOBO2  100 151      Gobo 2
+                    4    GOBO3  152 203      Gobo 3
+                    5    GOBO4  204 255      Gobo 4
+          Par=12 RotGB    Num=60  Ch=12         gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  51      
+                    2    GOBO1   52 103      
+                    3    GOBO2  104 156      
+                    4    GOBO3  157 207      
+                    5    GOBO4  208 255      
+          Par=13 RotGbRot Num=61  Ch=13         gob    Home=0
+                    Step Name   Min Max Stop
+                    1    0 -->    0  20      
+                    2    90 -->  21  41      
+                    3    180-->  42  62      
+                    4    270-->  63  83      
+                    5    360-->  84 104      
+                    6    450--> 105 126      
+                    7    540    127 127 s    
+                    8    ROT--> 128 190      
+                    9    STOP   191 192      
+                    10   <--ROT 193 255      
+          Par=14 Cyan     Num=40  Ch=14       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=15 Magenta  Num=41  Ch=15       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=16 Yellow   Num=42  Ch=16       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+7    PPLUS 33  Profile SV Plus           CPAKY 0115 PROFILE-.PLS HEAD   450 252
+          Par=0  Control  Ch=30   Home=0
+                    Step Name   Level Time Pal
+                    1    Off    0     0    Off
+                    2    OnHalf 100   0       
+                    3    OnFull 200   0    On 
+          Par=1  Iris     Num=81  Ch=1          beam f Home=255
+                    Step Name   Min Max Stop
+                    1    Iris     0 255      
+          Par=2  Zoom     Num=83  Ch=2          beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Zoom     0 255      
+          Par=3  Focus1   Num=80  Ch=3          beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=4  Dimmer   Num=20  Ch=4               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=5  X        Num=0   Ch=5   +6     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=6  Y        Num=1   Ch=7   +8     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=7  Blade A  Num=85  Ch=9          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    BladeA   0 255      
+          Par=8  Blade A" Num=85  Ch=10         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    BladeA   0 255      
+          Par=9  Blade B  Num=86  Ch=11         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    BladeB   0 255      
+          Par=10 Blade B" Num=86  Ch=12         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    BladeB   0 255      
+          Par=11 Blade C  Num=87  Ch=13         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    BladeC   0 255      
+          Par=12 Blade C" Num=87  Ch=14         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    BladeC   0 255      
+          Par=13 Blade D  Num=88  Ch=15         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    BladeD   0 255      
+          Par=14 Blade D" Num=88  Ch=16         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    BladeD   0 255      
+          Par=15 Blade->  Num=89  Ch=17         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Rotate   0 255      
+          Par=16 Strobe   Num=22  Ch=18       i        Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Strobe   0 255      Strobe
+          Par=17 Correct  Num=49  Ch=19         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0  85      
+                    2    WORM    86 171      
+                    3    COLD   172 255      
+          Par=18 EfWhl    Num=100 Ch=20         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0  51      
+                    2    5Prism  52 103      
+                    3    9Prism 104 155      
+                    4    4Prism 156 207      
+                    5    HOLE   208 255      
+          Par=19 Frost    Num=82  Ch=21         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Frost    0 255      
+          Par=20 Focus2   Num=80  Ch=22         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    FRAME    0 127 s    
+                    2    GOBO   128 255      
+          Par=21 RotGB1   Num=60  Ch=23  +32    gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  51      
+                    2    GOBO1   52 103      Gobo 1
+                    3    GOBO2  104 155      Gobo 2
+                    4    GOBO3  156 207      Gobo 3
+                    5    GOBO4  208 255      Gobo 4
+          Par=22 RotGbRot Num=61  Ch=24         gob    Home=0
+                    Step Name   Min Max Stop
+                    1    0>90     0  21      
+                    2    90>180  22  42      
+                    3    >270    43  63      
+                    4    >360    64  84      
+                    5    >450    85 105      
+                    6    >540   106 127 s    
+                    7    <--ROT 128 190      
+                    8    STOP   191 192      
+                    9    ROT--> 193 255      
+          Par=23 RotGB2   Num=60  Ch=25  +33    gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  51      
+                    2    GOBO1   52 103      
+                    3    GOBO2  104 155      
+                    4    GOBO3  156 207      
+                    5    GOBO4  208 255      
+          Par=24 RotGbRot Num=61  Ch=26         gob    Home=0
+                    Step Name   Min Max Stop
+                    1    0>90     0  21      
+                    2    90>180  22  42      
+                    3    >270    43  63      
+                    4    >360    64  84      
+                    5    >450    85 105      
+                    6    >540   106 127 s    
+                    7    <--ROT 128 190      
+                    8    STOP   191 192      
+                    9    ROT--> 193 255      
+          Par=25 Cyan     Num=40  Ch=27         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=26 Magenta  Num=41  Ch=28         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=27 Yellow   Num=42  Ch=29         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+          Par=28 User-Def Num=107 Ch=31              f Home=0
+                    Step Name   Min Max Stop
+                    1    NoFunc   0 127 s    
+                    2    RESET  128 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+8    CPRHX 9   ColorPro HX               HIEND 0801 COLORPRO.HX-        0   0
+          Par=0  Control  Ch=9    Home=5
+                    Step Name   Level Time Pal
+                    1    DispOf 24    6       
+                    2    DispDm 34    6       
+                    3    DispBr 44    6       
+                    4    Home   64    6       
+                    5    On     84    6    On 
+                    6    Off    94    6    Off
+                    7    ShutDn 125   6       
+          Par=1  Dimmer   Num=20  Ch=1               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=2  Strobe   Num=22  Ch=2        i        Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  31      Open
+                    2    TBD     32  63 s    
+                    3    RndPls  64  95 s    
+                    4    PULSE   96 127 s    PulseOp
+                    5    SYNC   128 159 s    Sync
+                    6    RANDOM 160 191 s    Random
+                    7    STROBE 192 223      Strobe
+                    8    CLOSED 224 255      Close
+          Par=3  Clr-Fnc  Num=48  Ch=3          col    Home=0
+                    Step Name   Min Max Stop
+                    1    Contnu   0  15      
+                    2    Index   16  31      
+                    3    PurMix  32  47      
+                    4    Spin    48  63      
+                    5    Cycle   64  79      
+                    6    Scan    80  95      
+                    7    Random  96 111      
+                    8    Blink  112 127 s    
+                    9    Contnu 128 143      
+                    10   Index  144 159      
+                    11   PurMix 160 175      
+                    12   Spin   176 191      
+                    13   Cycle  192 207      
+                    14   Scan   208 223      
+                    15   Random 224 239      
+                    16   Blink  240 255      
+          Par=4  Cyan     Num=40  Ch=4        i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=5  Magenta  Num=41  Ch=5        i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=6  Yellow   Num=42  Ch=6        i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+          Par=7  Focus    Num=80  Ch=7          beam f Home=63
+                    Step Name   Min Max Stop
+                    1    Range    0 127 s    
+                    2    <---   128 189 s    
+                    3    Stop   190 195 s    
+                    4    --->   196 255      
+          Par=8  Mov-Spd  Num=103 Ch=8                 Home=0
+                    Step Name   Min Max Stop
+                    1    Disabl   0   3      
+                    2    Sl>Fst   4 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+9    SBEAM 16  StudioBeam                HIEND 0803 STUDIOBE.AM- HEAD   540 287
+          Par=0  Control  Ch=16   Home=0
+                    Step Name   Level Time Pal
+                    1    DispDi 34    6       
+                    2    DispBr 44    6       
+                    3    Home   64    6       
+                    4    On     84    6    On 
+                    5    Off    94    6    Off
+                    6    Park   114   6       
+                    7    Shutdw 125   6       
+          Par=1  X        Num=0   Ch=1   +2     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=2  Y        Num=1   Ch=3   +4     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=3  Clr-Fnc  Num=48  Ch=5          col    Home=0
+                    Step Name   Min Max Stop
+                    1    SCROLL   0  15 s    
+                    2    INDEX   16  31 s    
+                    3    MIX     32  47 s    
+                    4    SPIN    48  63 s    
+                    5    CYCLE   64  79 s    
+                    6    SCAN    80  95 s    
+                    7    RANDOM  96 111 s    
+                    8    BLINK  112 127 s    
+                    9    MSscrl 128 143 s    
+                    10   MSindx 144 159 s    
+                    11   MSmix  160 175 s    
+                    12   MSspin 176 191 s    
+                    13   MScycl 192 207 s    
+                    14   MSscan 208 223 s    
+                    15   MSrndm 224 239 s    
+                    16   MSblnk 240 255      
+          Par=4  Cyan     Num=40  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=5  Magenta  Num=41  Ch=7          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=6  Yellow   Num=42  Ch=8          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+          Par=7  BeamShp  Num=84  Ch=9          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0 127 s    
+                    2    <--ROT 128 187      
+                    3    STOP   188 195      
+                    4    ROT--> 196 255      
+          Par=8  Zoom     Num=83  Ch=10         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Zoom     0 255      
+          Par=9  Frost    Num=82  Ch=11         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Opn>Cl   0 127      
+                    2    CLOSED 128 135 s    
+                    3    STROBE 136 151 s    
+                    4    RANDOM 152 167 s    
+                    5    RmpSnp 168 183 s    
+                    6    SnpRmp 184 199 s    
+                    7    RmpRmp 200 215 s    
+                    8    RndmRS 216 231 s    
+                    9    RndmSR 232 247 s    
+                    10   OPEN   248 255      
+          Par=10 Strobe   Num=22  Ch=12       i        Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  23 s    Open
+                    2    RndmSR  24  49 s    
+                    3    RndmRS  50  75 s    
+                    4    RmpRmp  76 101 s    
+                    5    SnpRmp 102 127 s    
+                    6    RmpSnp 128 153 s    
+                    7    SYNC   154 179 s    Sync
+                    8    RANDOM 180 205 s    Random
+                    9    STROBE 206 231      Strobe
+                    10   CLOSED 232 255      Close
+          Par=11 Dimmer   Num=20  Ch=13              f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=12 XY-Spd   Num=103 Ch=14                Home=0
+                    Step Name   Min Max Stop
+                    1    NoFnct   0   3      
+                    2    Sl>Fst   4 255      
+          Par=13 Effect   Num=100 Ch=15         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0   7 s    
+                    2    MACRO    8 135 s    
+                    3    RANDOM 136 167 s    
+                    4    NoFnct 168 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+10   SC575 16  StudioColor 575           HIEND 0807 STUDCOL-.575 HEAD   370 240
+          Par=0  Control  Ch=15   Home=0
+                    Step Name   Level Time Pal
+                    1    Home   64    6       
+                    2    Shtdwn 128   6       
+          Par=1  X        Num=0   Ch=1   +2     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=2  Y        Num=1   Ch=3   +4     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=3  Clr-Fnc  Num=48  Ch=5          col    Home=0
+                    Step Name   Min Max Stop
+                    1    DEFULT   0  15 s    
+                    2    SPN-->  16  31 s    
+                    3    <--SPN  32  47 s    
+                    4    Qlock   48  63 s    
+                    5    Mix2    64  79 s    
+                    6    Stp5+2  80  95 s    
+                    7    Stp5+3  96 111 s    
+                    8    Stp5+4 112 127 s    
+                    9    MspdOf 128 143 s    
+                    10   Stp9+2 144 159 s    
+                    11   Spt9+3 160 175 s    
+                    12   Stp9+4 176 191 s    
+                    13   Stp9+5 192 207 s    
+                    14   5+9+2  208 223 s    
+                    15   5+9+3  224 239 s    
+                    16   5+9+4  240 255      
+          Par=4  CWhl     Num=47  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  43      
+                    2    CTO     44  85      
+                    3    PINK    86 127      
+                    4    MAG    128 169      
+                    5    RED    170 212      
+                    6    AQUA   213 254      
+                    7    WHITE  255 255      
+          Par=5  Cyan     Num=40  Ch=7        i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=6  Magenta  Num=41  Ch=8        i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=7  Yellow   Num=42  Ch=9        i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+          Par=8  BeamShp  Num=84  Ch=10         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Shaper   0 255      
+          Par=9  Frost    Num=82  Ch=11         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Frost    0 255      
+          Par=10 Shutter  Num=21  Ch=12       i        Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0   7      Open
+                    2    RANDOM   8 127 s    Random
+                    3    STROBE 128 247      Strobe
+                    4    CLOSED 248 255      Close
+          Par=11 Dimmer   Num=20  Ch=13              f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=12 Mov-Spd  Num=103 Ch=14                Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   3      
+                    2    SLOW     4 128      
+                    3    FAST   129 255      
+          Par=13 User-Def Num=107 Ch=16                Home=0
+                    Step Name   Min Max Stop
+                    1    Check    0   0      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+11   SS575 24  StudioSpot 575            HIEND 0808 STUDSPT-.575 HEAD   370 255
+          Par=0  Control  Ch=24   Home=0
+                    Step Name   Level Time Pal
+                    1    MSoff  10    6       
+                    2    DispOf 20    6       
+                    3    DispDi 30    6       
+                    4    DispBr 40    6       
+                    5    Home   60    6       
+                    6    On     80    6    On 
+                    7    Off    90    6    Off
+                    8    Shutdw 120   6       
+          Par=1  X        Num=0   Ch=1   +2     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=2  Y        Num=1   Ch=3   +4     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=3  Clr-Fnc1 Num=48  Ch=5          col    Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  31      
+                    2    SPN-->  32  47      
+                    3    <--SPN  48  63      
+                    4    SCROLL  64  79      
+                    5    FstScn  80  87      
+                    6    SlwScn  88  95      
+                    7    RANDOM  96 111      
+                    8    BLINK  112 127 s    
+                    9    MSindx 128 159      
+                    10   MS-->  160 175      
+                    11   MS<--  176 191      
+                    12   MSscrl 192 207      
+                    13   MSfscn 208 215      
+                    14   MSslsc 216 223      
+                    15   MSrand 224 239      
+                    16   MSblnk 240 255      
+          Par=4  CWhl1    Num=47  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    White    0  42      White
+                    2    Yellow  43  84      Yellow
+                    3    CTO     85 127      
+                    4    Aqua   128 169      
+                    5    Pink   170 212      Pink
+                    6    Magent 213 254      Magent
+                    7    White  255 255      
+          Par=5  Clr-Fnc2 Num=48  Ch=7          col    Home=0
+                    Step Name   Min Max Stop
+                    1    2Wheel   0  15      
+                    2    INDEX   16  31      
+                    3    SPN-->  32  47      
+                    4    <--SPN  48  63      
+                    5    SCROLL  64  79      
+                    6    FstScn  80  87      
+                    7    SlwScn  88  95      
+                    8    RANDOM  96 111      
+                    9    BLINK  112 127 s    
+                    10   MSindx 128 159      
+                    11   MS-->  160 175      
+                    12   MS<--  176 191      
+                    13   MSscrl 192 207      
+                    14   MSfscn 208 215      
+                    15   MSslsc 216 223      
+                    16   MSrand 224 239      
+                    17   MSblnk 240 255      
+          Par=6  CWhl2    Num=47  Ch=8          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    White    0  42      
+                    2    Cyan    43  84      Cyan
+                    3    Cyan-L  85 127      
+                    4    Indigo 128 169      Lavend
+                    5    Pink2  170 212      
+                    6    Magen2 213 254      
+                    7    White  255 255      
+          Par=7  RotGbFnc Num=79  Ch=9                 Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  15      
+                    2    ROT-->  16  31      
+                    3    <--ROT  32  47      
+                    4    SPIN    48  63      
+                    5    SCAN    64  79      
+                    6    RANDOM  80  95      
+                    7    BlnkWh  96 111      
+                    8    BlnkAp 112 127 s    
+                    9    MSindx 128 143      
+                    10   MS-->> 144 159      
+                    11   MS<<-- 160 175      
+                    12   MSspin 176 191      
+                    13   MSscan 192 207      
+                    14   MSrand 208 223      
+                    15   MSblWh 224 239      
+                    16   MSblAp 240 255      
+          Par=8  RotGB1   Num=60  Ch=10         gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  36      
+                    2    GOBO1   37  73      Gobo 1
+                    3    GOBO2   74 109      Gobo 2
+                    4    GOBO3  110 146      Gobo 3
+                    5    GOBO4  147 182      Gobo 4
+                    6    GOBO5  183 219      Gobo 5
+                    7    OPEN   220 255      
+          Par=9  RotGbRot Num=61  Ch=11  +12    gob  f Home=0
+                    Step Name   Min Max Stop
+                    1    GbRot1   0 255      
+          Par=10 RotGbFnc Num=79  Ch=13                Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  15      
+                    2    ROT-->  16  31      
+                    3    <--ROT  32  47      
+                    4    SPIN    48  63      
+                    5    SCAN    64  79      
+                    6    RANDOM  80  95      
+                    7    BlnkWh  96 111      
+                    8    BlnkAp 112 127 s    
+                    9    MSindx 128 143      
+                    10   MS-->> 144 159      
+                    11   MS<<-- 160 175      
+                    12   MSspin 176 191      
+                    13   MSscan 192 207      
+                    14   MSrand 208 223      
+                    15   MSblWh 224 239      
+                    16   MSblAp 240 255      
+          Par=11 RotGB2   Num=60  Ch=14         gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  36      
+                    2    GOBO1   37  73      
+                    3    GOBO2   74 109      
+                    4    GOBO3  110 146      
+                    5    GOBO4  147 182      
+                    6    GOBO5  183 219      
+                    7    OPEN   220 255      
+          Par=12 RotGbRot Num=61  Ch=15  +16    gob  f Home=0
+                    Step Name   Min Max Stop
+                    1    GbRot2   0 255      
+          Par=13 Frost    Num=82  Ch=17         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    CLEAR    0  28      
+                    2    FULL    29  57 s    
+                    3    PERIOD  58  85 s    
+                    4    RANDOM  86 113 s    
+                    5    RAMP   114 142 s    
+                    6    SNAP   143 170 s    
+                    7    RndRmp 171 198 s    
+                    8    RndSnp 199 227 s    
+                    9    OPEN   228 255      
+          Par=14 Focus    Num=80  Ch=18              f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=15 Iris     Num=81  Ch=19         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    TIGHT    0 127      
+                    2    WIDE   128 143 s    
+                    3    PERIOD 144 159 s    
+                    4    RANDOM 160 175 s    
+                    5    RmpSnp 176 191 s    
+                    6    SnpRmp 192 207 s    
+                    7    RndRmp 208 223 s    
+                    8    RndSnp 224 239 s    
+                    9    WIDE   240 255      
+          Par=16 Shutter  Num=21  Ch=20       i        Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  31 s    Open
+                    2    RndSnp  32  63 s    
+                    3    RndRmp  64  95 s    
+                    4    SnpRmp  96 127 s    
+                    5    RmpSnp 128 159 s    
+                    6    RANDOM 160 191 s    Random
+                    7    PERIOD 192 223      Strobe
+                    8    CLOSED 224 255      Close
+          Par=17 Dimmer   Num=20  Ch=21              f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=18 Mov-Spd  Num=103 Ch=22                Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   3      
+                    2    SLOW     4 128      
+                    3    FAST   129 255      
+          Par=19 User-Def Num=107 Ch=23              f Home=0
+                    Step Name   Min Max Stop
+                    1    Macros   0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+12   XSPOT 38  X-Spot                    HIEND 0811 X-SPOT--.--- HEAD   630 240
+          Par=0  Control  Ch=14   Home=0
+                    Step Name   Level Time Pal
+                    1    SAFE   5     0       
+                    2    MspdOf 15    0       
+                    3    DispOf 24    0       
+                    4    DispDm 34    0       
+                    5    DispBr 44    0       
+                    6    Home   64    6       
+                    7    On     84    6    On 
+                    8    Off    94    6    Off
+                    9    ShtDwn 125   6       
+                    10   HomeXY 164   6       
+                    11   HomeCo 174   6       
+                    12   HomeGo 184   6       
+                    13   HomeSt 194   6       
+                    14   HomeBm 204   6       
+                    15   HomeIr 214   6       
+          Par=1  X        Num=0   Ch=1   +2     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=2  Y        Num=1   Ch=3   +4     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=3  User-Def Num=107 Ch=5                 Home=0
+                    Step Name   Min Max Stop
+                    1    Normal   0  31 s    
+                    2    >700w   32  63 s    
+                    3    >700w   64  95 s    
+                    4    2 Dimr  96 127 s    
+                    5    ElctDm 128 159 s    
+                    6    Normal 224 255      
+          Par=4  Shutter  Num=21  Ch=6        i        Home=0
+                    Step Name   Min Max Stop Palette
+                    1    Shuter   0 255      Strobe
+          Par=5  Dimmer   Num=20  Ch=7               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=6  Frost    Num=82  Ch=8          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Frost    0 135 s    
+                    2    Slw>Fs 136 151 s    
+                    3    Random 152 167 s    
+                    4    RmpSnp 168 183 s    
+                    5    SnpRmp 184 199 s    
+                    6    RmpRmp 200 215 s    
+                    7    Randm1 216 231 s    
+                    8    Randm2 233 247      
+                    9    Open   248 255      
+          Par=7  User-Def Num=107 Ch=9                 Home=0
+                    Step Name   Min Max Stop
+                    1    AutoFC   0  31 s    
+                    2    ManlFC  32  63      
+          Par=8  Focus    Num=80  Ch=10         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=9  Zoom     Num=83  Ch=11         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Zoom     0 255      
+          Par=10 Mov-Spd  Num=103 Ch=12                Home=255
+                    Step Name   Min Max Stop
+                    1    Mov-Sp   0 255      
+          Par=11 Macros   Num=110 Ch=13                Home=0
+                    Step Name   Min Max Stop
+                    1    Off      0   5      
+                    2    PanSwp   6  62      
+                    3    Off     63  65 s    
+                    4    TltSwp  66 122      
+                    5    Off    123 125 s    
+                    6    >>Circ 126 160      
+                    7    Off    161 163 s    
+                    8    <<Circ 164 198      
+          Par=12 Clr-Fnc  Num=48  Ch=15         col    Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  15 s    
+                    2    >>SPIN  16  31 s    
+                    3    <<SPIN  32  47 s    
+                    4    CONTNU  48  63 s    
+                    5    SlwScn  64  79 s    
+                    6    FstScn  80  95 s    
+                    7    RANDOM  96 111 s    
+                    8    BLINK  112 127 s    
+                    9    INDEX  128 143 s    
+                    10   >>SPIN 144 159 s    
+                    11   <<SPIN 160 175 s    
+                    12   CONTNU 176 191 s    
+                    13   SlwScn 192 207 s    
+                    14   FstScn 208 223 s    
+                    15   RANDOM 224 239 s    
+                    16   BLINK  240 255      
+          Par=13 CWhl1    Num=47  Ch=16         col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    c 1      0  23      
+                    2    c 1/2   24  42      
+                    3    c 2     43  61      
+                    4    c 2/3   62  80      
+                    5    c 3     81  99      
+                    6    c 3/4  100 118      
+                    7    c 4    119 137      
+                    8    c 4/5  138 156      
+                    9    c 5    157 175      
+                    10   c 5/6  176 194      
+                    11   c 6    195 213      
+                    12   c 6/1  214 232      
+                    13   c 1    233 255      
+          Par=14 Clr-Fnc  Num=48  Ch=17         col    Home=0
+                    Step Name   Min Max Stop
+                    1    PURE     0  15 s    
+                    2    CONTNU  16  31 s    
+                    3    SPIN    48  63 s    
+                    4    CYCLE   64  79 s    
+                    5    RANDOM  96 111 s    
+                    6    BLINK  112 127 s    
+                    7    PURE   128 143 s    
+                    8    CONTNU 144 159 s    
+                    9    SPIN   176 191 s    
+                    10   CYCLE  192 207 s    
+                    11   RANDOM 224 239 s    
+                    12   BLINK  240 255      
+          Par=15 Cyan     Num=40  Ch=18       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=16 Magenta  Num=41  Ch=19       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=17 Yellow   Num=42  Ch=20       i col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+          Par=18 Correct1 Num=49  Ch=21         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CTO      0 170 s    
+                    2    BemFlt 171 213      
+                    3    OPEN   214 255      
+          Par=19 Correct2 Num=49  Ch=22         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    BemFlt   0  42      
+                    2    OPEN    43 212      
+                    3    CTB    213 254      
+                    4    BemFlt 255 255      
+          Par=20 GB-Fnc   Num=79  Ch=23                Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  15 s    
+                    2    >>SPIN  16  31 s    
+                    3    <<SPIN  32  47 s    
+                    4    SCAN    48  63 s    
+                    5    RANDOM  64  79 s    
+                    6    BLINK   80  95 s    
+                    7    TBC     96 111 s    
+                    8    CONTNU 112 127 s    
+                    9    INDEX  128 143 s    
+                    10   >>SPIN 144 159 s    
+                    11   <<SPIN 160 175 s    
+                    12   SCAN   176 191 s    
+                    13   RANDOM 192 207 s    
+                    14   BLINK  208 223 s    
+                    15   TBC    224 239 s    
+                    16   CONTNU 240 255      
+          Par=21 Gobo1    Num=60  Ch=24         gob    Home=0
+                    Step Name   Min Max Stop Palette
+                    1    GW - 2   0 255      
+          Par=22 RotGbFnc Num=79  Ch=25                Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  15 s    
+                    2    >>ROT   16  31 s    
+                    3    <<ROT   32  47 s    
+                    4    SCAN    48  63 s    
+                    5    BLINK   64  79 s    
+                    6    INDEX  128 143 s    
+                    7    >>ROT  144 159 s    
+                    8    <<ROT  160 175 s    
+                    9    SCAN   176 191 s    
+                    10   BLINK  192 207      
+          Par=23 RotGbRot Num=61  Ch=26  +27    gob  f Home=0
+                    Step Name   Min Max Stop
+                    1    Ind/Rt   0 255      
+          Par=24 EFW-Fnc  Num=119 Ch=28                Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  15 s    
+                    2    >>SPIN  16  31 s    
+                    3    <<SPIN  32  47 s    
+                    4    SCAN    48  63 s    
+                    5    RANDOM  64  79 s    
+                    6    BLINK   80  95 s    
+                    7    TBC     96 111 s    
+                    8    CONTNU 112 127 s    
+                    9    INDEX  128 143 s    
+                    10   >>SPIN 144 159 s    
+                    11   <<SPIN 160 175 s    
+                    12   SCAN   176 191 s    
+                    13   RANDOM 192 207 s    
+                    14   BLINK  208 223 s    
+                    15   TBC    224 239 s    
+                    16   CONTNU 240 255      
+          Par=25 Effect   Num=100 Ch=29         xtra f Home=0
+                    Step Name   Min Max Stop
+                    1    Effect   0 255      
+          Par=26 Effect>  Num=108 Ch=30         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  15 s    
+                    2    >>ROT   16  31 s    
+                    3    <<ROT   32  47 s    
+                    4    SCAN    48  63 s    
+                    5    BLINK   64  79 s    
+                    6    INDEX  128 143 s    
+                    7    >>ROT  144 159 s    
+                    8    <<ROT  160 175 s    
+                    9    SCAN   176 191 s    
+                    10   BLINK  192 207      
+          Par=27 ModeEff  Num=109 Ch=31  +32    xtra f Home=0
+                    Step Name   Min Max Stop
+                    1    Ind/Rt   0 255      
+          Par=28 GB-Fnc   Num=79  Ch=33                Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  15 s    
+                    2    >>SPIN  16  31 s    
+                    3    <<SPIN  32  47 s    
+                    4    SCAN    48  63 s    
+                    5    RANDOM  64  79 s    
+                    6    BLINK   80  95 s    
+                    7    TBC     96 111 s    
+                    8    CONTNU 112 127 s    
+                    9    INDEX  128 143 s    
+                    10   >>SPIN 144 159 s    
+                    11   <<SPIN 160 175 s    
+                    12   SCAN   176 191 s    
+                    13   RANDOM 192 207 s    
+                    14   BLINK  208 223 s    
+                    15   TBC    224 239 s    
+                    16   CONTNU 240 255      
+          Par=29 Gobo 2   Num=60  Ch=34         gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    GW - 2   0 255      
+          Par=30 RotGbFnc Num=79  Ch=35                Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0  15 s    
+                    2    >>ROT   16  31 s    
+                    3    <<ROT   32  47 s    
+                    4    SCAN    48  63 s    
+                    5    BLINK   64  79 s    
+                    6    INDEX  128 143 s    
+                    7    >>ROT  144 159 s    
+                    8    <<ROT  160 175 s    
+                    9    SCAN   176 191 s    
+                    10   BLINK  192 207      
+          Par=31 RotGbRot Num=61  Ch=36  +37    gob  f Home=0
+                    Step Name   Min Max Stop
+                    1    Ind/Rt   0 255      
+          Par=32 Iris     Num=81  Ch=38         beam f Home=135
+                    Step Name   Min Max Stop
+                    1    Iris     0 135 s    
+                    2    Slw>Fs 136 151 s    
+                    3    Random 152 167 s    
+                    4    RmpSnp 168 183 s    
+                    5    SnpRmp 184 199 s    
+                    6    RmpRmp 200 215 s    
+                    7    Randm1 216 231 s    
+                    8    Randm2 233 247      
+                    9    Open   248 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+13   PRSLX 16  ProSpot 250 LX            COEMA 0005 PROSPOTL.LX- HEAD   530 284
+          Par=0  Control  Ch=16   Home=60
+                    Step Name   Level Time Pal
+                    1    Off    0     6    Off
+                    2    EffRst 140   6       
+                    3    Reset  185   6    Rst
+                    4    Silent 220   6       
+                    5    On     255   6    On 
+          Par=1  X        Num=0   Ch=1   +2     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=2  Y        Num=1   Ch=3   +4     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=3  Mov-Spd  Num=103 Ch=5                 Home=11
+                    Step Name   Min Max Stop
+                    1    FAST     0  10      
+                    2    FASTER  11  25 s    
+                    3    VECTOR  26 127 s    
+                    4    TRACK  128 247 s    
+                    5    TrckSl 248 255      
+          Par=4  Dimmer   Num=20  Ch=6               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=5  Strobe   Num=22  Ch=7        i        Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  10      Open
+                    2    RANDOM  11  67 s    Random
+                    3    OPEN    68  70      
+                    4    PULSE   71 127 s    PulseOp
+                    5    OPEN   128 129      
+                    6    PULSE  130 186 s    PulseCl
+                    7    OPEN   187 188      
+                    8    STROBE 189 245      Strobe
+                    9    CLOSED 246 255      Close
+          Par=6  Focus    Num=80  Ch=8          beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=7  RotGB    Num=60  Ch=9          gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  10      
+                    2    GOBO1   11  30      Gobo 1
+                    3    GOBO2   31  50      Gobo 2
+                    4    GOBO3   51  70      Gobo 3
+                    5    GOBO4   71  90      Gobo 4
+                    6    GOBO5   91 110      Gobo 5
+                    7    GOBO6  111 127 s    Gobo 6
+                    8    SCROLL 128 192 s    
+                    9    SPIN   193 255      
+          Par=8  Index    Num=62  Ch=10         gob  f Home=0
+                    Step Name   Min Max Stop
+                    1    0>360    0 255      
+          Par=9  Rotation Num=61  Ch=11         gob    Home=0
+                    Step Name   Min Max Stop
+                    1    ROT-->   0 131      
+                    2    STOP   132 134      
+                    3    <--ROT 135 255      
+          Par=10 PrismRot Num=102 Ch=12         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0  10      
+                    2    3PRISM  11  20 s    
+                    3    ROT-->  21 136      
+                    4    STOP   137 139      
+                    5    <--ROT 140 255      
+          Par=11 CWhl     Num=47  Ch=13         col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0   4      White
+                    2    CTO      5   9      
+                    3    Cyan    10  14      Cyan
+                    4    Amber   15  19      Amber
+                    5    Orange  20  24      Orange
+                    6    Blue    25  29      Blue
+                    7    Yellow  30  34      Yellow
+                    8    Magent  35  39      Magent
+                    9    Pink    40  44      Pink
+                    10   Red-L   45  49      Red
+                    11   Red-D   50  54      Purple
+                    12   Green   55  59 s    Green
+                    13   SCROLL  60 127 s    
+                    14   SPN--> 128 190      Col>
+                    15   STOP   191 192      
+                    16   <--SPN 193 255      
+          Par=12 RotGbFnc Num=79  Ch=14                Home=0
+                    Step Name   Min Max Stop
+                    1    <>GOBO   0 249 s    
+                    2    MovBO  250 255      
+          Par=13 GB-Fnc   Num=79  Ch=15                Home=0
+                    Step Name   Min Max Stop
+                    1    <>Max    0  23      
+                    2    <>9     24  47      
+                    3    <>8     48  71      
+                    4    <>7     72  95      
+                    5    <>6     96 119      
+                    6    <>5    120 143      
+                    7    <>4    144 167      
+                    8    <>3    168 191      
+                    9    <>2    192 215      
+                    10   <>1    216 239      
+                    11   <>Min  240 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+14   PW250 14  ProWash 250 LX            COEMA 0007 PROWASHL.LX- HEAD   530 284
+          Par=0  Control  Ch=14   Home=60
+                    Step Name   Level Time Pal
+                    1    Off    0     7    Off
+                    2    EffRst 140   7       
+                    3    Reset  185   7    Rst
+                    4    Silent 220   7       
+                    5    On     255   7    On 
+          Par=1  X        Num=0   Ch=1   +2     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=2  Y        Num=1   Ch=3   +4     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=3  Mov-Spd  Num=103 Ch=5                 Home=11
+                    Step Name   Min Max Stop
+                    1    FAST     0  10      
+                    2    FASTER  11  25 s    
+                    3    VECTOR  26 127 s    
+                    4    TRACK  128 247 s    
+                    5    TrckSl 248 255      
+          Par=4  Dimmer   Num=20  Ch=6               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=5  Strobe   Num=22  Ch=7        i        Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  10      Open
+                    2    RANDOM  11  67 s    Random
+                    3    OPEN    68  70      
+                    4    PULSE   71 127 s    PulseOp
+                    5    OPEN   128 129      
+                    6    PULSE  130 186 s    PulseCl
+                    7    OPEN   187 188      
+                    8    STROBE 189 245      Strobe
+                    9    CLOSED 246 255      Close
+          Par=6  Mov-Type Num=3   Ch=8          pos  f Home=0
+                    Step Name   Min Max Stop
+                    1    Defult   0 249 s    
+                    2    MovBO  250 255      
+          Par=7  BeamShp  Num=84  Ch=9          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Defult   0  70 s    
+                    2    0>180   71 230 s    
+                    3    Wide   231 255      
+          Par=8  CWhl     Num=47  Ch=10         col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0   5      
+                    2    COLOR1   6  14      
+                    3    COLOR2  15  23      
+                    4    COLOR3  24  32      
+                    5    COLOR4  33  41      
+                    6    COLOR5  42  50      
+                    7    COLOR6  51  60 s    
+                    8    SCROLL  61 127 s    
+                    9    SPN--> 128 190      
+                    10   STOP   191 192      
+                    11   <--SPN 193 255      
+          Par=9  Cyan     Num=40  Ch=11         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=10 Magenta  Num=41  Ch=12         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=11 Yellow   Num=42  Ch=13         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+15   M2000 24  Mac2000 Profile (16b)     MARTN 1005 MAC2000-.16B HEAD   540 305
+          Par=0  Control  Ch=1    Home=0
+                    Step Name   Level Time Pal
+                    1    Reset  212   6    Rst
+                    2    On     232   6    On 
+                    3    Off    255   6    Off
+          Par=1  Strobe   Num=22  Ch=1                 Home=49
+                    Step Name   Min Max Stop Palette
+                    1    SHUTER   0  49      
+                    2    STROBE  50  72      Strobe
+                    3    OPEN    73  79 s    Open
+                    4    OPEN P  80  99 s    PulseOp
+                    5    CLOS P 100 119 s    PulseCl
+                    6    OPEN   120 127      
+                    7    FAST   128 147      
+                    8    MED    148 167      
+                    9    SLOW   168 187      
+                    10   OPEN   188 190 s    
+                    11   OpenFs 191 193      
+                    12   OpenSl 194 196 s    
+                    13   ClosFs 197 199      
+                    14   ClosSl 200 202 s    
+                    15   OPEN   203 207      
+          Par=2  Dimmer   Num=20  Ch=2               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=3  Cyan     Num=40  Ch=3          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=4  Magenta  Num=41  Ch=4          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=5  Yellow   Num=42  Ch=5          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+          Par=6  Correct  Num=49  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CTC      0 255      
+          Par=7  Effect   Num=100 Ch=7          xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0  19      
+                    2    RED     20  39      
+                    3    GREEN   40  59      
+                    4    BLUE    60  79      
+                    5    UV      80  99      
+                    6    CONES  100 119      
+                    7    HIWAYS 120 139      
+                    8    DOTS   140 159 s    
+                    9    DOTS   160 163      
+                    10   HIWAYS 164 167      
+                    11   CONES  168 171      
+                    12   UV     172 175      
+                    13   BLUE   176 179      
+                    14   GREEN  180 183      
+                    15   RED    184 187      
+                    16   OPEN   188 191 s    
+                    17   SPN--> 192 217      
+                    18   <--SPN 218 243 s    
+                    19   CmyFst 244 247      
+                    20   CmyMed 248 251      
+                    21   CmySl  252 255      
+          Par=8  GWhl1    Num=60  Ch=8          gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0   9      
+                    2    FAN     10  14      Gobo 1
+                    3    PIPE    15  19      Gobo 2
+                    4    WORMS   20  24      Gobo 3
+                    5    STAR    25  29      Gobo 4
+                    6    LIMBO   30  34 s    Gobo 5
+                    7    >>FAN   35  39      
+                    8    >>PIPE  40  44      
+                    9    >>WRMS  45  49      
+                    10   >>STAR  50  54      
+                    11   >>LMBO  55  59 s    
+                    12   <>FAN   60  74      
+                    13   <>PIPE  75  89      
+                    14   <>WRMS  90 104      
+                    15   <>STAR 105 119      
+                    16   <>LMBO 120 134 s    
+                    17   <>>FAN 135 149      
+                    18   <>>PIP 150 164      
+                    19   <>>WRM 165 179      
+                    20   <>>STR 180 194      
+                    21   <>>LMB 195 209 s    
+                    22   SPN--> 210 232      Gob>
+                    23   <--SPN 233 255      
+          Par=9  RotGbR1  Num=61  Ch=9   +10    gob    Home=0
+                    Step Name   Min Max Stop
+                    1    GbRot1   0 255      
+          Par=10 GWhl2    Num=60  Ch=11         gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0   9      
+                    2    LIMBO   10  14      Gobo 6
+                    3    CONES   15  19      Gobo 7
+                    4    STAR    20  24      Gobo 8
+                    5    SUN     25  29      Gobo 9
+                    6    WAVES   30  34 s    
+                    7    LIMBO   35  39      
+                    8    CONES   40  44      
+                    9    STAR    45  49      
+                    10   SUN     50  54      
+                    11   WAVE    55  59 s    
+                    12   <>LMBO  60  74      
+                    13   <>CONS  75  89      
+                    14   <>STAR  90 104      
+                    15   <>SUN  105 119      
+                    16   <>WAVE 120 134 s    
+                    17   <>>LMB 135 149      
+                    18   <>>CNS 150 164      
+                    19   <>>STR 165 179      
+                    20   <>>SUN 180 194      
+                    21   <>>WAV 195 209 s    
+                    22   SPN--> 210 232      
+                    23   <--SPN 233 255      
+          Par=11 RotGbR2  Num=61  Ch=12  +13    gob    Home=0
+                    Step Name   Min Max Stop
+                    1    GbRot2   0 255      
+          Par=12 Effect2  Num=100 Ch=14         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    FROST    0 175 s    
+                    2    EFECT1 176 183      
+                    3    EFECT2 184 191 s    
+                    4    >>EFF1 192 199      
+                    5    >>EFF2 200 207      
+                    6    OPEN   208 215 s    
+                    7    MACRO1 216 220      
+                    8    MACRO2 221 225      
+                    9    MACRO3 226 230      
+                    10   MACRO4 231 235      
+                    11   MACRO5 236 240      
+                    12   MACRO6 241 245      
+                    13   MACRO7 246 250      
+                    14   MACRO8 251 255      
+          Par=13 Effect2> Num=108 Ch=15         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    EFW-Rt   0 255      
+          Par=14 Iris     Num=81  Ch=16         beam   Home=0
+                    Step Name   Min Max Stop
+                    1    Op>Cls   0 199      
+                    2    CLOSED 200 215 s    
+                    3    OPEN P 216 229 s    
+                    4    CLOS P 230 243 s    
+                    5    OpenFs 244 246      
+                    6    OpenSl 247 249 s    
+                    7    ClosFs 250 252      
+                    8    ClosSl 253 255      
+          Par=15 Focus    Num=80  Ch=17         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=16 Zoom     Num=83  Ch=18         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Zoom     0 255      
+          Par=17 X        Num=0   Ch=19  +20    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=18 Y        Num=1   Ch=21  +22    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=19 Mov-Spd  Num=103 Ch=23                Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   2      
+                    2    Fst>Sl   3 242 s    
+                    3    SLOW   243 245 s    
+                    4    NORM   246 248 s    
+                    5    FAST   249 251 s    
+                    6    mov BO 252 255      
+          Par=20 Mov-Type Num=3   Ch=24         pos  f Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   2      
+                    2    Fst>Sl   3 239 s    
+                    3    StuOff 240 242 s    
+                    4    StuOn  243 245 s    
+                    5    ScOff  246 248 s    
+                    6    ScOn   249 251 s    
+                    7    Mov BO 252 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+16   MC300 13  Mac300 Mode4              MARTN 1006 MAC300M4.--- HEAD   540 289
+          Par=0  Control  Ch=1    Home=0
+                    Step Name   Level Time Pal
+                    1    Reset  212   6    Rst
+                    2    On     232   6    On 
+                    3    Off    255   6    Off
+          Par=1  Strobe   Num=22  Ch=1                 Home=49
+                    Step Name   Min Max Stop Palette
+                    1    CLOSED   0  19      Close
+                    2    OPEN    20  49      Open
+                    3    STROBE  50  72      Strobe
+                    4    OPEN    73  79 s    
+                    5    OPEN P  80  99 s    PulseOp
+                    6    CLOS P 100 119 s    PulseCl
+                    7    OPEN   120 127      
+                    8    FAST   128 147      
+                    9    MED    148 167      
+                    10   SLOW   168 187      
+                    11   OPEN   188 190 s    
+                    12   RANDOM 191 193      
+                    13   RANDOM 194 196      Random
+                    14   RANDOM 197 199      
+                    15   RANDOM 200 202      
+                    16   OPEN   203 207      
+          Par=2  Dimmer   Num=20  Ch=2               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=3  Cyan     Num=40  Ch=3          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    CYAN     0 255      
+          Par=4  Magenta  Num=41  Ch=4          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=5  Yellow   Num=42  Ch=5          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    YELLOW   0 255      
+          Par=6  CWhl     Num=47  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  25      
+                    2    CTC     26  51      
+                    3    PINK    52  77      
+                    4    UV      78 103      
+                    5    RED    104 129      
+                    6    GREEN  130 155      
+                    7    BLUE   156 179 s    
+                    8    BLUE   180 183      
+                    9    GREEN  184 187      
+                    10   RED    188 191      
+                    11   UV     192 195      
+                    12   PINK   196 199      
+                    13   CTC    200 203      
+                    14   WHITE  204 207 s    
+                    15   SPN--> 208 226      
+                    16   <--SPN 227 245 s    
+                    17   RANDOM 246 255      
+          Par=7  Frost    Num=82  Ch=7          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Frost    0 255      
+          Par=8  X        Num=0   Ch=8   +9     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=9  Y        Num=1   Ch=10  +11    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=10 Mov-Spd  Num=103 Ch=12                Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   2      
+                    2    Fst>Sl   3 245 s    
+                    3    NORM   246 248 s    
+                    4    FAST   249 251 s    
+                    5    Mov BO 252 255      
+          Par=11 Mov-Type Num=3   Ch=13         pos  f Home=0
+                    Step Name   Min Max Stop
+                    1    TRACK    0   2      
+                    2    Speed    3 245 s    
+                    3    track  246 248 s    
+                    4    track  249 251 s    
+                    5    Mov BO 252 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+17   PALFX 20  Pal 1200 FX Mode4         MARTN 1021 PAL1200-.FX4 MIRROR 287 85
+          Par=0  Control  Ch=1    Home=49
+                    Step Name   Level Time Pal
+                    1    RESET  212   6    Rst
+                    2    ON     232   6    On 
+                    3    OFF    255   6    Off
+          Par=1  Strobe   Num=22  Ch=1                 Home=49
+                    Step Name   Min Max Stop Palette
+                    1    STROBE   0 177      Strobe
+                    2    OPEN   178 187 s    Open
+                    3    FanLow 188 197      
+                    4    OPEN   198 207      
+          Par=2  Dimmer   Num=20  Ch=2               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=3  Cyan     Num=40  Ch=3          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Cyan     0 255      
+          Par=4  Magenta  Num=41  Ch=4          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Magent   0 255      
+          Par=5  Yellow   Num=42  Ch=5          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Yellow   0 255      
+          Par=6  Color    Num=47  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  32      
+                    2    COLOR1  33  65      
+                    3    COLOR2  66  98      
+                    4    COLOR3  99 131      
+                    5    COLOR4 132 166      
+                    6    COLOR5 167 167 s    
+                    7    COLOR5 168 181      
+                    8    COLOR4 182 195      
+                    9    COLOR3 196 209      
+                    10   COLOR2 210 223      
+                    11   COLOR1 224 237      
+                    12   WHITE  238 255      
+          Par=7  Gobo     Num=60  Ch=7          gob  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  22      
+                    2    GOBO1   23  45      Gobo 1
+                    3    GOBO2   46  68      Gobo 2
+                    4    Fixed3  69  91      Gobo 3
+                    5    GOBO4   92 114      Gobo 4
+                    6    GOBO5  115 137 s    Gobo 5
+                    7    >>GOB5 138 160      
+                    8    >>GOB4 161 183      
+                    9    Fixed3 184 206      
+                    10   >>GOB2 207 229      
+                    11   >>GOB1 230 255      
+          Par=8  Gobo->   Num=61  Ch=8          gob  f Home=0
+                    Step Name   Min Max Stop
+                    1    --->     0 127      
+                    2    <---   128 255      
+          Par=9  Effect   Num=100 Ch=9          xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    Open     0  22      
+                    2    Eff-1i  23  45      
+                    3    Eff-2f  46  68      
+                    4    Eff-3i  69  91      
+                    5    Eff-4f  92 114      
+                    6    prsmI  115 137      
+                    7    prsm>> 138 160      
+                    8    Eff-4f 161 183      
+                    9    Eff-3> 184 206      
+                    10   Eff-2f 207 229      
+                    11   Eff-1> 230 255      
+          Par=10 Effect>  Num=108 Ch=10         xtra   Home=0
+                    Step Name   Min Max Stop
+                    1    --->     0 127      
+                    2    <---   128 255      
+          Par=11 Focus    Num=80  Ch=11         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Focus    0 255      
+          Par=12 Zoom     Num=83  Ch=12         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    Zoom     0 255      
+          Par=13 Iris     Num=81  Ch=13         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Iris     0 255      
+          Par=14 Frost    Num=82  Ch=14         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Off>On   0 255      
+          Par=15 X        Num=0   Ch=15  +16    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=16 Y        Num=1   Ch=17  +18    pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=17 XY-Spd   Num=103 Ch=19                Home=0
+                    Step Name   Min Max Stop
+                    1    Fst>Sl   0 251      
+                    2    BlkOut 252 255      
+          Par=18 Speed    Num=105 Ch=20                Home=0
+                    Step Name   Min Max Stop
+                    1    Fst>Sl   0 251      
+                    2    BlkOut 252 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+18   V2000 15  VL2000 Wash (VL2402) E16  VARYL 1403 V2000WSH.E16 HEAD   540 270
+          Par=0  Control  Ch=15   Home=0
+                    Step Name   Level Time Pal
+                    1    Displa 1     6       
+                    2    Reset  84    6    Rst
+                    3    Off    168   6    Off
+                    4    On     255   6    On 
+          Par=1  Dimmer   Num=20  Ch=1               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=2  X        Num=0   Ch=2   +3     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=3  Y        Num=1   Ch=4   +5     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=4  Blue     Num=45  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Blue     0 255      
+          Par=5  Amber    Num=46  Ch=7          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Amber    0 255      
+          Par=6  Magenta  Num=41  Ch=8          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=7  CWhl     Num=47  Ch=9          col  f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  16      White
+                    2    L.RED   17  34      Red
+                    3    BLUE    35  52      Blue
+                    4    YELLOW  53  70      Yellow
+                    5    L.BLUE  71  88      Cyan
+                    6    PINK    89 106      Pink
+                    7    GREEN  107 124      Green
+                    8    MAGNTA 125 142      Magent
+                    9    LAVNDR 143 160      Lavend
+                    10   AMBER  161 178      Amber
+                    11   ORANGE 179 196      Orange
+                    12   UV F.  197 215 s    Congo
+                    13   <--SPN 216 233      Col>
+                    14   STOP   234 236      
+                    15   SPN--> 237 255      
+          Par=8  Frost    Num=82  Ch=10         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Frost    0 255      
+          Par=9  Strobe   Num=22  Ch=11                Home=0
+                    Step Name   Min Max Stop Palette
+                    1    Open     0   2      Open
+                    2    Close    3   5      Close
+                    3    Slow     6   7      
+                    4    Medium   8  10      Random
+                    5    Fast    11  12      
+                    6    Speed>  13 255      Strobe
+          Par=10 XY-Spd   Num=103 Ch=12                Home=255
+                    Step Name   Min Max Stop
+                    1    Sl>Fst   0 255      
+          Par=11 Col-Spd  Num=104 Ch=13                Home=255
+                    Step Name   Min Max Stop
+                    1    Sl>Fst   0 255      
+          Par=12 Beam-Spd Num=105 Ch=14                Home=255
+                    Step Name   Min Max Stop
+                    1    Sl>Fst   0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+19   V2400 15  VL2416 Wash (Vl2400) E16  VARYL 1404 V2416WSH.E16 HEAD   540 270
+          Par=0  Control  Ch=15   Home=0
+                    Step Name   Level Time Pal
+                    1    Displa 1     6       
+                    2    Reset  84    6    Rst
+                    3    Off    168   6    Off
+                    4    On     255   6    On 
+          Par=1  Dimmer   Num=20  Ch=1               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=2  X        Num=0   Ch=2   +3     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=3  Y        Num=1   Ch=4   +5     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=4  Blue     Num=45  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Blue     0 255      
+          Par=5  Amber    Num=46  Ch=7          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Amber    0 255      
+          Par=6  Magenta  Num=41  Ch=8          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    MAGNTA   0 255      
+          Par=7  Iris     Num=81  Ch=9          beam   Home=255
+                    Step Name   Min Max Stop
+                    1    Iris     0 255      
+          Par=8  Strobe   Num=22  Ch=10                Home=0
+                    Step Name   Min Max Stop Palette
+                    1    Strobe   0 255      Strobe
+          Par=9  EFW-Rot  Num=119 Ch=11                Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0 215 s    
+                    2    ROT--> 216 233      
+                    3    STOP   234 237      
+                    4    <--ROT 238 255      
+          Par=10 XY-Spd   Num=103 Ch=12                Home=255
+                    Step Name   Min Max Stop
+                    1    Sl>Fst   0 255      
+          Par=11 Col-Spd  Num=104 Ch=13                Home=255
+                    Step Name   Min Max Stop
+                    1    Sl>Fst   0 255      
+          Par=12 Beam-Spd Num=105 Ch=14                Home=255
+                    Step Name   Min Max Stop
+                    1    Sl>Fst   0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+20   VL5   11  Series300 VL5Arc Wash M2  VARYL 1409 VL5M2---.--- HEAD   360 270
+          Par=0  Control  Ch=11   Home=0
+                    Step Name   Level Time Pal
+                    1    Reset  84    4    Rst
+          Par=1  Dimmer   Num=20  Ch=1               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   1 255      Dimmer
+          Par=2  X        Num=0   Ch=2          pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=3  Y        Num=1   Ch=3          pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=4  Blue     Num=45  Ch=4          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Blue     0 255      
+          Par=5  Amber    Num=46  Ch=5          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Amber    0 255      
+          Par=6  Magenta  Num=41  Ch=6          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Magent   0 255      
+          Par=7  Frost    Num=82  Ch=7          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Frost    0 255      
+          Par=8  XY-Spd   Num=103 Ch=8                 Home=255
+                    Step Name   Min Max Stop
+                    1    FSpeed   0 255      
+          Par=9  Col-Spd  Num=104 Ch=9                 Home=255
+                    Step Name   Min Max Stop
+                    1    Cspeed   0 255      
+          Par=10 Beam-Spd Num=105 Ch=10                Home=255
+                    Step Name   Min Max Stop
+                    1    Bspeed   0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+21   VL6   11  Series300 VL6 Spot M2     VARYL 1411 VL6M2---.--- HEAD   360 270
+          Par=0  Control  Ch=11   Home=0
+                    Step Name   Level Time Pal
+                    1    Reser  84    4    Rst
+          Par=1  Dimmer   Num=20  Ch=1               f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+          Par=2  X        Num=0   Ch=2          pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=3  Y        Num=1   Ch=3          pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=4  Gobo     Num=60  Ch=4          gob    Home=0
+                    Step Name   Min Max Stop Palette
+                    1    Open     0  20      
+                    2    Pebble  21  40      Gobo 1
+                    3    Globul  41  61      Gobo 2
+                    4    CirclM  62  81      Gobo 3
+                    5    Sky     82 101      Gobo 4
+                    6    Leaves 102 122      Gobo 5
+                    7    Bars-V 123 142      Gobo 6
+                    8    Bars-H 143 163      Gobo 7
+                    9    Block  164 183      Gobo 8
+                    10   Waves  184 203      Gobo 9
+                    11   Triang 204 224      
+                    12   3holes 225 244 s    
+                    13   Spin-> 245 255      Gob>
+          Par=5  Color    Num=47  Ch=5          col    Home=0
+                    Step Name   Min Max Stop Palette
+                    1    Open     0  20      White
+                    2    Magent  21  40      Magent
+                    3    Pink    41  61      Pink
+                    4    Red-L   62  81      Red
+                    5    Flesh   82 101      Amber
+                    6    Orange 102 122      Orange
+                    7    Yellow 123 142      Yellow
+                    8    Green  143 163      Green
+                    9    Blue-L 164 183      Cyan
+                    10   Blue-D 184 203      
+                    11   Lavend 204 224      Lavend
+                    12   Congo  225 244 s    Congo
+                    13   Spin-> 245 255      Col>
+          Par=6  Iris     Num=81  Ch=6          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Iris     0 255      
+          Par=7  Shaper   Num=84  Ch=7          beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Edge     0 255      
+          Par=8  XY-Spd   Num=103 Ch=8                 Home=255
+                    Step Name   Min Max Stop
+                    1    Xy-Spd   0 255      
+          Par=9  Col-Spd  Num=104 Ch=9                 Home=255
+                    Step Name   Min Max Stop
+                    1    Col-Sp   0 255      
+          Par=10 Beam-Spd Num=105 Ch=10                Home=255
+                    Step Name   Min Max Stop
+                    1    BeamSp   0 255      
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+22   SP575 16  Spot 575 XT 16 bits M1    ROBE  1627 SPOT575-.XT1 HEAD   530 280
+          Par=0  Control  Ch=6    Home=0
+                    Step Name   Level Time Pal
+                    1    ON-RST 135   4    On 
+                    2    OFF    235   4    Off
+          Par=1  X        Num=0   Ch=1   +3     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=2  Y        Num=1   Ch=2   +4     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=3  XY-Spd   Num=103 Ch=5               f Home=0
+                    Step Name   Min Max Stop
+                    1    Fst>Sl   0 249 s    
+                    2    BLKCOL 250 252      
+                    3    BLK-XY 253 255      
+          Par=4  FanCtrl  Num=119 Ch=6               f Home=0
+                    Step Name   Min Max Stop
+                    1    Fst>Sl   0 127      
+          Par=5  Color1   Num=47  Ch=7          col    Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  12      White
+                    2    BLUE-L  13  25      
+                    3    RED     26  37      Red
+                    4    BLUE    38  50      Blue
+                    5    GREENL  51  63      
+                    6    YELLOW  64  76      Yellow
+                    7    MAGENT  77  89      Magent
+                    8    CYAN    90 101      Cyan
+                    9    GREEN  102 114      Green
+                    10   ORANGE 115 127 s    Orange
+                    11   Fst>Sl 128 189      Col>
+                    12   STOP   190 193      
+                    13   Sl>Fst 194 255      
+          Par=6  Color2   Num=47  Ch=8          col    Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  11      
+                    2    RED-DP  12  23      
+                    3    BLUE-D  24  35      
+                    4    PINK    36  47      
+                    5    CYAN    48  59      
+                    6    MAGENT  60  71      
+                    7    YELLOW  72  83      
+                    8    5600K   84  95      
+                    9    3200K   96 107      
+                    10   UV-FLT 108 119      
+                    11   WHITE  120 127 s    
+                    12   ColFnc 128 255      
+          Par=7  Prism    Num=101 Ch=9          xtra f Home=0
+                    Step Name   Min Max Stop
+                    1    OPEN     0   0      
+                    2    Fst>Sl   1  63      
+                    3    STOP    64  64      
+                    4    Sl>Fst  65 127 s    
+                    5    MAC-01 128 135      
+                    6    MAC-02 136 143      
+                    7    MAC-03 144 151      
+                    8    MAC-04 152 159      
+                    9    MAC-05 160 167      
+                    10   MAC-06 168 175      
+                    11   MAC-07 176 183      
+                    12   MAC-08 184 191      
+                    13   MAC-09 192 199      
+                    14   MAC-10 200 207      
+                    15   MAC-11 208 215      
+                    16   MAC-12 216 223      
+                    17   MAC-13 224 231      
+                    18   MAC-14 232 239      
+                    19   MAC-15 240 247      
+                    20   MAC-16 248 255      
+          Par=8  Gobo-1   Num=60  Ch=10         gob    Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0   7      
+                    2    GOBO1    8  15      Gobo 1
+                    3    GOBO2   16  23      Gobo 2
+                    4    GOBO3   24  31      Gobo 3
+                    5    GOBO4   32  39      Gobo 4
+                    6    GOBO5   40  47      Gobo 5
+                    7    GOBO6   48  55      Gobo 6
+                    8    GOBO7   56  63      Gobo 7
+                    9    GOBO8   64  71      Gobo 8
+                    10   GOBO9   72  79 s    Gobo 9
+                    11   GOBOs1  80  95      
+                    12   GOBOs2  96 111      
+                    13   GOBOs3 112 127      
+                    14   GOBOs4 128 143      
+                    15   GOBOs5 144 159      
+                    16   GOBOs6 160 175      
+                    17   GOBOs7 176 191      
+                    18   GOBOs8 192 207      
+                    19   GOBOs9 208 223 s    
+                    20   Sl>Fst 224 255      
+          Par=9  Gobo-2   Num=60  Ch=11         gob    Home=0
+                    Step Name   Min Max Stop Palette
+                    1    OPEN     0  31      
+                    2    GOBO1r  32  63      
+                    3    GOBO2r  64  95      
+                    4    GOBO3r  96 127      
+                    5    GOBO4r 128 159      
+                    6    GOBO5r 160 191      
+                    7    GOBO6r 192 223 s    
+                    8    Sl>Fst 224 255      
+          Par=10 Gobo->   Num=61  Ch=12         gob  f Home=0
+                    Step Name   Min Max Stop
+                    1    INDEX    0 127 s    
+                    2    Fst>Sl 128 190      
+                    3    STOP   191 192      
+                    4    Sl>Fst 193 255      
+          Par=11 Iris     Num=81  Ch=13         beam f Home=0
+                    Step Name   Min Max Stop
+                    1    Op>Cls   0 191 s    
+                    2    PULSEs 192 223      
+                    3    PULSEf 224 255      
+          Par=12 FocusZm  Num=80  Ch=14         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    15�-->   0  85      
+                    2    18�-->  86 170      
+                    3    22�--> 171 225      
+          Par=13 Shutter  Num=21  Ch=15              f Home=32
+                    Step Name   Min Max Stop Palette
+                    1    CLOSED   0  31 s    Close
+                    2    OPEN    32  63 s    Open
+                    3    STROBE  64  95 s    Strobe
+                    4    PULSE+ 127 159 s    PulseOp
+                    5    PULSE- 191 223      PulseCl
+          Par=14 Dimmer   Num=20  Ch=16              f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    DIMMER   0 255      Dimmer
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+23   WH575 16  Wash 575 XT 16 bits M1    ROBE  1633 WASH575-.XT1 HEAD   530 280
+          Par=0  Control  Ch=6    Home=0
+                    Step Name   Level Time Pal
+                    1    ON-RST 135   4    On 
+                    2    OFF    235   4    Off
+          Par=1  X        Num=0   Ch=1   +3     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Pan      0 255      
+          Par=2  Y        Num=1   Ch=2   +4     pos  f Home=128
+                    Step Name   Min Max Stop
+                    1    Tilt     0 255      
+          Par=3  XY-Spd   Num=103 Ch=5               f Home=0
+                    Step Name   Min Max Stop
+                    1    Fst>Sl   0 249 s    
+                    2    BLKOUT 250 252      
+                    3    BLK-XY 253 255      
+          Par=4  FanCtrl  Num=119 Ch=6               f Home=0
+                    Step Name   Min Max Stop
+                    1    FanCtr   0 127      
+          Par=5  Color    Num=47  Ch=7          col    Home=0
+                    Step Name   Min Max Stop Palette
+                    1    WHITE    0  15      
+                    2    RED     16  31      
+                    3    BLUE    32  47      
+                    4    GREEN   48  63      
+                    5    ORANGE  64  79      
+                    6    3200K   80  95      
+                    7    5600K   96 111      
+                    8    UV-FLT 112 127 s    
+                    9    Fst>Sl 128 190      
+                    10   STOP   191 192      
+                    11   Sl>Fst 193 255      
+          Par=6  Cyan     Num=40  Ch=8          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Cyan     0 255      
+          Par=7  Magenta  Num=41  Ch=9          col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Magent   0 255      
+          Par=8  Yellow   Num=42  Ch=10         col  f Home=0
+                    Step Name   Min Max Stop
+                    1    Yellow   0 255      
+          Par=9  Col-Spd  Num=104 Ch=11              f Home=0
+                    Step Name   Min Max Stop
+                    1    Fst>Sl   0 255      
+          Par=10 Col-Fnc  Num=48  Ch=12         col    Home=0
+                    Step Name   Min Max Stop
+                    1    OFF      0   7      
+                    2    MAC 1    8  15      
+                    3    MAC 2   16  23      
+                    4    MAC 3   24  31      
+                    5    MAC 4   32  39      
+                    6    MAC 5   40  47      
+                    7    MAC 6   48  55      
+                    8    MAC 7   56  63      
+                    9    MAC 8   64  71      
+                    10   MAC 9   72  79      
+                    11   MAC 10  80  87      
+                    12   MAC 11  88  95      
+                    13   MAC 12  96 103      
+                    14   MAC 13 104 111      
+                    15   MAC 14 112 119      
+                    16   MAC 15 120 127      
+                    17   MAC 16 128 135      
+                    18   MAC 17 136 143      
+                    19   MAC 18 144 151      
+                    20   MAC 19 152 159      
+                    21   MAC 20 160 167      
+                    22   MAC 21 168 175      
+                    23   MAC 22 176 183      
+                    24   MAC 23 184 191      
+                    25   MAC 24 192 199      
+                    26   MAC 25 200 207      
+                    27   MAC 26 208 215      
+                    28   MAC 27 216 223      
+                    29   MAC 28 224 231      
+                    30   MAC 29 232 239      
+                    31   MAC 30 240 247      
+                    32   MAC 31 248 255      
+          Par=11 Effect   Num=100 Ch=13         xtra f Home=0
+                    Step Name   Min Max Stop
+                    1    FULL     0  70 s    
+                    2    SHAPER  71 180 s    
+                    3    FRSOT  181 255      
+          Par=12 Zoom     Num=83  Ch=14         beam f Home=128
+                    Step Name   Min Max Stop
+                    1    28�>7�   0 255      
+          Par=13 Shutter  Num=21  Ch=15              f Home=32
+                    Step Name   Min Max Stop Palette
+                    1    CLOSED   0  31 s    Close
+                    2    OPEN    32  63 s    Open
+                    3    STROBE  64  96 s    Strobe
+                    4    PULSE  120 159 s    PulseOp
+                    5    RANDOM 220 255      Random
+          Par=14 Dimmer   Num=20  Ch=16              f Home=255
+                    Step Name   Min Max Stop Palette
+                    1    DIMMER   0 255      Dimmer
+Fixt Name  Chs Comment                   Manuf Id   File         Move   Xº  Yº
+24   SCR11 1   Generic Scroller 11Frames DEVIC 0911 SCROLLER.11-        0   0
+          Par=1  Scroller Num=50  Ch=1          col  f Home=0
+                    Step Name   Min Max Dark Palette
+                    1    COLOR1   0  23      
+                    2    COLOR2  24  46      
+                    3    COLOR3  47  70      
+                    4    COLOR4  71  93      
+                    5    COLOR5  94 116      
+                    6    COLOR6 117 139      
+                    7    COLOR7 140 162      
+                    8    COLOR8 163 185      
+                    9    COLOR9 186 209      
+                    10   COLO10 210 232      
+                    11   COLO11 233 255      
+          Par=2  Dimmer   Num=20  Ch=EXT             f Home=0
+                    Step Name   Min Max Stop Palette
+                    1    Dimmer   0 255      Dimmer
+--------------------------------------------------------------------------------
+Pos Palette
+   0 : Home
+   1 : MIDDLE
+   2 : LEFT
+   3 : RIGHT
+   4 : TOP
+   5 : BOTTOM
+   6 : T-LEFT
+   7 : T-RIGHT
+   8 : R-LEFT
+   9 : R-RIGHT
+
+Dim Palette
+   0 :   0%
+   1 :  10%
+   2 :  20%
+   3 :  30%
+   4 :  40%
+   5 :  50%
+   6 :  60%
+   7 :  70%
+   8 :  80%
+   9 :  90%
+  10 :  FF%
+  11 : Open
+  12 : Close
+  13 : Strobe
+  14 : PulseOp
+  15 : PulseCl
+  16 : Random
+  17 : Sync
+
+Col Palette
+   0 : Black
+   1 : White
+   2 : Yellw--
+   3 : Yellow-
+   4 : Yellow
+   5 : Yellow+
+   6 : Amber-
+   7 : Amber
+   8 : Orange
+   9 : Red-
+  10 : Red
+  11 : Red+
+  12 : Magent-
+  13 : Magent
+  14 : Magent+
+  15 : Pink-
+  16 : Pink
+  17 : Pink+
+  18 : Cyan-
+  19 : Cyan
+  20 : Cyan+
+  21 : Cyan++
+  22 : Lavend-
+  23 : Lavend
+  24 : Lavend+
+  25 : Blue--
+  26 : Blue-
+  27 : Blue
+  28 : Blue+
+  29 : Green--
+  30 : Green-
+  31 : Green
+  32 : Green+
+  33 : Congo-
+  34 : Congo
+  35 : Congo+
+  36 : Purple-
+  37 : Purple
+  38 : Purple+
+  39 : COL>
+
+Gob Palette
+   0 : Home
+   1 : GOBO 1
+   2 : GOBO 2
+   3 : GOBO 3
+   4 : GOBO 4
+   5 : GOBO 5
+   6 : GOBO 6
+   7 : GOBO 7
+   8 : GOBO 8
+   9 : GOBO 9
+  10 : GOB>
+
+Beam Palette
+   0 : Home
+   1 : Bld 1
+   2 : Bld 2
+   3 : Bld 3
+   4 : Bld 4
+   5 : Bld s1
+   6 : Bld S1
+   7 : Bld s2
+   8 : Bld S2
+   9 : Bld t1
+  10 : Bld T1
+  11 : Bld t2
+  12 : Bld T2
+  13 : Bld u1
+  14 : Bld U1
+
+Xtra Palette
+   0 : Home
+   1 : Effct 1
+   2 : Effct 2
+   3 : Effct 3
+   4 : Effct 4
+   5 : Prism 1
+   6 : Prism 2
+   7 : Prism 3
+   8 : Prism 4
+--------------------------------------------------------------------------------
+Devices Cache
+
+Device FileName      Bauds   DataBits  Parity  StopBits  Commands
+1      MDS-----.SNY  9600    8         None    1         15
+          Cmd Name         Data
+          1   Remote OFF   *7E*07*05*47*10*04*FF   
+          2   Remote ON    *7E*07*05*47*10*03*FF 
+          3   Power OFF    *7E*07*05*47*01*03*FF 
+          4   Power ON     *7E*07*05*47*01*02*FF 
+          5   STOP         *7E*07*05*47*02*02*FF  
+          6   EJECT        *7E*07*05*47*02*40*FF 
+          7   TRACK +      *7E*07*05*47*02*16*FF 
+          8   TRACK -      *7E*07*05*47*02*15*FF 
+          9   a.PAUSE Off  *7E*07*05*47*02*80*FF  
+          10  a.PAUSE On   *7E*07*05*47*02*81*FF 
+          11   >> >>       *7E*07*05*47*02*14*FF 
+          12   << <<       *7E*07*05*47*02*13*FF
+          13  >>STOP<<     *7E*06*05*47*00*FF
+          14  PAUSE        *7E*07*05*47*02*06*FF
+          15  PLAY         *7E*07*05*47*02*01*FF
+Device FileName      Bauds   DataBits  Parity  StopBits  Commands
+2      EKT-20--.KDK  9600    8         None    1         44
+          Cmd Name         Data
+          1   UP1          *09*62*5A
+          2   DW1 UP2      *09*60*46*11*62*5A
+          3   AV1 DW2 UP1  *0D*00*00*11*60*46*09*62*5A
+          4   AV2 DW1 UP2  *15*00*00*09*60*46*11*62*5A
+          5   DW2          *11*60*46
+          6   Focus 1  >>  *0D*08*00
+          7   Focus 1 stop *0D*10*00
+          8   Focus 1  <<  *0D*0C*00
+          9   Focus 2  >>  *15*08*00
+          10  Focus 2 stop *15*10*00
+          11  Focus 2  <<  *15*0C*00 
+          12  Diapo ZERO   *FB*1C*00*F9*00*00
+          13  Stand by OFF *0B*1C*00*13*1C*00*09*60*00*11*60*00
+          14  Stand by ON  *0B*1E*00*13*1E*00
+          15  a.Sht OFF    *0B*0C*00*13*0C*00
+          16  a.Sht ON     *0B*0E*00*13*0E*00
+          17  Sht 1 OPEN   *0D*1C*00
+          18  Sht 1 CLOSED *0D*20*00
+          19  Sht 2 OPEN   *15*1C*00
+          20  Sht 2 CLOSED *15*20*00
+          21  1 diapo 1    *09*00*02
+          22  1 diapo 2    *09*00*04
+          23  1 diapo 3    *09*00*06
+          24  1 diapo 4    *09*00*08
+          25  1 diapo 5    *09*00*0A
+          26  1 diapo 6    *09*00*0C
+          27  1 diapo 7    *09*00*0E
+          28  1 diapo 8    *09*00*10
+          29  1 diapo 9    *09*00*12
+          30  1 diapo 10   *09*00*14
+          31  1 diapo 11   *09*00*16
+          32  1 diapo 12   *09*00*18
+          33  2 diapo 1    *11*00*02
+          34  2 diapo 2    *11*00*04
+          35  2 diapo 3    *11*00*06
+          36  2 diapo 4    *11*00*08
+          37  2 diapo 5    *11*00*0A
+          38  2 diapo 6    *11*00*0C
+          39  2 diapo 7    *11*00*0E
+          40  2 diapo 8    *11*00*10
+          41  2 diapo 9    *11*00*12
+          42  2 diapo 10   *11*00*14
+          43  2 diapo 11   *11*00*16
+          44  2 diapo 12   *11*00*18
+Device FileName      Bauds   DataBits  Parity  StopBits  Commands
+3      DVM-----.AMB  9600    8         None    1         30
+          Cmd Name         Data
+          1   AUDIO OFF    0AD*0D
+          2   AUDIO 20%    30AL*0D
+          3   AUDIO 25%    25AL*0D
+          4   AUDIO 40%    20AL*0D
+          5   AUDIO 50%    12AL*0D
+          6   AUDIO 60%    8AL*0D
+          7   AUDIO 80%    6AL*0D
+          8   AUDIO 100%   1AD*0D
+          9   Video OFF    0VD*0D
+          10  Video ON     1VD*0D 
+          11  PAUSE        PA*0D
+          12  STILL        ST*0D
+          13  PLAY         PL*0D
+          14  LOOP Play    LP*0D 
+          15  Track 1      1SE*0D 
+          16  Track 2      2SE*0D
+          17  Track 3      3SE*0D
+          18  Track 4      4SE*0D
+          19  Track 5      5SE*0D
+          20  Track 6      6SE*0D
+          21  Track 7      7SE*0D
+          22  Track 8      8SE*0D
+          23  Track 9      9SE*0D
+          24  Track 10     10SE*0D
+          25  Track 11     11SE*0D
+          26  Track 12     12SE*0D
+          27  Track 13     13SE*0D
+          28  Track 14     14SE*0D
+          29  Track 15     15SE*0D
+          30  Track 16     16SE*0D
+Device FileName      Bauds   DataBits  Parity  StopBits  Commands
+4      DVD7300-.PNR  9600    8         None    1         9
+          Cmd Name         Data
+          1   START        SA*0D
+          2   PLAY         PL*0D
+          3   PAUSE        PA*0D
+          4   STILL        ST*0D
+          5   Step >>      SF*0D
+          6   Step <<      SR*0D
+          7   Scan  >>     NF*0D
+          8   Scan Stop    NS*0D
+          9   Scan  <<     NR*0D
+Device FileName      Bauds   DataBits  Parity  StopBits  Commands
+5      PIRENE--.-LT  9600    8         None    1         37
+          Cmd Name         Data
+          1   GO (next)    *F0*7F*7F*02*7F*01*F7
+          2   STOP         *F0*7F*7F*02*7F*02*F7
+          3   RESUME       *F0*7F*7F*02*7F*03*F7
+          4   ALL OFF      *F0*7F*7F*02*7F*08*F7
+          5   RESTORE      *F0*7F*7F*02*7F*09*F7
+          6   ZERO         *F0*7F*7F*02*7F*0A*F7
+          7   GO OFF       *F0*7F*7F*02*7F*0B*F7
+          8   GO 1         *F0*7F*7F*02*7F*01*30*31*F7
+          9   GO 2         *F0*7F*7F*02*7F*01*30*32*F7
+          10  GO 3         *F0*7F*7F*02*7F*01*30*33*F7
+          11  GO 4         *F0*7F*7F*02*7F*01*30*34*F7
+          12  GO 5         *F0*7F*7F*02*7F*01*30*35*F7
+          13  GO 6         *F0*7F*7F*02*7F*01*30*36*F7
+          14  GO ...        
+          15  GO 99        *F0*7F*7F*02*7F*01*39*39*F7
+          16  LOAD 1       *F0*7F*7F*02*7F*05*30*31*F7
+          17  LOAD 2       *F0*7F*7F*02*7F*05*30*32*F7
+          18  LOAD 3       *F0*7F*7F*02*7F*05*30*33*F7
+          19  LOAD 4       *F0*7F*7F*02*7F*05*30*34*F7
+          20  LOAD 5       *F0*7F*7F*02*7F*05*30*35*F7
+          21  LOAD 6       *F0*7F*7F*02*7F*05*30*36*F7
+          22  LOAD ...      
+          23  LOAD 99      *F0*7F*7F*02*7F*05*39*39*F7
+          24  split comman 
+          25  Go ##enter   *F0*7F*7F*02*7F*01
+          26  Load ##enter *F0*7F*7F*02*7F*05
+          27  #: 0         *30
+          28  #: 1         *31
+          29  #: 2         *32
+          30  #: 3         *33
+          31  #: 4         *34
+          32  #: 5         *35
+          33  #: 6         *36
+          34  #: 7         *37
+          35  #: 8         *38
+          36  #: 9         *39
+          37  enter        *F7
+Device FileName      Bauds   DataBits  Parity  StopBits  Commands
+6      DPO-NAVE.-LT  9600    8         None    1         23
+          Cmd Name         Data
+          1   FACHADA      *09*00*02*11*00*02
+          2   NAVE         *09*00*08*11*00*08
+          3   MAQUINARIA   *09*00*10*11*00*10
+          4   COMPONENTES  *09*00*16*11*00*16
+          5   TRABAJO      *09*00*2C*11*00*2C
+          6   DEPENDENCIAS *09*00*3C*11*00*3C
+          7   ACABADOS     *09*00*4A*11*00*4A
+          8   ACTIVAR      *0B*1C*00*13*1C*00
+          9   DESACTIVAR   *0B*1E*00*13*1E*00
+          10  DIAPOS ZERO  *FB*1C*00*F9*00*00
+          11  FADE IN      *09*62*2C*11*62*2C
+          12  FADE OUT     *09*60*18*11*60*18
+          13  AVANCE       *0D*00*00*15*00*00
+          14  RETROCESO    *0D*04*00*15*04*00
+          15  FOCUS 1 >>   *0D*08*00
+          16  FOCUS STOP   *0D*10*00*15*10*00
+          17  FOCUS 1 <<   *0D*0C*00
+          18  SHUTTER OPEN *0D*1C*00*15*1C*00
+          19  SHUTTER CLOS *0D*20*00*15*20*00
+          20  auto SH ON   *0B*0E*00*13*0E*00
+          21  auto SH OFF  *0B*0C*00*13*0C*00
+          22  FOCUS 2 >>   *15*08*00
+          23  FOCUS 2 <<   *15*0C*00
+--------------------------------------------------------------------------------
+Midi MSC
+ In
+  Mode NONE
+  Device 1
+  Group NONE
+  Enabled Commands
+   01-GO
+   02-STOP
+   03-RESUME
+   04-GO_TIME
+   05-LOAD
+   07-FIRE
+   08-ALL_OFF
+   09-RESTORE
+   0A-RESET
+   0B-GO_OFF
+ Out
+  Mode NONE
+  For DEVICE
+  Device 1
+  Group 1
+  Format 01-LIGHTING
+  Enabled Commands
+   01-GO
+   02-STOP
+   05-LOAD
+   07-FIRE
+   08-ALL_OFF
+   09-RESTORE
+   0A-RESET
+   0B-GO_OFF
+
+Midi Patch
+
+Faders
+S1 *C0 Ch1
+S2 *C1 Ch1
+S3 *C2 Ch1
+S4 *C3 Ch1
+S5 *C4 Ch1
+S6 *C5 Ch1
+S7 *C6 Ch1
+S8 *C7 Ch1
+S9 *C8 Ch1
+S10*C9 Ch1
+S11*C10 Ch1
+S12*C11 Ch1
+S13*C12 Ch1
+S14*C13 Ch1
+S15*C14 Ch1
+S16*C15 Ch1
+S17*C16 Ch1
+S18*C17 Ch1
+S19*C18 Ch1
+S20*C19 Ch1
+S21*C20 Ch1
+S22*C21 Ch1
+S23*C22 Ch1
+S24*C23 Ch1
+S25*C24 Ch1
+S26*C25 Ch1
+S27*C26 Ch1
+S28*C27 Ch1
+S29*C28 Ch1
+S30*C29 Ch1
+S31*C30 Ch1
+S32*C31 Ch1
+S33*C32 Ch1
+S34*C33 Ch1
+S35*C34 Ch1
+S36*C35 Ch1
+S37*C36 Ch1
+S38*C37 Ch1
+S39*C38 Ch1
+S40*C39 Ch1
+S41*C40 Ch1
+S42*C41 Ch1
+S43*C42 Ch1
+S44*C43 Ch1
+S45*C44 Ch1
+S46*C45 Ch1
+S47*C46 Ch1
+S48*C47 Ch1
+C1  -
+C2  -
+C3  -
+A  *C51 Ch1
+B  *C52 Ch1
+AB *C53 Ch1
+GM *C54 Ch1
+W1     *C55 Ch1
+W2     *C56 Ch1
+W3     *C57 Ch1
+W4     *C58 Ch1
+WlEV    -
+TRACKBx -
+TRACKBy -
+Keys
+S1 *N0 Ch1
+S2 *N1 Ch1
+S3 *N2 Ch1
+S4 *N3 Ch1
+S5 *N4 Ch1
+S6 *N5 Ch1
+S7 *N6 Ch1
+S8 *N7 Ch1
+S9 *N8 Ch1
+S10*N9 Ch1
+S11*N10 Ch1
+S12*N11 Ch1
+S13*N12 Ch1
+S14*N13 Ch1
+S15*N14 Ch1
+S16*N15 Ch1
+S17*N16 Ch1
+S18*N17 Ch1
+S19*N18 Ch1
+S20*N19 Ch1
+S21*N20 Ch1
+S22*N21 Ch1
+S23*N22 Ch1
+S24*N23 Ch1
+S25*N24 Ch1
+S26*N25 Ch1
+S27*N26 Ch1
+S28*N27 Ch1
+S29*N28 Ch1
+S30*N29 Ch1
+S31*N30 Ch1
+S32*N31 Ch1
+S33*N32 Ch1
+S34*N33 Ch1
+S35*N34 Ch1
+S36*N35 Ch1
+S37*N36 Ch1
+S38*N37 Ch1
+S39*N38 Ch1
+S40*N39 Ch1
+S41*N40 Ch1
+S42*N41 Ch1
+S43*N42 Ch1
+S44*N43 Ch1
+S45*N44 Ch1
+S46*N45 Ch1
+S47*N46 Ch1
+S48*N47 Ch1
+E1 *N48 Ch1
+E2 *N49 Ch1
+E3 *N50 Ch1
+E4 *N51 Ch1
+E5 *N52 Ch1
+E6 *N53 Ch1
+E7 *N54 Ch1
+E8 *N55 Ch1
+E9 *N56 Ch1
+E10*N57 Ch1
+E11*N58 Ch1
+E12*N59 Ch1
+E13*N60 Ch1
+E14*N61 Ch1
+E15*N62 Ch1
+E16*N63 Ch1
+E17*N64 Ch1
+E18*N65 Ch1
+E19*N66 Ch1
+E20*N67 Ch1
+E21*N68 Ch1
+E22*N69 Ch1
+E23*N70 Ch1
+E24*N71 Ch1
+E25*N72 Ch1
+E26*N73 Ch1
+E27*N74 Ch1
+E28*N75 Ch1
+E29*N76 Ch1
+E30*N77 Ch1
+E31*N78 Ch1
+E32*N79 Ch1
+E33*N80 Ch1
+E34*N81 Ch1
+E35*N82 Ch1
+E36*N83 Ch1
+E37*N84 Ch1
+E38*N85 Ch1
+E39*N86 Ch1
+E40*N87 Ch1
+E41*N88 Ch1
+E42*N89 Ch1
+E43*N90 Ch1
+E44*N91 Ch1
+E45*N92 Ch1
+E46*N93 Ch1
+E47*N94 Ch1
+E48*N95 Ch1
+0         *N96 Ch1
+1         *N97 Ch1
+2         *N98 Ch1
+3         *N99 Ch1
+4         *N100 Ch1
+5         *N101 Ch1
+6         *N102 Ch1
+7         *N103 Ch1
+8         *N104 Ch1
+9         *N105 Ch1
+C         *N106 Ch1
+.         *N107 Ch1
+FLASH     *N108 Ch1
+SUB       *N109 Ch1
+PRIO      *N110 Ch1
+STEP      *N111 Ch1
+P.BK      *N112 Ch1
+HELP      *N113 Ch1
+LIVE.T    *N114 Ch1
+BLIND     *N115 Ch1
+MDFY      *N116 Ch1
+EXAM      *N117 Ch1
+MACRO     *N118 Ch1
+EFFECT    *N119 Ch1
+PAGE      *N120 Ch1
+LN.TM     *N121 Ch1
+PART      *N122 Ch1
+PARAM     *N123 Ch1
+TEST      *N124 Ch1
+INV       *N125 Ch1
+CALL      *N126 Ch1
+NEXT      *N127 Ch1
+PREV      *N0 Ch2
+REL       *N1 Ch2
+FXT       *N2 Ch2
+EXCP      *N3 Ch2
+OPT       *N4 Ch2
+CH        *N5 Ch2
+THRU      *N6 Ch2
+@         *N7 Ch2
+REC       *N8 Ch2
+RST       *N9 Ch2
+CUE       *N10 Ch2
+GRP       *N11 Ch2
+HOME      *N12 Ch2
+MENU      *N13 Ch2
+COPY      *N14 Ch2
+INS       *N15 Ch2
+EXIT      *N16 Ch2
+MON       *N17 Ch2
+WHEEL     *N18 Ch2
+DEL       *N19 Ch2
+ArrowUp   *N20 Ch2
+ArrowLeft *N21 Ch2
+OK        *N22 Ch2
+ArrowRight*N23 Ch2
+ArrowDown *N24 Ch2
+POS       *N25 Ch2
+COL       *N26 Ch2
+GOB       *N27 Ch2
+DIM       *N28 Ch2
+XTRA      *N29 Ch2
+BEAM      *N30 Ch2
+SHAPE     *N31 Ch2
+END.J     *N32 Ch2
+RATE      *N33 Ch2
+SEQ       *N34 Ch2
+FINE      *N35 Ch2
+FAN.O     *N36 Ch2
+MOUSE     *N37 Ch2
+T.B.      *N38 Ch2
+FLIP      *N39 Ch2
+AB-MODE   *N40 Ch2
+AB-B.O.   *N41 Ch2
+GM-MODE   *N42 Ch2
+GM-B.O.   *N43 Ch2
+GO        *N44 Ch2
+BACK      *N45 Ch2
+PAUSE     *N46 Ch2
+C1-MODE    -
+C1-B.O.    -
+C2-MODE    -
+C2-B.O.    -
+C3-MODE    -
+C3-B.O.    -
+W1        *N53 Ch2
+W2        *N54 Ch2
+W3        *N55 Ch2
+W4        *N56 Ch2
+QLIST     *N57 Ch2
+KEYB      *N58 Ch2
+
+Keyboard*C62 Ch1
+      to C63
+PC Page*1 Ch1
+     to 128
+--------------------------------------------------------------------------------
+Time Code
+
+TC          Pl Item   Text                  Mo Tu We Th Fr Sa Su
+--------------------------------------------------------------------------------

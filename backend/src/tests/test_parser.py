@@ -95,8 +95,8 @@ def test_parse_channel_data():
     # Should return a dict mapping cue numbers to channel lists
     assert isinstance(result, dict)
     assert len(result) > 0
-    # Check that we have channels for some cues
-    assert 1 in result or 2 in result
+    # Check that we have channels for some cues (cue numbers are stored as strings)
+    assert "1" in result or "2" in result
 
 
 def test_find_max_channel_number():

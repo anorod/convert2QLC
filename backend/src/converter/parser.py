@@ -28,8 +28,9 @@ class PicoloParser:
         """
         self.content = content
         self.cue_list: List[Dict[str, str]] = []
-        self.channel_data: Dict[int, List[str]] = {}
+        self.channel_data: Dict[str, List[str]] = {}
         self.max_channel_number: Optional[int] = None
+        self.channel_mapping: Dict[int, int] = {}
 
     def parse_cue_list(self) -> List[Dict[str, str]]:
         """Parse the Cue List section of the Picolo file.
@@ -48,6 +49,7 @@ class PicoloParser:
 
         i = 0
         found_cue_header = False
+        in_detailed_section = False  # Track if we're in the detailed section with channel data
 
         while i < len(lines):
             line = lines[i].strip()
@@ -55,13 +57,66 @@ class PicoloParser:
             # Check if this is a cue header line (starts with "Cue" and has the column headers)
             if line.startswith("Cue") and "TI" in line and "TO" in line:
                 found_cue_header = True
-                # Skip the header line
+                
+                # Look ahead to determine if this is a summary or detailed section
+                # A detailed section has ONE cue data line followed by Channels (or another Cue header)
+                # A summary section has MULTIPLE cue data lines before the next Cue header
+                lookahead_pos = i + 1
+                is_summary_section = False
+                
+                # Count how many cue data lines are in this section
+                cue_data_count = 0
+                while lookahead_pos < len(lines):
+                    lookahead_line = lines[lookahead_pos].strip()
+                    
+                    # If we find a "Channels" line, this is NOT a summary (it's detailed)
+                    if lookahead_line == "Channels":
+                        break
+                    # If we hit another Cue header, check how many cues were in this section
+                    elif lookahead_line.startswith("Cue") and "TI" in lookahead_line:
+                        is_summary_section = (cue_data_count > 1)
+                        break
+                    # Count cue data lines (lines that start with a number)
+                    elif (lookahead_line and not lookahead_line.startswith("-") and 
+                         not lookahead_line.startswith("Cue")):
+                        parts = lookahead_line.split()
+                        if parts:
+                            first_token = parts[0]
+                            # Check if it's a number (with optional decimal point)
+                            is_number = True
+                            dot_count = 0
+                            for c in first_token:
+                                if not c.isdigit() and c != '.':
+                                    is_number = False
+                                    break
+                                elif c == '.':
+                                    dot_count += 1
+                                    if dot_count > 1:
+                                        is_number = False
+                                        break
+                            if is_number:
+                                cue_data_count += 1
+                    lookahead_pos += 1
+                
+                # Move past the cue header line before processing data
                 i += 1
-
+                
+                # Only parse cue data if this is NOT a summary section
+                # If it's a summary section, skip to the next Cue header
+                if is_summary_section:
+                    # Skip all lines until we hit the next Cue header
+                    while i < len(lines):
+                        line = lines[i].strip()
+                        # Stop when we find another Cue header
+                        if line.startswith("Cue") and "TI" in line:
+                            break
+                        i += 1
+                    continue
+                
                 # Now look for actual cue data lines - these are lines that start with a number
                 while i < len(lines):
                     cue_line = lines[i].strip()
-
+                    
                     # Stop processing when we hit a new Cue header, Channels line, or empty line
                     if (
                         not cue_line
@@ -69,12 +124,16 @@ class PicoloParser:
                         or cue_line == "Channels"
                     ):
                         break
-
+                    
                     # Parse cue line: "0.1 3 3 Manua T1 CUE -"
                     # (CueNum TI TO TW Ti To Tm Jump Lp Text Command TC cfs)
                     parts = cue_line.split()
                     if len(parts) >= 1:
                         cue_number = parts[0]
+                        # Skip lines that look like "Channels" or other non-cue data
+                        if cue_number == "Channels":
+                            i += 1
+                            continue
                         # Extract time values TI, TO, TW from the cue line
                         cue_data = {
                             "cue_number": cue_number,
@@ -95,7 +154,7 @@ class PicoloParser:
 
         return cues
 
-    def parse_channel_data(self) -> Dict[int, List[str]]:
+    def parse_channel_data(self) -> Dict[str, List[str]]:
         """Parse channel data from the Cues content section.
 
         Returns:
@@ -105,7 +164,7 @@ class PicoloParser:
             InvalidFileFormatError: If the channel data cannot be parsed.
         """
         # Parse channel data sections
-        channel_data: Dict[int, List[str]] = {}
+        channel_data: Dict[str, List[str]] = {}
         lines = self.content.split("\n")
 
         i = 0
@@ -147,9 +206,6 @@ class PicoloParser:
                 filtered_channels = [ch for ch in all_channels if ch and not re.match(r'^-+$', ch)]
 
                 if current_cue_number is not None and filtered_channels:
-                    # Convert cue number to int for consistency
-                    cue_int = int(round(current_cue_number))
-
                     # Convert Picolo levels to QLC+ format
                     converted_channels = []
                     for channel_str in filtered_channels:
@@ -160,7 +216,10 @@ class PicoloParser:
                             # Keep original value if conversion fails
                             converted_channels.append(channel_str)
 
-                    channel_data[cue_int] = converted_channels
+                    # Use the same cue number format (string) for consistency with cue_list
+                    # Convert to string without decimal point for integer cues
+                    cue_key = str(current_cue_number).rstrip('.0')
+                    channel_data[cue_key] = converted_channels
             elif line.startswith("Cue") and "TI" in line and "TO" in line:
                 # Skip cue header - i will be incremented at the end of loop
                 pass
@@ -181,6 +240,74 @@ class PicoloParser:
         # Assign the result to self.channel_data as expected by tests
         self.channel_data = channel_data
         return channel_data
+
+    def parse_channel_mapping(self) -> Dict[int, int]:
+        """Parse the Channel Dmx mapping section.
+
+        Returns:
+            A dictionary mapping Picolo channel numbers to DMX addresses.
+        """
+        channel_map: Dict[int, int] = {}
+        lines = self.content.split("\n")
+
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+
+            # Check if this is the "Channel Dmx" header line
+            if line == "Channel Dmx   Li Cu":
+                i += 1
+                
+                # Read mapping lines until we hit an empty line or another section
+                while i < len(lines):
+                    mapping_line = lines[i].strip()
+                    
+                    # Stop at empty lines or section headers
+                    if not mapping_line:
+                        break
+                    
+                    # Check for section headers that might appear after the mapping
+                    if (mapping_line.startswith("Cue") or 
+                        mapping_line == "Channels" or
+                        mapping_line.startswith("*")):
+                        break
+                    
+                    # Parse mapping line: "1       1     FF 1"
+                    parts = mapping_line.split()
+                    if len(parts) >= 2:
+                        try:
+                            picolo_channel = int(parts[0])
+                            dmx_address = int(parts[1])
+                            channel_map[picolo_channel] = dmx_address
+                        except ValueError:
+                            # Skip lines that can't be parsed as integers
+                            pass
+                    i += 1
+            else:
+                i += 1
+        
+        return channel_map
+
+    def parse(self) -> Dict[str, object]:
+        """Parse the entire Picolo file and return structured data.
+
+        Returns:
+            A dictionary containing parsed cue list, channel data,
+            and maximum channel number.
+
+        Raises:
+            InvalidFileFormatError: If any section cannot be parsed.
+        """
+        self.cue_list = self.parse_cue_list()
+        self.channel_mapping = self.parse_channel_mapping()
+        self.channel_data = self.parse_channel_data()
+        self.max_channel_number = self.find_max_channel_number()
+
+        return {
+            "cue_list": self.cue_list,
+            "channel_data": self.channel_data,
+            "max_channel_number": self.max_channel_number,
+        }
 
     def find_max_channel_number(self) -> Optional[int]:
         """Find and store the highest channel number in the file.
@@ -207,23 +334,3 @@ class PicoloParser:
                     continue
 
         return max_channel if max_channel > 0 else None
-
-    def parse(self) -> Dict[str, object]:
-        """Parse the entire Picolo file and return structured data.
-
-        Returns:
-            A dictionary containing parsed cue list, channel data,
-            and maximum channel number.
-
-        Raises:
-            InvalidFileFormatError: If any section cannot be parsed.
-        """
-        self.cue_list = self.parse_cue_list()
-        self.channel_data = self.parse_channel_data()
-        self.max_channel_number = self.find_max_channel_number()
-
-        return {
-            "cue_list": self.cue_list,
-            "channel_data": self.channel_data,
-            "max_channel_number": self.max_channel_number,
-        }

@@ -15,9 +15,9 @@ def test_generate_base_xml():
     generator = XMLGenerator()
     root = generator.generate_base_xml("Test Show")
     
-    assert root.tag == "QLCPlus"
-    assert root.get("version") == "4.12.0"
-    assert root.get("name") == "Test Show"
+    assert root.tag == "Workspace"
+    assert "xmlns" in root.attrib
+    assert root.attrib["xmlns"] == "http://www.qlcplus.org/Workspace"
 
 
 def test_generate_fixture():
@@ -26,18 +26,12 @@ def test_generate_fixture():
     fixture = generator.generate_fixture(5)
     
     assert fixture.tag == "Fixture"
-    assert fixture.get("Name") == "Generic Fixture"
+    assert fixture.get("Name") == "Dimmers"
     assert fixture.get("Channels") == "5"
     
-    # Check that we have 5 channel elements
+    # Check that there are no Channel subelements (use FixtureVal instead)
     channels = fixture.findall("Channel")
-    assert len(channels) == 5
-    
-    # Check first channel
-    first_channel = channels[0]
-    assert first_channel.get("Name") == "Channel 1"
-    assert first_channel.get("Group") == "Generic"
-    assert first_channel.get("Type") == "Intensity"
+    assert len(channels) == 0
 
 
 def test_generate_scene():
@@ -45,23 +39,22 @@ def test_generate_scene():
     generator = XMLGenerator()
     scene = generator.generate_scene(1, ["255", "128", "0"], 1000, 2000, 3000)
     
-    assert scene.tag == "Scene"
-    assert scene.get("Name") == "Cue 1 Scene"
-    assert scene.get("FadeIn") == "1000"
-    assert scene.get("FadeOut") == "2000"
-    assert scene.get("Hold") == "3000"
+    assert scene.tag == "Function"
+    assert scene.get("Type") == "Scene"
+    assert scene.get("Name") == "1. Cue 1"
     
-    # Check that channels are correctly added
-    channels = scene.findall("Channel")
-    assert len(channels) == 3
+    # Check Speed element
+    speed = scene.find("Speed")
+    assert speed is not None
+    assert speed.get("FadeIn") == "1000"
+    assert speed.get("FadeOut") == "2000"
+    assert speed.get("Duration") == "3000"
     
-    # Check first channel
-    assert channels[0].get("Number") == "1"
-    assert channels[0].get("Level") == "255"
-    
-    # Check second channel
-    assert channels[1].get("Number") == "2"
-    assert channels[1].get("Level") == "128"
+    # Check FixtureVal element with comma-separated values
+    fixture_val = scene.find("FixtureVal")
+    assert fixture_val is not None
+    assert fixture_val.get("ID") == "0"
+    assert fixture_val.text == "255,128,0"
 
 
 def test_generate_chaser():
@@ -74,18 +67,13 @@ def test_generate_chaser():
     
     chaser = generator.generate_chaser([scene1, scene2])
     
-    assert chaser.tag == "Chaser"
-    assert chaser.get("Name") == "Picolo Cue Sequence"
+    assert chaser.tag == "Function"
+    assert chaser.get("Type") == "Chaser"
+    assert chaser.get("Name") == "Cuelist"
     
     # Check that we have two steps
     steps = chaser.findall("Step")
     assert len(steps) == 2
-    
-    # Check first step
-    assert steps[0].get("Scene") == "Cue 1 Scene"
-    
-    # Check second step
-    assert steps[1].get("Scene") == "Cue 2 Scene"
 
 
 def test_generate_xml():
@@ -105,9 +93,9 @@ def test_generate_xml():
     
     xml_output = generator.generate_xml("Test Show", cue_list, channel_data, max_channel_number)
     
-    # Check that the XML contains key elements
-    assert "QLCPlus" in xml_output
+    # Check that the XML contains key elements in QXW format
+    assert "Workspace" in xml_output
     assert "Fixture" in xml_output
-    assert "Scene" in xml_output
-    assert "Chaser" in xml_output
-    assert "Test Show" in xml_output
+    assert "Function" in xml_output
+    assert "Type=\"Scene\"" in xml_output
+    assert "Type=\"Chaser\"" in xml_output
