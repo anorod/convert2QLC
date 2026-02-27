@@ -58,16 +58,19 @@ class XMLGenerator:
         
         return fixture
 
-    def generate_scene(self, cue_number: int, channel_levels: List[str], 
-                      fade_in: int, fade_out: int, hold: int) -> ET.Element:
+    def generate_scene(self, cue_number: int, channel_data: Dict[int, str], 
+                      fade_in: int, fade_out: int, hold: int, is_scene_type: bool = True) -> ET.Element:
         """Generate a scene element for a specific cue with channel levels and timing.
 
         Args:
             cue_number: The cue number (used for scene name)
-            channel_levels: List of channel level values in QLC+ decimal format (0-255)
+            channel_data: Dictionary mapping channel numbers to their QLC+ level values,
+                          or list of values in order (for backward compatibility)
             fade_in: FadeIn time in milliseconds
             fade_out: FadeOut time in milliseconds
             hold: Hold time in milliseconds
+            is_scene_type: Whether this function should be treated as a Scene type.
+                          If True, sets Speed attributes to 0. Defaults to True for backward compatibility.
 
         Returns:
             Scene element with channel data and timing attributes
@@ -80,15 +83,33 @@ class XMLGenerator:
         
         # Add Speed element with timing information
         speed = ET.SubElement(function, "Speed")
-        speed.set("FadeIn", str(fade_in))
-        speed.set("FadeOut", str(fade_out))
-        speed.set("Duration", str(hold))
+        if is_scene_type:
+            speed.set("FadeIn", "0")
+            speed.set("FadeOut", "0")
+            speed.set("Duration", "0")
+        else:
+            speed.set("FadeIn", str(fade_in))
+            speed.set("FadeOut", str(fade_out))
+            speed.set("Duration", str(hold))
         
-        # Add FixtureVal element with comma-separated channel values
-        if channel_levels:
+        # Add FixtureVal elements with channel-value pairs
+        if channel_data:
             fixture_val = ET.SubElement(function, "FixtureVal")
             fixture_val.set("ID", "0")
-            fixture_val.text = ",".join(channel_levels)
+            
+            # Handle both dict and list formats for backward compatibility
+            if isinstance(channel_data, dict):
+                # Create a list of "channel:value" pairs sorted by channel number
+                channel_pairs = []
+                for channel_num in sorted(channel_data.keys()):
+                    value = channel_data[channel_num]
+                    channel_pairs.append(f"{channel_num}:{value}")
+                
+                # Join all pairs with commas
+                fixture_val.text = ",".join(channel_pairs)
+            else:
+                # Backward compatibility: use comma-separated values (old format)
+                fixture_val.text = ",".join(channel_data)
         
         return function
 
@@ -309,7 +330,8 @@ class XMLGenerator:
         return cue_section
 
     def generate_xml(self, file_name: str, cue_list: List[Dict], 
-                    channel_data: Dict[int, List[str]], max_channel_number: int) -> str:
+                    channel_data: Dict[str, List[str]], max_channel_number: int,
+                    channel_value_pairs: Dict[str, Dict[int, str]] = {}) -> str:
         """Generate complete QLC+ XML document from parsed Picolo data.
 
         Args:
@@ -317,6 +339,7 @@ class XMLGenerator:
             cue_list: List of parsed cues with time information
             channel_data: Dictionary mapping cue numbers to channel data
             max_channel_number: Highest channel number found in the file
+            channel_value_pairs: Optional dictionary mapping cue numbers to channel-value pairs
 
         Returns:
             Formatted XML string representing the QLC+ project
@@ -345,15 +368,25 @@ class XMLGenerator:
                 cue_number = int(float(cue.get("cue_number", 0)))
             except ValueError:
                 continue
-            levels = channel_data.get(cue_number, [])
             
             # Get time values from cue (these are already converted by transformer)
             fade_in = int(cue.get("FadeIn", 0))
             fade_out = int(cue.get("FadeOut", 0)) 
             hold = int(cue.get("Hold", 0))
             
-             # Create scene with channel levels and timing
-            scene = self.generate_scene(cue_number, levels, fade_in, fade_out, hold)
+            # Get the appropriate channel data for this cue
+            if str(cue_number) in channel_value_pairs:
+                # Use the detailed channel-value pairs
+                cue_channels = channel_value_pairs[str(cue_number)]
+            else:
+                # Fallback to flat list (for backward compatibility)
+                cue_channels = {}
+                levels = channel_data.get(str(cue_number), [])
+                for i, level in enumerate(levels):
+                    cue_channels[i+1] = level
+            
+            # Create scene with channel levels and timing
+            scene = self.generate_scene(cue_number, cue_channels, fade_in, fade_out, hold, is_scene_type=True)
             scenes.append(scene)
             engine.append(scene)
         

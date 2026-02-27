@@ -4518,9 +4518,9 @@ Fixt Name  Chs Comment                   Manuf Id   File         Move   Xยบ  Yยบ
                     3    PULSEf 224 255      
           Par=12 FocusZm  Num=80  Ch=14         beam f Home=128
                     Step Name   Min Max Stop
-                    1    15บ-->   0  85      
-                    2    18บ-->  86 170      
-                    3    22บ--> 171 225      
+                    1    15-->   0  85      
+                    2    18-->  86 170      
+                    3    22--> 171 225      
           Par=13 Shutter  Num=21  Ch=15              f Home=32
                     Step Name   Min Max Stop Palette
                     1    CLOSED   0  31 s    Close
@@ -4617,7 +4617,7 @@ Fixt Name  Chs Comment                   Manuf Id   File         Move   Xยบ  Yยบ
                     3    FRSOT  181 255      
           Par=12 Zoom     Num=83  Ch=14         beam f Home=128
                     Step Name   Min Max Stop
-                    1    28บ>7บ   0 255      
+                    1    28>7   0 255      
           Par=13 Shutter  Num=21  Ch=15              f Home=32
                     Step Name   Min Max Stop Palette
                     1    CLOSED   0  31 s    Close

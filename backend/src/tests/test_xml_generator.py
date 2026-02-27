@@ -37,24 +37,33 @@ def test_generate_fixture():
 def test_generate_scene():
     """Test that a scene is generated with correct channel levels and timing."""
     generator = XMLGenerator()
+    
+    # Test Scene type (default behavior - should have 0 values)
     scene = generator.generate_scene(1, ["255", "128", "0"], 1000, 2000, 3000)
     
     assert scene.tag == "Function"
     assert scene.get("Type") == "Scene"
     assert scene.get("Name") == "1. Cue 1"
     
-    # Check Speed element
+    # Check Speed element - Scene types should have 0 values
     speed = scene.find("Speed")
     assert speed is not None
-    assert speed.get("FadeIn") == "1000"
-    assert speed.get("FadeOut") == "2000"
-    assert speed.get("Duration") == "3000"
+    assert speed.get("FadeIn") == "0"
+    assert speed.get("FadeOut") == "0"
+    assert speed.get("Duration") == "0"
     
     # Check FixtureVal element with comma-separated values
     fixture_val = scene.find("FixtureVal")
     assert fixture_val is not None
     assert fixture_val.get("ID") == "0"
     assert fixture_val.text == "255,128,0"
+    
+    # Test non-Scene type (should use provided timing values)
+    scene2 = generator.generate_scene(2, ["128", "64"], 1000, 2000, 3000, is_scene_type=False)
+    speed2 = scene2.find("Speed")
+    assert speed2.get("FadeIn") == "1000"
+    assert speed2.get("FadeOut") == "2000"
+    assert speed2.get("Duration") == "3000"
 
 
 def test_generate_chaser():

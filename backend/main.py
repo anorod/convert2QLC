@@ -66,7 +66,8 @@ async def convert_picolo_file(file: UploadFile) -> Dict[str, Any]:
             file.filename,
             transformed_cues,
             parsed_data["channel_data"],
-            parsed_data.get("max_channel_number", 71)
+            parsed_data.get("max_channel_number", 71),
+            parsed_data.get("_channel_value_pairs", {})
         )
         
         return {
