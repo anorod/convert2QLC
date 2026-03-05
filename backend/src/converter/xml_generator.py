@@ -59,7 +59,8 @@ class XMLGenerator:
         return fixture
 
     def generate_scene(self, cue_number: int, channel_data: Dict[int, str], 
-                      fade_in: int, fade_out: int, hold: int, is_scene_type: bool = True) -> ET.Element:
+                      fade_in: int, fade_out: int, hold: int, is_scene_type: bool = True,
+                      function_id: Optional[str] = None) -> ET.Element:
         """Generate a scene element for a specific cue with channel levels and timing.
 
         Args:
@@ -71,13 +72,16 @@ class XMLGenerator:
             hold: Hold time in milliseconds
             is_scene_type: Whether this function should be treated as a Scene type.
                           If True, sets Speed attributes to 0. Defaults to True for backward compatibility.
+            function_id: Optional custom ID for the Function element. If not provided,
+                         defaults to cue_number for backward compatibility.
 
         Returns:
             Scene element with channel data and timing attributes
         """
         # Create Function element with a descriptive name (QXW format)
         function = ET.Element("Function")
-        function.set("ID", str(cue_number))
+        function_id_to_use = str(function_id) if function_id is not None else str(cue_number)
+        function.set("ID", function_id_to_use)
         function.set("Type", "Scene")
         function.set("Name", f"{cue_number}. Cue {cue_number}")
         
@@ -124,7 +128,8 @@ class XMLGenerator:
         """
         # Create chaser element (QXW format)
         chaser = ET.Element("Function")
-        chaser.set("ID", str(len(scenes)))
+        total_scenes = len(scenes)
+        chaser.set("ID", str(total_scenes))
         chaser.set("Type", "Chaser")
         chaser.set("Name", "Cuelist")
         
@@ -382,11 +387,12 @@ class XMLGenerator:
                 # Fallback to flat list (for backward compatibility)
                 cue_channels = {}
                 levels = channel_data.get(str(cue_number), [])
-                for i, level in enumerate(levels):
-                    cue_channels[i+1] = level
+                for j, level in enumerate(levels):
+                    cue_channels[j+1] = level
             
             # Create scene with channel levels and timing
-            scene = self.generate_scene(cue_number, cue_channels, fade_in, fade_out, hold, is_scene_type=True)
+            # Pass the scene index (i) as function_id to ensure unique sequential IDs starting from 0
+            scene = self.generate_scene(cue_number, cue_channels, fade_in, fade_out, hold, is_scene_type=True, function_id=i)
             scenes.append(scene)
             engine.append(scene)
         
