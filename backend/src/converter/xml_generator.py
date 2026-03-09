@@ -97,23 +97,25 @@ class XMLGenerator:
             speed.set("Duration", str(hold))
         
         # Add FixtureVal elements with channel-value pairs
-        if channel_data:
+        if isinstance(channel_data, dict) and channel_data:
             fixture_val = ET.SubElement(function, "FixtureVal")
             fixture_val.set("ID", "0")
             
-            # Handle both dict and list formats for backward compatibility
-            if isinstance(channel_data, dict):
-                # Create a list of "channel:value" pairs sorted by channel number
-                channel_pairs = []
-                for channel_num in sorted(channel_data.keys()):
-                    value = channel_data[channel_num]
-                    channel_pairs.append(f"{channel_num}:{value}")
-                
-                # Join all pairs with commas
-                fixture_val.text = ",".join(channel_pairs)
-            else:
-                # Backward compatibility: use comma-separated values (old format)
-                fixture_val.text = ",".join(channel_data)
+            # Create a list of "fixture_index,value" pairs sorted by channel number
+            # where fixture_index = channel_num - 1
+            channel_pairs = []
+            for channel_num in sorted(channel_data.keys()):
+                value = channel_data[channel_num]
+                fixture_index = int(channel_num) - 1
+                channel_pairs.append(f"{fixture_index},{value}")
+            
+            # Join all pairs with commas
+            fixture_val.text = ",".join(channel_pairs)
+        elif isinstance(channel_data, list) and channel_data:
+            fixture_val = ET.SubElement(function, "FixtureVal")
+            fixture_val.set("ID", "0")
+            # Backward compatibility: use comma-separated values (old format)
+            fixture_val.text = ",".join(channel_data)
         
         return function
 
@@ -392,7 +394,7 @@ class XMLGenerator:
             
             # Create scene with channel levels and timing
             # Pass the scene index (i) as function_id to ensure unique sequential IDs starting from 0
-            scene = self.generate_scene(cue_number, cue_channels, fade_in, fade_out, hold, is_scene_type=True, function_id=i)
+            scene = self.generate_scene(cue_number, cue_channels, fade_in, fade_out, hold, is_scene_type=True, function_id=str(i))
             scenes.append(scene)
             engine.append(scene)
         
