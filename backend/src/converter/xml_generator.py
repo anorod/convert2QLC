@@ -33,7 +33,7 @@ class XMLGenerator:
         # Create root element with proper namespace and version
         root = ET.Element("Workspace")
         root.set("xmlns", self.workspace_namespace)
-        
+
         return root
 
     def generate_fixture(self, max_channel_number: int) -> ET.Element:
@@ -55,10 +55,11 @@ class XMLGenerator:
         fixture.set("Universe", "0")
         fixture.set("Address", "0")
         fixture.set("Channels", str(max_channel_number))
-        
+
         return fixture
 
-    def generate_scene(self, cue_number: int, channel_data: Dict[int, str], 
+
+    def generate_scene(self, cue_number: int, channel_data: Dict[int, str],
                       fade_in: int, fade_out: int, hold: int, is_scene_type: bool = True,
                       function_id: Optional[str] = None) -> ET.Element:
         """Generate a scene element for a specific cue with channel levels and timing.
@@ -71,7 +72,7 @@ class XMLGenerator:
             fade_out: FadeOut time in milliseconds
             hold: Hold time in milliseconds
             is_scene_type: Whether this function should be treated as a Scene type.
-                          If True, sets Speed attributes to 0. Defaults to True for backward compatibility.
+                           If True, sets Speed attributes to 0. Defaults to True for backward compatibility.
             function_id: Optional custom ID for the Function element. If not provided,
                          defaults to cue_number for backward compatibility.
 
@@ -101,21 +102,37 @@ class XMLGenerator:
             fixture_val = ET.SubElement(function, "FixtureVal")
             fixture_val.set("ID", "0")
             
-            # Create a list of "fixture_index,value" pairs sorted by channel number
-            # where fixture_index = channel_num - 1
-            channel_pairs = []
-            for channel_num in sorted(channel_data.keys()):
-                value = channel_data[channel_num]
-                fixture_index = int(channel_num) - 1
-                channel_pairs.append(f"{fixture_index},{value}")
-            
-            # Join all pairs with commas
-            fixture_val.text = ",".join(channel_pairs)
+            # Check if this is a new format (channel_num -> value)
+            first_key = list(channel_data.keys())[0] if channel_data else None
+            if isinstance(first_key, int) and isinstance(channel_data[first_key], str):
+                # New format: {channel_number: value}
+                channel_pairs = []
+                for channel_num in sorted(channel_data.keys()):
+                    value = channel_data[channel_num]
+                    fixture_index = int(channel_num) - 1
+                    channel_pairs.append(f"{fixture_index},{value}")
+                fixture_val.text = ",".join(channel_pairs)
+            else:
+                # Handle old format properly
+                if len(channel_data) > 0 and isinstance(list(channel_data.values())[0], list):
+                    # Old format: {cue_number: [values]}
+                    first_key = list(channel_data.keys())[0]
+                    if isinstance(channel_data[first_key], list):
+                        fixture_val.text = ",".join(str(v) for v in channel_data[first_key])
+                else:
+                    # Fallback to simple handling
+                    if isinstance(list(channel_data.values())[0], str):
+                        channel_pairs = []
+                        for channel_num in sorted(channel_data.keys()):
+                            value = channel_data[channel_num]
+                            fixture_index = int(channel_num) - 1
+                            channel_pairs.append(f"{fixture_index},{value}")
+                        fixture_val.text = ",".join(channel_pairs)
         elif isinstance(channel_data, list) and channel_data:
             fixture_val = ET.SubElement(function, "FixtureVal")
             fixture_val.set("ID", "0")
             # Backward compatibility: use comma-separated values (old format)
-            fixture_val.text = ",".join(channel_data)
+            fixture_val.text = ",".join(str(v) for v in channel_data)
         
         return function
 
