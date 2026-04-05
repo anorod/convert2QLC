@@ -387,9 +387,10 @@ class XMLGenerator:
         # Generate scenes for each cue (convert cue times first)
         scenes = []
         for i, cue in enumerate(cue_list):
-            # Get the channel levels for this cue
+            # Get the channel levels for this cue - preserve original string format
+            cue_number_str = cue.get("cue_number", "0")
             try:
-                cue_number = int(float(cue.get("cue_number", 0)))
+                cue_number = int(float(cue_number_str))
             except ValueError:
                 continue
             
@@ -398,10 +399,10 @@ class XMLGenerator:
             fade_out = int(cue.get("FadeOut", 0)) 
             hold = int(cue.get("Hold", 0))
             
-            # Get the appropriate channel data for this cue
-            if str(cue_number) in channel_value_pairs:
+            # Get the appropriate channel data for this cue - use original string key
+            if cue_number_str in channel_value_pairs:
                 # Use the detailed channel-value pairs
-                cue_channels = channel_value_pairs[str(cue_number)]
+                cue_channels = channel_value_pairs[cue_number_str]
             else:
                 # Fallback to flat list (for backward compatibility)
                 cue_channels = {}

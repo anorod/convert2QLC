@@ -173,6 +173,7 @@ class PicoloParser:
         max_iterations = len(lines) * 2  # Safety limit to prevent infinite loops
         iterations = 0
         increment_i = True  # Track whether we should increment i at the end of loop
+        in_detailed_section = False  # Track if we're in a section with actual channel data
 
         while i < len(lines) and iterations < max_iterations:
             line = lines[i].strip()
@@ -180,8 +181,9 @@ class PicoloParser:
 
             # Check if this is a "Channels" line (indicates channel data follows)
             if line == "Channels":
+                in_detailed_section = True  # We've found actual channel data
                 i += 1
-
+                
                 channel_numbers_line1 = []
                 channel_numbers_line2 = []
                 values_line1 = []
@@ -242,10 +244,10 @@ class PicoloParser:
 
                 # Create channel-value pairs, converting values to QLC+ format
                 channel_value_pairs = {}
-                for i, channel_num_str in enumerate(filtered_channels):
+                for idx, channel_num_str in enumerate(filtered_channels):
                     try:
                         channel_num = int(channel_num_str)
-                        value_str = filtered_values[i] if i < len(filtered_values) else "0"
+                        value_str = filtered_values[idx] if idx < len(filtered_values) else "0"
                         
                         # Convert Picolo level to QLC+ format
                         try:
@@ -271,42 +273,51 @@ class PicoloParser:
                 # We've manually incremented i inside this block, so don't increment again
                 increment_i = False
             elif line.startswith("Cue") and "TI" in line and "TO" in line:
-                # Skip cue header - i will be incremented at the end of loop
                 pass
             elif re.match(r"^\s*[0-9]+(\.[0-9]+)?\s+" + r"[0-9]+", line):
-                # Cue data line: starts with number, followed by space, then another digit
-                # But we need to be more careful - this should only match cue lines,
-                # not channel data lines that happen to start with numbers
-                # A cue line has the format: "<cue_num> <TI> <TO> <TW> ..."
-                # where TI, TO are typically small positive integers (0-99)
-                match = re.search(r"^\s*([0-9]+(\.[0-9]+)?)", line)
-                if match:
-                    try:
-                        val = float(match.group(1))
-                        # Additional check: cue numbers should be reasonable (< 1000)
-                        # and the next tokens should look like time values (small integers)
-                        parts = line.strip().split()
-                        if len(parts) >= 3:
-                            # Check if the first three tokens after cue number look like a cue line
-                            # Cue number, TI, TO should all be numeric
-                            try:
-                                cue_num = float(parts[0])
-                                ti = float(parts[1])
-                                to_val = float(parts[2])
-                                # If this looks like a cue line (cue num < 100, times are reasonable),
-                                # treat it as a cue number
-                                if cue_num < 100 and ti < 100 and to_val < 100:
-                                    current_cue_number = val
-                                else:
-                                    # This is likely channel data, not a cue line
+                # This line has a number followed by space and another digit.
+                # It could be either:
+                # 1. A cue header: "1      3    3    Manua..." (starts at beginning of line)
+                # 2. Channel data: " 1    3    5    71" (has leading spaces)
+                
+                if re.match(r"^[0-9]+(\.[0-9]+)?\s+" + r"[0-9]+", line):
+                    # This is a cue header line (starts at beginning of line, not indented)
+                    match = re.search(r"^\s*([0-9]+(\.[0-9]+)?)", line)
+                    if match:
+                        try:
+                            val = float(match.group(1))
+                            # Additional check: cue numbers should be reasonable (< 1000)
+                            # and the next tokens should look like time values (small integers)
+                            parts = line.strip().split()
+                            if len(parts) >= 3:
+                                # Check if the first three tokens after cue number look like a cue line
+                                # Cue number, TI, TO should all be numeric
+                                try:
+                                    cue_num = float(parts[0])
+                                    ti = float(parts[1])
+                                    to_val = float(parts[2])
+                                    # If this looks like a cue line (cue num < 100, times are reasonable),
+                                    # treat it as a cue number
+                                    if cue_num < 100 and ti < 100 and to_val < 100:
+                                        current_cue_number = val
+                                        # Store this cue in our data structure with consistent key format
+                                        cue_key = str(current_cue_number).rstrip('.0')
+                                        if cue_key not in channel_data:
+                                            channel_data[cue_key] = []
+                                    else:
+                                        # This is likely channel data, not a cue line
+                                        current_cue_number = None
+                                except ValueError:
                                     current_cue_number = None
-                            except ValueError:
+                            else:
                                 current_cue_number = None
-                        else:
+                        except ValueError:
+                            # Skip lines that can't be converted to float (e.g., separator lines)
                             current_cue_number = None
-                    except ValueError:
-                        # Skip lines that can't be converted to float (e.g., separator lines)
-                        current_cue_number = None
+                else:
+                    # This line starts with a number but has leading spaces - it's channel data, not a cue header
+                    # Don't change current_cue_number - keep the existing cue context
+                    pass
             # Increment i if we haven't already done so in this iteration
             if increment_i:
                 i += 1
@@ -375,7 +386,7 @@ class PicoloParser:
         """
         self.cue_list = self.parse_cue_list()
         self.channel_mapping = self.parse_channel_mapping()
-        self._channel_value_pairs = {}
+        # Don't initialize _channel_value_pairs here - let parse_channel_data set it
         self.channel_data = self.parse_channel_data()
         self.max_channel_number = self.find_max_channel_number()
 
