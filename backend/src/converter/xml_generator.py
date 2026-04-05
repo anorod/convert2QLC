@@ -33,7 +33,7 @@ class XMLGenerator:
         # Create root element with proper namespace and version
         root = ET.Element("Workspace")
         root.set("xmlns", self.workspace_namespace)
-        
+
         return root
 
     def generate_fixture(self, max_channel_number: int) -> ET.Element:
@@ -55,40 +55,84 @@ class XMLGenerator:
         fixture.set("Universe", "0")
         fixture.set("Address", "0")
         fixture.set("Channels", str(max_channel_number))
-        
+
         return fixture
 
-    def generate_scene(self, cue_number: int, channel_levels: List[str], 
-                      fade_in: int, fade_out: int, hold: int) -> ET.Element:
+
+    def generate_scene(self, cue_number: int, channel_data: Dict[int, str],
+                      fade_in: int, fade_out: int, hold: int, is_scene_type: bool = True,
+                      function_id: Optional[str] = None) -> ET.Element:
         """Generate a scene element for a specific cue with channel levels and timing.
 
         Args:
             cue_number: The cue number (used for scene name)
-            channel_levels: List of channel level values in QLC+ decimal format (0-255)
+            channel_data: Dictionary mapping channel numbers to their QLC+ level values,
+                          or list of values in order (for backward compatibility)
             fade_in: FadeIn time in milliseconds
             fade_out: FadeOut time in milliseconds
             hold: Hold time in milliseconds
+            is_scene_type: Whether this function should be treated as a Scene type.
+                           If True, sets Speed attributes to 0. Defaults to True for backward compatibility.
+            function_id: Optional custom ID for the Function element. If not provided,
+                         defaults to cue_number for backward compatibility.
 
         Returns:
             Scene element with channel data and timing attributes
         """
         # Create Function element with a descriptive name (QXW format)
         function = ET.Element("Function")
-        function.set("ID", str(cue_number))
+        function_id_to_use = str(function_id) if function_id is not None else str(cue_number)
+        function.set("ID", function_id_to_use)
         function.set("Type", "Scene")
         function.set("Name", f"{cue_number}. Cue {cue_number}")
         
         # Add Speed element with timing information
         speed = ET.SubElement(function, "Speed")
-        speed.set("FadeIn", str(fade_in))
-        speed.set("FadeOut", str(fade_out))
-        speed.set("Duration", str(hold))
+        if is_scene_type:
+            speed.set("FadeIn", "0")
+            speed.set("FadeOut", "0")
+            speed.set("Duration", "0")
+        else:
+            speed.set("FadeIn", str(fade_in))
+            speed.set("FadeOut", str(fade_out))
+            speed.set("Duration", str(hold))
         
-        # Add FixtureVal element with comma-separated channel values
-        if channel_levels:
+        # Add FixtureVal elements with channel-value pairs
+        if isinstance(channel_data, dict) and channel_data:
             fixture_val = ET.SubElement(function, "FixtureVal")
             fixture_val.set("ID", "0")
-            fixture_val.text = ",".join(channel_levels)
+            
+            # Check if this is a new format (channel_num -> value)
+            first_key = list(channel_data.keys())[0] if channel_data else None
+            if isinstance(first_key, int) and isinstance(channel_data[first_key], str):
+                # New format: {channel_number: value}
+                channel_pairs = []
+                for channel_num in sorted(channel_data.keys()):
+                    value = channel_data[channel_num]
+                    fixture_index = int(channel_num) - 1
+                    channel_pairs.append(f"{fixture_index},{value}")
+                fixture_val.text = ",".join(channel_pairs)
+            else:
+                # Handle old format properly
+                if len(channel_data) > 0 and isinstance(list(channel_data.values())[0], list):
+                    # Old format: {cue_number: [values]}
+                    first_key = list(channel_data.keys())[0]
+                    if isinstance(channel_data[first_key], list):
+                        fixture_val.text = ",".join(str(v) for v in channel_data[first_key])
+                else:
+                    # Fallback to simple handling
+                    if isinstance(list(channel_data.values())[0], str):
+                        channel_pairs = []
+                        for channel_num in sorted(channel_data.keys()):
+                            value = channel_data[channel_num]
+                            fixture_index = int(channel_num) - 1
+                            channel_pairs.append(f"{fixture_index},{value}")
+                        fixture_val.text = ",".join(channel_pairs)
+        elif isinstance(channel_data, list) and channel_data:
+            fixture_val = ET.SubElement(function, "FixtureVal")
+            fixture_val.set("ID", "0")
+            # Backward compatibility: use comma-separated values (old format)
+            fixture_val.text = ",".join(str(v) for v in channel_data)
         
         return function
 
@@ -103,7 +147,8 @@ class XMLGenerator:
         """
         # Create chaser element (QXW format)
         chaser = ET.Element("Function")
-        chaser.set("ID", str(len(scenes)))
+        total_scenes = len(scenes)
+        chaser.set("ID", str(total_scenes))
         chaser.set("Type", "Chaser")
         chaser.set("Name", "Cuelist")
         
@@ -309,7 +354,8 @@ class XMLGenerator:
         return cue_section
 
     def generate_xml(self, file_name: str, cue_list: List[Dict], 
-                    channel_data: Dict[int, List[str]], max_channel_number: int) -> str:
+                    channel_data: Dict[str, List[str]], max_channel_number: int,
+                    channel_value_pairs: Dict[str, Dict[int, str]] = {}) -> str:
         """Generate complete QLC+ XML document from parsed Picolo data.
 
         Args:
@@ -317,6 +363,7 @@ class XMLGenerator:
             cue_list: List of parsed cues with time information
             channel_data: Dictionary mapping cue numbers to channel data
             max_channel_number: Highest channel number found in the file
+            channel_value_pairs: Optional dictionary mapping cue numbers to channel-value pairs
 
         Returns:
             Formatted XML string representing the QLC+ project
@@ -340,20 +387,32 @@ class XMLGenerator:
         # Generate scenes for each cue (convert cue times first)
         scenes = []
         for i, cue in enumerate(cue_list):
-            # Get the channel levels for this cue
+            # Get the channel levels for this cue - preserve original string format
+            cue_number_str = cue.get("cue_number", "0")
             try:
-                cue_number = int(float(cue.get("cue_number", 0)))
+                cue_number = int(float(cue_number_str))
             except ValueError:
                 continue
-            levels = channel_data.get(cue_number, [])
             
             # Get time values from cue (these are already converted by transformer)
             fade_in = int(cue.get("FadeIn", 0))
             fade_out = int(cue.get("FadeOut", 0)) 
             hold = int(cue.get("Hold", 0))
             
-             # Create scene with channel levels and timing
-            scene = self.generate_scene(cue_number, levels, fade_in, fade_out, hold)
+            # Get the appropriate channel data for this cue - use original string key
+            if cue_number_str in channel_value_pairs:
+                # Use the detailed channel-value pairs
+                cue_channels = channel_value_pairs[cue_number_str]
+            else:
+                # Fallback to flat list (for backward compatibility)
+                cue_channels = {}
+                levels = channel_data.get(str(cue_number), [])
+                for j, level in enumerate(levels):
+                    cue_channels[j+1] = level
+            
+            # Create scene with channel levels and timing
+            # Pass the scene index (i) as function_id to ensure unique sequential IDs starting from 0
+            scene = self.generate_scene(cue_number, cue_channels, fade_in, fade_out, hold, is_scene_type=True, function_id=str(i))
             scenes.append(scene)
             engine.append(scene)
         
