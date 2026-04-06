@@ -65,7 +65,7 @@ class XMLGenerator:
         """Generate a scene element for a specific cue with channel levels and timing.
 
         Args:
-            cue_number: The cue number (used for scene name)
+            cue_number: The cue number as string (used for scene name, preserves decimals like "4.5")
             channel_data: Dictionary mapping channel numbers to their QLC+ level values,
                           or list of values in order (for backward compatibility)
             fade_in: FadeIn time in milliseconds
@@ -393,10 +393,12 @@ class XMLGenerator:
         # Generate scenes for each cue (convert cue times first)
         scenes = []
         for i, cue in enumerate(cue_list):
-            # Get the channel levels for this cue - preserve original string format
+            # Get the channel levels for this cue - preserve original string format (including decimals like "4.5")
             cue_number_str = cue.get("cue_number", "0")
+            
+            # Validate cue number is numeric (skip non-numeric cues like "Group" or "Channels")
             try:
-                cue_number = int(float(cue_number_str))
+                float(cue_number_str)  # Just validate, don't convert
             except ValueError:
                 continue
 
@@ -412,13 +414,13 @@ class XMLGenerator:
             else:
                 # Fallback to flat list (for backward compatibility)
                 cue_channels = {}
-                levels = channel_data.get(str(cue_number), [])
+                levels = channel_data.get(cue_number_str, [])
                 for j, level in enumerate(levels):
                     cue_channels[j+1] = level
 
-            # Create scene with channel levels and timing
+            # Create scene with channel levels and timing - use original string to preserve decimals
             # Pass the scene index (i) as function_id to ensure unique sequential IDs starting from 0
-            scene = self.generate_scene(cue_number, cue_channels, fade_in, fade_out, hold, is_scene_type=True, function_id=str(i), cue_info=cue)
+            scene = self.generate_scene(cue_number_str, cue_channels, fade_in, fade_out, hold, is_scene_type=True, function_id=str(i), cue_info=cue)
             scenes.append(scene)
             engine.append(scene)
 
