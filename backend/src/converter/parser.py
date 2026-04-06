@@ -135,13 +135,39 @@ class PicoloParser:
                         if cue_number == "Channels":
                             i += 1
                             continue
-                        # Extract time values TI, TO, TW from the cue line
+                        
                         cue_data = {
                             "cue_number": cue_number,
                             "TI": parts[1] if len(parts) > 1 else "0",
                             "TO": parts[2] if len(parts) > 2 else "0", 
-                            "TW": parts[3] if len(parts) > 3 else "0"
+                            "TW": parts[3] if len(parts) > 3 else "0",
+                            "Text": ""
                         }
+                        
+                        # Extract Text field by finding markers at the end and taking everything before them
+                        # Format after TW: [Ti/To/Tm/Jump/Lp values] + [Text (multiple words)] + [Command marker] + [cfs marker]
+                        # Command markers are typically "c", "-", or similar single chars at positions -2, -1
+                        if len(parts) > 4:
+                            # Start from position 4 (after TW) and go backwards from end to find where text ends
+                            text_end_idx = len(parts)
+                            
+                            # Skip the last two elements (Command marker and cfs marker like "c" and "-")
+                            if len(parts) >= 2:
+                                text_end_idx = len(parts) - 2
+                            
+                            # Text starts after position 3 (TW), but there may be Ti/To/Tm/Jump/Lp values first
+                            # We need to find where the actual descriptive text begins
+                            # Heuristic: look for single-letter/time values at positions 4-8, then text follows
+                            text_start_idx = 4
+                            
+                            # Check if position 4 looks like a time value (T1, T2, etc.) or loop marker
+                            if len(parts) > 4 and parts[4] in ["T1", "T2", "T3", "T4", "Lp", "Jump"]:
+                                text_start_idx = 5
+                            
+                            # Extract text between start and end indices
+                            if text_start_idx < text_end_idx:
+                                cue_data["Text"] = " ".join(parts[text_start_idx:text_end_idx])
+                        
                         cues.append(cue_data)
                     i += 1
             else:
