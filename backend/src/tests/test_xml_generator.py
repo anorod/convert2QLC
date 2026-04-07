@@ -26,8 +26,8 @@ def test_generate_fixture():
     fixture = generator.generate_fixture(5)
     
     assert fixture.tag == "Fixture"
-    assert fixture.get("Name") == "Dimmers"
-    assert fixture.get("Channels") == "5"
+    assert fixture.find("Name").text == "Dimmers"
+    assert fixture.find("Channels").text == "5"
     
     # Check that there are no Channel subelements (use FixtureVal instead)
     channels = fixture.findall("Channel")
