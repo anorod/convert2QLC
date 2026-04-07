@@ -47,14 +47,14 @@ class XMLGenerator:
         """
         # Create fixture element
         fixture = ET.Element("Fixture")
-        fixture.set("Manufacturer", "Generic")
-        fixture.set("Model", "Generic")
-        fixture.set("Mode", "71 Channel")
-        fixture.set("ID", "0")
-        fixture.set("Name", "Dimmers")
-        fixture.set("Universe", "0")
-        fixture.set("Address", "0")
-        fixture.set("Channels", str(max_channel_number))
+        ET.SubElement(fixture, "Manufacturer").text = "Generic"
+        ET.SubElement(fixture, "Model").text = "Generic"
+        ET.SubElement(fixture, "Mode").text = f"{max_channel_number} Channel"
+        ET.SubElement(fixture, "ID").text = "0"
+        ET.SubElement(fixture, "Name").text = "Dimmers"
+        ET.SubElement(fixture, "Universe").text = "0"
+        ET.SubElement(fixture, "Address").text = "0"
+        ET.SubElement(fixture, "Channels").text = str(max_channel_number)
 
         return fixture
 
