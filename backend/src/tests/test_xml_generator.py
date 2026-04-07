@@ -86,7 +86,7 @@ def test_generate_chaser():
 
 
 def test_generate_xml():
-    """Test that complete XML is generated correctly."""
+    """Test that complete XML is generated correctly with the proper header."""
     generator = XMLGenerator()
     
     # Sample data
@@ -106,5 +106,9 @@ def test_generate_xml():
     assert "Workspace" in xml_output
     assert "Fixture" in xml_output
     assert "Function" in xml_output
-    assert "Type=\"Scene\"" in xml_output
-    assert "Type=\"Chaser\"" in xml_output
+    assert 'Type="Scene"' in xml_output
+    assert 'Type="Chaser"' in xml_output
+
+    # Check for the correct XML declaration and DOCTYPE header
+    assert '<?xml version="1.0" encoding="UTF-8"?>' in xml_output
+    assert '<!DOCTYPE Workspace>' in xml_output
