@@ -453,4 +453,12 @@ class XMLGenerator:
         # Convert the XML tree to a formatted string
         rough_string = ET.tostring(root, encoding="unicode")
         reparsed = minidom.parseString(rough_string)
-        return reparsed.toprettyxml(indent="  ")
+        xml_output = reparsed.toprettyxml(indent="  ")
+
+        # Enforce exact required header and DOCTYPE
+        lines = xml_output.splitlines()
+        if lines and lines[0].startswith('<?xml'):
+            lines = lines[1:]
+        header = '<?xml version="1.0" encoding="UTF-8"?>'
+        doctype = '<!DOCTYPE Workspace>'
+        return "\n".join([header, doctype] + lines)
