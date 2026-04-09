@@ -3,7 +3,12 @@
 __MACOSX/
 .AppleDouble
 .LSOverride
-Icon[]
+Icon[
+]
+
+.opencode
+-venev
+.venv_new
 
 # Thumbnails
 ._*

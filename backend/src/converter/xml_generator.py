@@ -59,38 +59,39 @@ class XMLGenerator:
         return fixture
 
 
-    def generate_scene(self, cue_number: int, channel_data: Dict[int, str],
-                      fade_in: int, fade_out: int, hold: int, is_scene_type: bool = True,
+    def _pad_scene_pattern(self, cue_number: str) -> str:
+        """Pad the integer part of a numeric string with leading zeros while preserving decimals."""
+        try:
+            # Validate it's a number first
+            float(cue_number)
+            if "." in cue_number:
+                left, right = cue_number.split(".", 1)
+                return f"{left.zfill(2)}.{right}"
+            else:
+                return cue_number.zfill(2)
+        except ValueError:
+            # If not a valid number, return as is (fallback)
+            return cue_number
+
+    def generate_scene(self, cue_number: str, channel_data: Dict[int, str],
+                      fade_in: int, fade_out:int, hold: int, is_scene_type: bool = True,
                       function_id: Optional[str] = None, cue_info: Optional[Dict] = None) -> ET.Element:
         """Generate a scene element for a specific cue with channel levels and timing.
-
-        Args:
-            cue_number: The cue number as string (used for scene name, preserves decimals like "4.5")
-            channel_data: Dictionary mapping channel numbers to their QLC+ level values,
-                          or list of values in order (for backward compatibility)
-            fade_in: FadeIn time in milliseconds
-            fade_out: FadeOut time in milliseconds
-            hold: Hold time in milliseconds
-            is_scene_type: Whether this function should be treated as a Scene type.
-                           If True, sets Speed attributes to 0. Defaults to True for backward compatibility.
-            function_id: Optional custom ID for the Function element. If not provided,
-                         defaults to cue_number for backward compatibility.
-
-        Returns:
-            Scene element with channel data and timing attributes
+        ... (rest of docstring)
         """
-        # Create Function element with a descriptive name (QXW format)
-        function = ET.Element("Function")
-        function_id_to_use = str(function_id) if function_id is not None else str(cue_number)
-        function.set("ID", function_id_to_use)
-        function.set("Type", "Scene")
-        
+        # ... existing code ...
         # Use Text from cue_info if available, otherwise use default format
         cue_text = cue_info.get("Text", "") if cue_info else ""
+        display_num = self._pad_scene_pattern(cue_number)
+
+        function = ET.Element("Function")
+        function.set("ID", function_id if function_id else "0")
+        function.set("Type", "Scene")
         if cue_text.strip():
-            function.set("Name", f"{cue_number}. {cue_text.strip()}")
+            function.set("Name", f"{display_num}. {cue_text.strip()}")
         else:
-            function.set("Name", f"{cue_number}. Cue {cue_number}")
+            function.set("Name", f"{display_num}. Cue {display_num}")
+        # ... existing code ...
 
         # Add Speed element with timing information
         speed = ET.SubElement(function, "Speed")
