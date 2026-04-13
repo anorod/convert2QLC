@@ -144,23 +144,29 @@ def convert_cue_times(cue_list: list, channel_data: dict) -> list:
             fade_in = 0
             
         # 2. Determine fade_out based on priority:
-        #    Priority 1: If a next cue exists, use its TO value (to fulfill the look-ahead requirement)
-        #    Priority 2: Use current TO if present and non-zero (fallback for the last cue)
-        #    Priority 3: If previous cue had a valid TO, use that
+        #    Priority 1: If a next cue exists and its TO is non-zero/non-empty, use that value.
+        #    Priority 2: Use current TO if present and non-zero (fallback for the last cue).
+        #    Priority 3: If previous cue had a valid TO, use that.
         #    Priority 4: Fallback to previous fade_in
         fade_out = 0
+        next_to_value = None
         if i < len(cue_list) - 1:
             next_cue = cue_list[i + 1]
             next_to_value = str(next_cue.get("TO", "0"))
+
+        # Check if we can use the next cue's TO for the current FadeOut
+        if next_to_value and next_to_value != "0" and next_to_value != "":
             try:
                 fade_out = convert_time_value(next_to_value)
             except ValueError:
                 fade_out = 0
+        # If no valid next TO, check the current cue's TO
         elif to_value and to_value != "0" and to_value != "":
             try:
                 fade_out = convert_time_value(to_value)
             except ValueError:
                 fade_out = 0
+        # Fallback to previous values if current/next are unavailable
         elif i > 0 and prev_to_value and prev_to_value != "0" and prev_to_value != "":
             try:
                 fade_out = convert_time_value(prev_to_value)
