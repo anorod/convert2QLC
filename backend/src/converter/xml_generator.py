@@ -161,7 +161,30 @@ class XMLGenerator:
         chaser.set("ID", str(total_scenes))
         chaser.set("Type", "Chaser")
         chaser.set("Name", "Cuelist")
-        ...
+        
+        # Add required chaser configuration elements
+        ET.SubElement(chaser, "Speed", {"FadeIn": "0", "FadeOut": "0", "Duration": "0"})
+        ET.SubElement(chaser, "Direction").text = "Forward"
+        ET.SubElement(chaser, "RunOrder").text = "Loop"
+        ET.SubElement(chaser, "SpeedModes", {"FadeIn": "PerStep", "FadeOut": "PerStep", "Duration": "PerStep"})
+
+        # Add steps for each scene
+        for i, scene in enumerate(scenes):
+            step = ET.SubElement(chaser, "Step")
+            step.set("Number", str(i))
+            
+            # Use the transformed_cues directly instead of reading from the zeroed-out XML element
+            cue_data = transformed_cues[i]
+            fade_in = int(cue_data.get("FadeIn", 0))
+            fade_out = int(cue_data.get("FadeOut", 0))
+            hold = int(cue_data.get("Hold", 0))
+            
+            step.set("FadeIn", str(fade_in))
+            step.set("Hold", str(hold))
+            step.set("FadeOut", str(fade_out))
+            step.text = str(i)
+
+        return chaser
         # Add steps for each scene
         for i, scene in enumerate(scenes):
             step = ET.SubElement(chaser, "Step")

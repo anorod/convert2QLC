@@ -94,7 +94,7 @@ The conversion process will be performed in a single pass on the backend, follow
 Units in Picolo are **seconds**, and in QLC+ they are **milliseconds**.
 *   **Fade In:** `FadeIn_ms = float(TI_Picolo) * 1000`.
 *   **Fade Out:** Crossfade logic is applied. The `FadeOut` of step `N` is the `FadeIn` of step `N+1`.
-    *   `FadeOut_ms(Step_N) = float(TI_Picolo_of_Next_Cue) * 1000`.
+    *   `FadeOut_ms(Step_N) = float(TO_Picolo_of_Next_Cue) * 1000`.
     *   For the last step, its own `TO` value will be used: `float(TO_Picolo_Last) * 1000`.
 *   **Hold:**
     *   If `TW` is `"Manua"` -> `Hold_ms = 4294967294`.

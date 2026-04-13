@@ -125,56 +125,67 @@ def convert_cue_times(cue_list: list, channel_data: dict) -> list:
     """
     # Create a copy of the cue list to avoid modifying original data
     result_cues = []
+    prev_fade_in = 0
+    prev_to_value = "0"
     
     # Process each cue in order
     for i, cue in enumerate(cue_list):
         new_cue = cue.copy()
         
-        # Get TI (FadeIn) from cue - it's stored as "TI" key in the cue dict
-        # For simplicity, we'll assume that the cues have TI, TO, TW values
-        # which are stored as part of the cue data structure
-        ti_value = cue.get("TI", "0")  # Default to 0 if not found
-        to_value = cue.get("TO", "0")  # Default to 0 if not found
-        tw_value = cue.get("TW", "0")  # Default to 0 if not found
+        # Get TI, TO, TW values
+        ti_value = str(cue.get("TI", "0"))
+        to_value = str(cue.get("TO", "0"))
+        tw_value = str(cue.get("TW", "0"))
         
-        # Convert TI (FadeIn) from seconds to milliseconds
+        # 1. Calculate fade_in from current TI
         try:
             fade_in = convert_time_value(ti_value)
         except ValueError:
             fade_in = 0
-        
-        # Calculate FadeOut based on next step's FadeIn value (crossfade logic)
-        fade_out = 0  # Default value
-        if i < len(cue_list) - 1:  # If not the last cue
-            # Get the next cue and its TI value (FadeIn of next step)
+            
+        # 2. Determine fade_out based on priority:
+        #    Priority 1: If a next cue exists, use its TO value (to fulfill the look-ahead requirement)
+        #    Priority 2: Use current TO if present and non-zero (fallback for the last cue)
+        #    Priority 3: If previous cue had a valid TO, use that
+        #    Priority 4: Fallback to previous fade_in
+        fade_out = 0
+        if i < len(cue_list) - 1:
             next_cue = cue_list[i + 1]
-            next_ti_value = next_cue.get("TI", "0")
+            next_to_value = str(next_cue.get("TO", "0"))
             try:
-                fade_out = convert_time_value(next_ti_value)
+                fade_out = convert_time_value(next_to_value)
             except ValueError:
                 fade_out = 0
-        else:
-            # For the last step, use TO for FadeOut calculation
-            # If TO is missing or invalid, fall back to TI (per user confirmation)
-            if to_value and to_value != "0":
-                try:
-                    fade_out = convert_time_value(to_value)
-                except ValueError:
-                    # TO invalid, fallback to TI
-                    try:
-                        fade_out = convert_time_value(ti_value)
-                    except ValueError:
-                        fade_out = 0
-            else:
-                # TO missing or "0", use TI as fallback
-                try:
-                    fade_out = convert_time_value(ti_value)
-                except ValueError:
-                    fade_out = 0
-        
-        # Hold time is TW value - converted to milliseconds with special handling
+        elif to_value and to_value != "0" and to_value != "":
+            try:
+                fade_out = convert_time_value(to_value)
+            except ValueError:
+                fade_out = 0
+        elif i > 0 and prev_to_value and prev_to_value != "0" and prev_to_value != "":
+            try:
+                fade_out = convert_time_value(prev_to_value)
+            except ValueError:
+                fade_out = prev_fade_in
+        elif i > 0:
+            fade_out = prev_fade_in
+  
+
+        # NEW LOGIC: If TI is 0, the transition (FadeOut) belongs to the PREVIOUS cue.
+        if ti_value == "0" and i > 0 and result_cues:
+            # The 'fade_out' we just calculated for THIS cue represents the arrival time.
+            # According to user request, this transition should be applied to the 
+            # FadeOut of the PREVIOUS step instead.
+            prev_cue = result_cues[i - 1]
+            # We don't want to overwrite a much larger existing FadeOut if it exists,
+            # but we must ensure the 'arrival' at this cue is covered by the previous exit.
+            # The user specifically mentioned: "the FadeOut of 5000 should be in the previous step".
+            prev_cue["FadeOut"] = fade_out
+            # For the current cue, since it starts immediately (TI=0), its FadeIn is 0.
+            fade_in = 0
+
+        # 3. Calculate hold from TW
         try:
-            hold = convert_time_value(tw_value, for_hold=True)
+            hold = convert_time_value(tw_value, for_hold=	True)
         except ValueError:
             hold = 0
 
@@ -183,6 +194,16 @@ def convert_cue_times(cue_list: list, channel_data: dict) -> list:
         new_cue["FadeOut"] = fade_out
         new_cue["Hold"] = hold
 
+        # If TI is 0, the transition belongs to the PREVIOUS step.
+        # We move it and clear it from this cue to avoid duplication in XML.
+        if ti_value == "0" and i > 0 and result_cues:
+            result_cues[i - 1]["FadeOut"] = fade_out
+            new_cue["FadeOut"] = 0
+        
         result_cues.append(new_cue)
-    
+        prev_fade_in = fade_in
+        prev_to_value = to_value
+
+
+
     return result_cues
