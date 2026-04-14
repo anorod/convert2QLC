@@ -58,7 +58,7 @@ async def convert_picolo_file(file: UploadFile) -> Dict[str, Any]:
         parsed_data = parser.parse()
         
         # Transform data for QLC+
-        transformed_cues = convert_cue_times(parsed_data["cue_list"], {})
+        transformed_cues = convert_cue_times(parsed_data["cue_list"], parsed_data["channel_data"])
         
         # Generate XML using the XML generator
         xml_gen = XMLGenerator()

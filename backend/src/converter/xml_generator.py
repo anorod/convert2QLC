@@ -100,6 +100,8 @@ class XMLGenerator:
             speed.set("FadeOut", "0")
             speed.set("Duration", "0")
         else:
+            # For Chaser steps, we must NOT multiply by 1000 here because 
+            # the values are already converted to milliseconds in transformer.py
             speed.set("FadeIn", str(fade_in))
             speed.set("FadeOut", str(fade_out))
             speed.set("Duration", str(hold))
@@ -143,12 +145,13 @@ class XMLGenerator:
 
         return function
 
-    def generate_chaser(self, scenes: List[ET.Element]) -> ET.Element:
-        """Generate a chaser that sequences all scenes in order.
-
+    def generate_chaser(self, scenes: List[ET.Element], transformed_cues: List[Dict]) -> ET.Element:
+        """Generate a chaser that sequences all scenes in order using original timing data.
+        
         Args:
-            scenes: List of scene elements to include in the chaser
-
+            scenes: List of scene elements (for structure)
+            transformed_cues: List of dictionaries containing the actual converted timing
+        
         Returns:
             Chaser element with all scenes included in sequence
         """
@@ -158,41 +161,44 @@ class XMLGenerator:
         chaser.set("ID", str(total_scenes))
         chaser.set("Type", "Chaser")
         chaser.set("Name", "Cuelist")
-
-        # Add Speed element
-        speed = ET.SubElement(chaser, "Speed")
-        speed.set("FadeIn", "0")
-        speed.set("FadeOut", "0")
-        speed.set("Duration", "0")
-
-        # Add Direction and RunOrder
+        
+        # Add required chaser configuration elements
+        ET.SubElement(chaser, "Speed", {"FadeIn": "0", "FadeOut": "0", "Duration": "0"})
         ET.SubElement(chaser, "Direction").text = "Forward"
         ET.SubElement(chaser, "RunOrder").text = "Loop"
-
-        # Add SpeedModes
-        speed_modes = ET.SubElement(chaser, "SpeedModes")
-        speed_modes.set("FadeIn", "PerStep")
-        speed_modes.set("FadeOut", "PerStep")
-        speed_modes.set("Duration", "PerStep")
+        ET.SubElement(chaser, "SpeedModes", {"FadeIn": "PerStep", "FadeOut": "PerStep", "Duration": "PerStep"})
 
         # Add steps for each scene
         for i, scene in enumerate(scenes):
             step = ET.SubElement(chaser, "Step")
             step.set("Number", str(i))
-            # Get timing from the scene's Speed element
-            speed_elem = scene.find("Speed")
-            if speed_elem is not None:
-                fade_in = int(speed_elem.get("FadeIn", 0))
-                hold = int(speed_elem.get("Duration", 4294967294))
-                fade_out = int(speed_elem.get("FadeOut", 0))
-            else:
-                fade_in = 0
-                hold = 4294967294
-                fade_out = 0
+            
+            # Use the transformed_cues directly instead of reading from the zeroed-out XML element
+            cue_data = transformed_cues[i]
+            fade_in = int(cue_data.get("FadeIn", 0))
+            fade_out = int(cue_data.get("FadeOut", 0))
+            hold = int(cue_data.get("Hold", 0))
+            
+            step.set("FadeIn", str(fade_in))
+            step.set("Hold", str(hold))
+            step.set("FadeOut", str(fade_out))
+            step.text = str(i)
 
-            step.set("FadeIn", str(fade_in * 1000 if fade_in > 0 else fade_in))
-            step.set("Hold", str(hold if hold != 4294967294 else 4294967294))
-            step.set("FadeOut", str(fade_out * 1000 if fade_out > 0 else fade_out))
+        return chaser
+        # Add steps for each scene
+        for i, scene in enumerate(scenes):
+            step = ET.SubElement(chaser, "Step")
+            step.set("Number", str(i))
+            
+            # Use the transformed_cues directly instead of reading from the zeroed-out XML element
+            cue_data = transformed_cues[i]
+            fade_in = int(cue_data.get("FadeIn", 0))
+            fade_out = int(cue_data.get("FadeOut", 0))
+            hold = int(cue_data.get("Hold", 0))
+            
+            step.set("FadeIn", str(fade_in))
+            step.set("Hold", str(hold))
+            step.set("FadeOut", str(fade_out))
             step.text = str(i)
 
         return chaser
@@ -425,8 +431,8 @@ class XMLGenerator:
             scenes.append(scene)
             engine.append(scene)
 
-        # Create chaser to sequence all scenes
-        chaser = self.generate_chaser(scenes)
+        # Create chaser to sequence all scenes in order
+        chaser = self.generate_chaser(scenes, cue_list)
         engine.append(chaser)
 
         # Add Monitor section
